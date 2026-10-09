@@ -308,6 +308,9 @@ class School:
                          "yourself; recommended if work remains), post to the ledger, message, give slots, or write files. "
                          "Reading, searching, running code and spawning are closed to you now. Or end by replying without "
                          "tools: that reply is your final report.")
+                if ag.wallet:
+                    nudge += (f" You still hold {ag.wallet} slots: give them to someone who can use them, pass them on with "
+                              "`succeed`, or they go to " + ("the other founder" if ag.founder else "your parent") + " when you end.")
                 if ag.founder:
                     nudge += (" As a founder: if you end without succeeding, the game starts a successor for you from your "
                               "final report.")
@@ -642,7 +645,16 @@ class School:
             f = self.new_agent(None, 0, per, "", founder=k)
             founders.append(f)
         await self.log("events.jsonl", dict(ev="begin", budget=self.a.budget, founders=self.a.founders, wallet_each=per))
-        await asyncio.gather(*[self.run_agent(f, self.founder_intro(f.founder, f.wallet)) for f in founders])
+        async def lineage(f):
+            await self.run_agent(f, self.founder_intro(f.founder, f.wallet))
+            left = self.agents[f.id].wallet
+            heir = next((self.resolve(o.id) for o in founders if o.id != f.id and self.resolve(o.id)), None)
+            if left and heir:  # bequest (charter E2): a finished founder's unspent slots pass to the surviving founder
+                heir.wallet += left
+                self.agents[f.id].wallet = 0
+                heir.inbox.append({"from": f.id, "text": f"(founder #{f.founder} has ended; its {left} unspent slots are now yours)"})
+                await self.log("events.jsonl", dict(ev="bequest", frm=f.id, to=heir.id, n=left))
+        await asyncio.gather(*[lineage(f) for f in founders])
         rep_dir = self.repo / "SCHOOL" / "REPORTS"
         rep_dir.mkdir(parents=True, exist_ok=True)
         for f in founders:

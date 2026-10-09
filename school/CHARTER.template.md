@@ -17,7 +17,8 @@ begins with two founders, #1 and #2, who start at the same time and each hold a
 wallet of 49 agent-slots. Spawning a child or a successor costs exactly the slots you
 hand it (at least 1, because the new agent itself occupies one). When a child
 finishes, the slots it did not use come back to your wallet. You may give slots to
-any living agent with `give_slots`. You cannot spend slots you do not hold. Slots
+any living agent with `give_slots`. You cannot spend slots you do not hold. When a
+founder ends, its unspent slots pass to the other founder if it is still playing. Slots
 still unspent when the game ends are worth nothing.
 
 **E3. The world.** Your workspace is this repository and nothing else: no internet
