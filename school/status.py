@@ -29,7 +29,7 @@ print(f"agents started {len(starts)} / ended {len(ends)} (running {len(starts) -
       f"max depth {max([e['depth'] for e in starts] or [0])}")
 print(f"spend ${sum(c['cost'] for c in calls):.2f} over {len(calls)} requests; max prompt {max([c['prompt'] for c in calls] or [0]):,} tokens; "
       f"cache reads {100 * sum(c.get('cache_read', 0) for c in calls) / max(1, sum(c['prompt'] for c in calls)):.0f}% of prompt; "
-      f"cleared {sum(c.get('cleared', 0) for c in calls):,} tokens; errors {k.get('error', 0)}; pushes {sum(1 for e in ev if e['ev']=='push' and e.get('ok'))} ok / "
+      f"server clears {k.get('cleared', 0)} (~{sum(e.get('tokens', 0) for e in ev if e['ev'] == 'cleared'):,} tokens); errors {k.get('error', 0)}; pushes {sum(1 for e in ev if e['ev']=='push' and e.get('ok'))} ok / "
       f"{sum(1 for e in ev if e['ev']=='push' and not e.get('ok'))} failed")
 print(f"ledger {k.get('ledger', 0)} {dict(Counter(e['label'] for e in ev if e['ev']=='ledger'))}; amendments {k.get('amend', 0)}; "
       f"messages {k.get('message', 0)}; slot gifts {k.get('give', 0)}")

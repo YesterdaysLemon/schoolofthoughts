@@ -336,7 +336,10 @@ class School:
                 await self.log("events.jsonl", dict(ev="error", agent=ag.id, err=str(e)[:500]))
                 break
             ag.turns += 1
-            last_prompt = prompt_tokens(msg["usage"]) + (msg["usage"].get("output_tokens") or 0)
+            new_prompt = prompt_tokens(msg["usage"])
+            if last_prompt and new_prompt < last_prompt - 5000:  # the server cleared old tool results
+                await self.log("events.jsonl", dict(ev="cleared", agent=ag.id, tokens=last_prompt - new_prompt))
+            last_prompt = new_prompt + (msg["usage"].get("output_tokens") or 0)
             content = clean(msg["content"])
             transcript.append(content)
             messages.append({"role": "assistant", "content": content})

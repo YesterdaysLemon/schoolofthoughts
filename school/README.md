@@ -67,7 +67,7 @@ Add `--push-branch run/1` to run on a new branch and push it to `origin` every
 `--push-every-min 5` minutes, so the commits can be watched live while `main` stays the
 clean starting point for the next run.
 
-Knobs: `--budget 100 --founders 2 --effort xhigh --max-turns 20 --turn-tokens 32000
+Knobs: `--budget 100 --founders 2 --effort xhigh --max-turns 20 (40 recommended now that context is managed) --turn-tokens 32000
 --ctx-wrap 60000 --max-depth 10 --api-conc 16 --py-conc 4 --py-mem-gb 6`.
 
 ## While it runs
