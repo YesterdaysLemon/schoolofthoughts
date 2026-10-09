@@ -1,0 +1,18 @@
+{
+ "tag": "full",
+ "arms": "swarm",
+ "problems": "H01,H02,H03,H04,H05,H07,H08,H11",
+ "problem_file": "problems_hard.json",
+ "vote_n": 50,
+ "swarm_budget": 50,
+ "game": "orgchart",
+ "haiku_effort": "high",
+ "fable_effort": "xhigh",
+ "fable_max_tokens": 100000,
+ "haiku_max_tokens": 64000,
+ "cap": 8.0,
+ "mock": false,
+ "vote_batch": false,
+ "swarm_max_tokens": 48000,
+ "haiku_conc": 24
+}

@@ -1,0 +1,15 @@
+{
+ "tag": "calib_hard",
+ "arms": "vote",
+ "problems": "all",
+ "problem_file": "problems_hard.json",
+ "vote_n": 6,
+ "swarm_budget": 50,
+ "game": "procedural",
+ "haiku_effort": "high",
+ "fable_effort": "xhigh",
+ "fable_max_tokens": 64000,
+ "haiku_max_tokens": 32000,
+ "cap": 4.0,
+ "mock": false
+}

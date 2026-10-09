@@ -1,0 +1,28 @@
+{
+ "arm": "fable",
+ "pid": "H08",
+ "sample": 0,
+ "answer": 382323,
+ "correct": true,
+ "cost": 3.76584,
+ "wall": 732.0868723392487,
+ "usage": {
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "inference_geo": "global",
+  "input_tokens": 119,
+  "output_tokens": 75293,
+  "output_tokens_details": {
+   "thinking_tokens": 74311
+  },
+  "service_tier": "standard"
+ },
+ "stop": "end_turn",
+ "text": "**Setup.** Classify lattice points by how many coordinates are nonzero:\n\n$$N = 1 + 6L + 12C + 8B,$$\n\nwhere $L=\\#\\{v\\ge1: v^2\\le 2026\\}=45$, $C=\\#\\{(a,b)\\ge 1: a^2+b^2\\le 2026\\}$, and $B=\\#\\{(a,b,c)\\ge1: a^2+b^2+c^2\\le 2026\\}$.\n\n**Computing $C$.** $C=\\sum_{a=1}^{45}\\lfloor\\sqrt{2026-a^2}\\rfloor$. The values are \n$45,44\\times8,43\\times4,42\\times3,41\\times2,40\\times2,39\\times2,38\\times2,37,36\\times2,35,34,33,32,31,30,29,28,27,25,24,22,20,18,16,13,9,1$, summing to $C=1547$.\n\n**Computing $B$.** Write $B = 6B_{<} + 3E + T$, where\n- $B_<=\\#\\{x>y>z\\ge1\\}$,\n- $E=\\#\\{(a,b): a\\ne b,\\ 2a^2+b^2\\le 2026\\}$,\n- $T=\\#\\{a: 3a^2\\le 2026\\}=25$.\n\nFor $E$: $\\sum_{a=1}^{31}\\lfloor\\sqrt{2026-2a^2}\\rfloor = 1086$, so $E=1086-25=1061$.\n\nFor $B_<$: $B_<=\\sum_{z\\ge1}\\sum_{y>z}\\max\\!\\big(0,\\lfloor\\sqrt{2026-y^2-z^2}\\rfloor-y\\big)$. Computing row by row (and verifying each row by the threshold method $\\lfloor\\sqrt{m-k^2}\\rfloor$):\n\n| $z$ | row sum | $z$ | row sum | $z$ | row sum |\n|---|---|---|---|---|---|\n|1|714|9|383|17|122|\n|2|671|10|345|18|98|\n|3|627|11|308|19|75|\n|4|586|12|274|20|55|\n|5|544|13|240|21|38|\n|6|501|14|208|22|24|\n|7|461|15|176|23|12|\n|8|422|16|150|24|4|\n\n(rows $z\\ge 25$ contribute nothing). Total $B_<=7038$.\n\nHence $B = 6\\cdot 7038 + 3\\cdot 1061 + 25 = 42228+3183+25 = 45436$.\n\n**Total.**\n$$N = 1 + 270 + 12\\cdot1547 + 8\\cdot 45436 = 271 + 18564 + 363488 = 382323.$$\n\nSanity check: the ball volume $\\tfrac43\\pi(2026)^{3/2}\\approx 381986$, and $r_3(2026)=408$, so the count is consistent with the expected lattice-point error.\n\nANSWER: 382323",
+ "thinking_chars": 0,
+ "expected": 382323
+}

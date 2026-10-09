@@ -1,0 +1,595 @@
+{
+ "rows": [
+  {
+   "pid": "H01",
+   "topic": "domino tilings of a holed board",
+   "kind": "long computation",
+   "expected": 1113032,
+   "swarm_empty": {
+    "answer": 1113032,
+    "correct": true,
+    "cost": 0.030582735,
+    "wall": 194.12500190734863,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "swarm_procedural": {
+    "answer": 1113032,
+    "correct": true,
+    "cost": 0.0191329,
+    "wall": 152.05693006515503,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "fable": {
+    "answer": 1113032,
+    "correct": true,
+    "cost": 1.67397,
+    "wall": 350.7646086215973,
+    "out_tokens": 33445,
+    "stop": "end_turn",
+    "error": null
+   },
+   "vote": {
+    "answer": 1113032,
+    "correct": true,
+    "tie": false,
+    "single_acc": 0.7,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      1113032,
+      35
+     ]
+    ],
+    "cost": 0.70138425,
+    "wall": 882.2129352092743,
+    "errors": 0
+   },
+   "swarm_orgchart": {
+    "answer": 1113032,
+    "correct": true,
+    "cost": 0.030600545,
+    "wall": 193.0471532344818,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   }
+  },
+  {
+   "pid": "H02",
+   "topic": "proper 3-colorings of the 5x5 grid",
+   "kind": "long computation",
+   "expected": 580986,
+   "vote": {
+    "answer": 580986,
+    "correct": true,
+    "tie": false,
+    "single_acc": 0.9,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      580986,
+      45
+     ],
+     [
+      1222230,
+      2
+     ],
+     [
+      1222650,
+      1
+     ],
+     [
+      252910,
+      1
+     ],
+     [
+      252570,
+      1
+     ]
+    ],
+    "cost": 0.3145025,
+    "wall": 882.2131395339966,
+    "errors": 0
+   },
+   "swarm_orgchart": {
+    "answer": 580986,
+    "correct": true,
+    "cost": 0.013038899999999999,
+    "wall": 92.78468680381775,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "swarm_procedural": {
+    "answer": 580986,
+    "correct": true,
+    "cost": 0.02075449,
+    "wall": 130.85618710517883,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 1,
+    "n_amend": 0
+   },
+   "fable": {
+    "answer": 580986,
+    "correct": true,
+    "cost": 0.83962,
+    "wall": 170.7951545715332,
+    "out_tokens": 16759,
+    "stop": "end_turn",
+    "error": null
+   },
+   "swarm_empty": {
+    "answer": 580986,
+    "correct": true,
+    "cost": 0.042320385,
+    "wall": 137.37097549438477,
+    "n_agents": 17,
+    "max_depth": 1,
+    "n_ledger": 0,
+    "n_amend": 0
+   }
+  },
+  {
+   "pid": "H03",
+   "topic": "3D domino tilings",
+   "kind": "long computation",
+   "expected": 1845,
+   "swarm_orgchart": {
+    "answer": 1845,
+    "correct": true,
+    "cost": 0.011363775,
+    "wall": 86.94641327857971,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "fable": {
+    "answer": 1845,
+    "correct": true,
+    "cost": 0.79966,
+    "wall": 170.348304271698,
+    "out_tokens": 15960,
+    "stop": "end_turn",
+    "error": null
+   },
+   "swarm_empty": {
+    "answer": 1845,
+    "correct": true,
+    "cost": 0.00964115,
+    "wall": 74.38424777984619,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "swarm_procedural": {
+    "answer": 1845,
+    "correct": true,
+    "cost": 0.00857865,
+    "wall": 67.04799199104309,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "vote": {
+    "answer": 1845,
+    "correct": true,
+    "tie": false,
+    "single_acc": 0.96,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      1845,
+      48
+     ],
+     [
+      1843,
+      1
+     ]
+    ],
+    "cost": 0.31340375,
+    "wall": 882.213250875473,
+    "errors": 0
+   }
+  },
+  {
+   "pid": "H04",
+   "topic": "hafnian / weighted perfect matchings (Krenn-Gu flavour)",
+   "kind": "long computation",
+   "expected": -1098,
+   "fable": {
+    "answer": -1098,
+    "correct": true,
+    "cost": 4.06554,
+    "wall": 763.141428232193,
+    "out_tokens": 81269,
+    "stop": "end_turn",
+    "error": null
+   },
+   "swarm_procedural": {
+    "answer": -1098,
+    "correct": true,
+    "cost": 0.017717025,
+    "wall": 133.99278140068054,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "vote": {
+    "answer": -1098,
+    "correct": true,
+    "tie": false,
+    "single_acc": 0.94,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      -1098,
+      47
+     ],
+     [
+      -1002,
+      1
+     ],
+     [
+      -1128,
+      1
+     ],
+     [
+      -288,
+      1
+     ]
+    ],
+    "cost": 0.3959625,
+    "wall": 882.2133929729462,
+    "errors": 0
+   },
+   "swarm_empty": {
+    "answer": -1098,
+    "correct": true,
+    "cost": 0.015636025,
+    "wall": 115.37914991378784,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "swarm_orgchart": {
+    "answer": -1098,
+    "correct": true,
+    "cost": 0.017364650000000002,
+    "wall": 130.79502820968628,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   }
+  },
+  {
+   "pid": "H05",
+   "topic": "banded derangements",
+   "kind": "long computation",
+   "expected": 48344,
+   "swarm_empty": {
+    "answer": 48344,
+    "correct": true,
+    "cost": 0.0181964,
+    "wall": 131.33486199378967,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "vote": {
+    "answer": 48344,
+    "correct": true,
+    "tie": false,
+    "single_acc": 0.98,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      48344,
+      49
+     ],
+     [
+      127465,
+      1
+     ]
+    ],
+    "cost": 0.47855525,
+    "wall": 882.2134928703308,
+    "errors": 0
+   },
+   "fable": {
+    "answer": 48344,
+    "correct": true,
+    "cost": 2.66386,
+    "wall": 497.7331976890564,
+    "out_tokens": 53250,
+    "stop": "end_turn",
+    "error": null
+   },
+   "swarm_orgchart": {
+    "answer": 48344,
+    "correct": true,
+    "cost": 0.011928524999999999,
+    "wall": 86.26417016983032,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "swarm_procedural": {
+    "answer": 48344,
+    "correct": true,
+    "cost": 0.037029605,
+    "wall": 171.14033889770508,
+    "n_agents": 3,
+    "max_depth": 1,
+    "n_ledger": 0,
+    "n_amend": 0
+   }
+  },
+  {
+   "pid": "H06",
+   "topic": "gcd/lcm blackboard invariant (IMO 2026 P1 mechanics, new instance)",
+   "kind": "insight",
+   "expected": 1323000
+  },
+  {
+   "pid": "H07",
+   "topic": "greedy gcd sequence (IMO 2026 P6 mechanics, new instance)",
+   "kind": "insight + computation",
+   "expected": 12540,
+   "fable": {
+    "answer": 12540,
+    "correct": true,
+    "cost": 0.3076,
+    "wall": 61.87904691696167,
+    "out_tokens": 6120,
+    "stop": "end_turn",
+    "error": null
+   },
+   "swarm_orgchart": {
+    "answer": 12540,
+    "correct": true,
+    "cost": 0.011386525,
+    "wall": 97.81137132644653,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "swarm_empty": {
+    "answer": 12540,
+    "correct": true,
+    "cost": 0.0060839,
+    "wall": 50.39081048965454,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "vote": {
+    "answer": 12540,
+    "correct": true,
+    "tie": false,
+    "single_acc": 1.0,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      12540,
+      50
+     ]
+    ],
+    "cost": 0.15781775,
+    "wall": 882.2135899066925,
+    "errors": 0
+   },
+   "swarm_procedural": {
+    "answer": 12540,
+    "correct": true,
+    "cost": 0.0056574,
+    "wall": 48.156065225601196,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   }
+  },
+  {
+   "pid": "H08",
+   "topic": "lattice points in a ball",
+   "kind": "long computation",
+   "expected": 382323,
+   "fable": {
+    "answer": 382323,
+    "correct": true,
+    "cost": 3.76584,
+    "wall": 732.0868723392487,
+    "out_tokens": 75293,
+    "stop": "end_turn",
+    "error": null
+   },
+   "swarm_procedural": {
+    "answer": 382323,
+    "correct": true,
+    "cost": 0.151637535,
+    "wall": 127.35549235343933,
+    "n_agents": 47,
+    "max_depth": 1,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "vote": {
+    "answer": 382323,
+    "correct": true,
+    "tie": false,
+    "single_acc": 0.36,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      382323,
+      18
+     ],
+     [
+      382259,
+      1
+     ]
+    ],
+    "cost": 0.75357275,
+    "wall": 882.2136836051941,
+    "errors": 0
+   },
+   "swarm_orgchart": {
+    "answer": 382323,
+    "correct": true,
+    "cost": 0.10008739,
+    "wall": 127.63976335525513,
+    "n_agents": 23,
+    "max_depth": 1,
+    "n_ledger": 1,
+    "n_amend": 0
+   },
+   "swarm_empty": {
+    "answer": 382323,
+    "correct": true,
+    "cost": 0.0865634,
+    "wall": 166.83466577529907,
+    "n_agents": 50,
+    "max_depth": 1,
+    "n_ledger": 0,
+    "n_amend": 0
+   }
+  },
+  {
+   "pid": "H09",
+   "topic": "Burnside on cube edges (full symmetry group)",
+   "kind": "insight + computation",
+   "expected": 768
+  },
+  {
+   "pid": "H10",
+   "topic": "random walk hitting time on 4x4x4 grid",
+   "kind": "long computation",
+   "expected": 19367
+  },
+  {
+   "pid": "H11",
+   "topic": "octal game 0.433 (Sprague-Grundy periodicity)",
+   "kind": "insight + long computation",
+   "expected": 125,
+   "fable": {
+    "answer": 125,
+    "correct": true,
+    "cost": 4.03681,
+    "wall": 721.2814054489136,
+    "out_tokens": 80685,
+    "stop": "end_turn",
+    "error": null
+   },
+   "swarm_orgchart": {
+    "answer": 125,
+    "correct": true,
+    "cost": 0.07952718,
+    "wall": 308.4267523288727,
+    "n_agents": 5,
+    "max_depth": 1,
+    "n_ledger": 4,
+    "n_amend": 0
+   },
+   "swarm_procedural": {
+    "answer": 125,
+    "correct": true,
+    "cost": 0.17622709,
+    "wall": 612.0330710411072,
+    "n_agents": 9,
+    "max_depth": 1,
+    "n_ledger": 5,
+    "n_amend": 0
+   },
+   "vote": {
+    "answer": 125,
+    "correct": true,
+    "tie": false,
+    "single_acc": 0.24,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      125,
+      12
+     ],
+     [
+      8,
+      1
+     ]
+    ],
+    "cost": 0.7704805,
+    "wall": 882.2137777805328,
+    "errors": 0
+   }
+  },
+  {
+   "pid": "H12",
+   "topic": "Burnside with adjacency constraint",
+   "kind": "insight",
+   "expected": 1095
+  }
+ ],
+ "totals": {
+  "fable": {
+   "n": 8,
+   "correct": 8,
+   "cost": 18.1529
+  },
+  "swarm_empty": {
+   "n": 7,
+   "correct": 7,
+   "cost": 0.20902399500000002
+  },
+  "swarm_orgchart": {
+   "n": 8,
+   "correct": 8,
+   "cost": 0.27529749000000003
+  },
+  "swarm_procedural": {
+   "n": 8,
+   "correct": 8,
+   "cost": 0.43673469500000006
+  },
+  "vote": {
+   "n": 8,
+   "correct": 8,
+   "cost": 3.88567925
+  },
+  "haiku_single(mean of 50)": {
+   "n": 8,
+   "correct": 6.08,
+   "cost": 0.077713585
+  },
+  "haiku_pass@50": {
+   "n": 8,
+   "correct": 8,
+   "cost": 3.88567925
+  }
+ }
+}

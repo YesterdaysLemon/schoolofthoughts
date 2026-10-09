@@ -1,0 +1,53 @@
+{
+ "arm": "haiku_swarm_empty",
+ "game": "empty",
+ "pid": "H05",
+ "answer": 48344,
+ "correct": true,
+ "cost": 0.0181964,
+ "wall": 131.33486199378967,
+ "n_agents": 1,
+ "max_depth": 0,
+ "n_ledger": 0,
+ "amendments": [],
+ "ledger": [],
+ "events": [
+  {
+   "t": 0.0,
+   "kind": "spawn",
+   "agent": 1,
+   "parent": null,
+   "budget": 50
+  },
+  {
+   "t": 131.33,
+   "kind": "finish",
+   "agent": 1,
+   "status": "done",
+   "turns": 1
+  }
+ ],
+ "agents": {
+  "1": {
+   "parent": null,
+   "depth": 0,
+   "brief": "",
+   "report": "I solved this by hand with a transfer-matrix count, without spawning children or posting to the ledger.\n\n**Method.** Scan positions i = 1..13. Before position i, the values i-3..i+2 form a window, and exactly 3 of its 6 values are already used. Values below i-3 are all used, and values above i+2 are unused. So the state is a 3-subset of {0,...,5} (offset from i-3), giving 20 states. Position i takes a value at offset k \u2208 {0,...,6} \\ {3} (the 3 excludes the fixed point), and value i-3 must be used by the end of position i.\n\n- If offset 0 is used, the state is {0}\u222aR and the next state is (R\u222a{k})\u22121 for k \u2208 {1,2,4,5,6}\\R.\n- If offset 0 is unused, the only option is k = 0, giving S\u22121.\n- Boundaries: the nonexistent values 0, \u22121, \u22122 start as used, and values above 13 are forbidden (k=6 forbidden at i=11, k\u2208{5,6} at i=12, k\u2208{4,5,6} at i=13). The start state is {0,1,2} and the required end state is {0,1,2}.\n\n**Computation.**\n- Forward DP through steps 1\u201310 (unrestricted) gives the state vector at time 11. Its total was checked at each step against the out-degree sums (e.g. totals 1, 3, 10, 35, 78, 194, 503, 1372, 3651, 9559, 24943).\n- Backward from the end state through steps 13, 12, 11 gives the number of completions from each time-11 state.\n- The answer is the dot product of the two vectors: 48344.\n\n**Validation.** The same framework with n = 4 gives 9 (the derangements of 4, all of which satisfy the bound), and with n = 5 gives 24. That matches the direct count: 44 derangements of 5, minus 20 that have a displacement of 4.\n\n**Labels.** The transition structure, the boundary handling, and the small-n checks are DERIVED. The n = 13 value is DERIVED from the hand DP, with the step totals checked against out-degree sums and the individual steps re-verified once. I have not independently cross-checked it by another method.\n\nANSWER: 48344",
+   "status": "done",
+   "turns": 1,
+   "cost": 0.0181964,
+   "out_tokens": 35912,
+   "max_prompt": 1924,
+   "children": [],
+   "t_start": 1.9073486328125e-06,
+   "t_end": 131.33481359481812,
+   "wallet_end": 49
+  }
+ },
+ "transcripts": {
+  "1": [
+   "I solved this by hand with a transfer-matrix count, without spawning children or posting to the ledger.\n\n**Method.** Scan positions i = 1..13. Before position i, the values i-3..i+2 form a window, and exactly 3 of its 6 values are already used. Values below i-3 are all used, and values above i+2 are unused. So the state is a 3-subset of {0,...,5} (offset from i-3), giving 20 states. Position i takes a value at offset k \u2208 {0,...,6} \\ {3} (the 3 excludes the fixed point), and value i-3 must be used by the end of position i.\n\n- If offset 0 is used, the state is {0}\u222aR and the next state is (R\u222a{k})\u22121 for k \u2208 {1,2,4,5,6}\\R.\n- If offset 0 is unused, the only option is k = 0, giving S\u22121.\n- Boundaries: the nonexistent values 0, \u22121, \u22122 start as used, and values above 13 are forbidden (k=6 forbidden at i=11, k\u2208{5,6} at i=12, k\u2208{4,5,6} at i=13). The start state is {0,1,2} and the required end state is {0,1,2}.\n\n**Computation.**\n- Forward DP through steps 1\u201310 (unrestricted) gives the state vector at time 11. Its total was checked at each step against the out-degree sums (e.g. totals 1, 3, 10, 35, 78, 194, 503, 1372, 3651, 9559, 24943).\n- Backward from the end state through steps 13, 12, 11 gives the number of completions from each time-11 state.\n- The answer is the dot product of the two vectors: 48344.\n\n**Validation.** The same framework with n = 4 gives 9 (the derangements of 4, all of which satisfy the bound), and with n = 5 gives 24. That matches the direct count: 44 derangements of 5, minus 20 that have a displacement of 4.\n\n**Labels.** The transition structure, the boundary handling, and the small-n checks are DERIVED. The n = 13 value is DERIVED from the hand DP, with the step totals checked against out-degree sums and the individual steps re-verified once. I have not independently cross-checked it by another method.\n\nANSWER: 48344"
+  ]
+ },
+ "expected": 48344
+}

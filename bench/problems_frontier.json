@@ -1,0 +1,14 @@
+[
+ {"id": "F01", "topic": "random walk hitting time on 5x5x5 grid", "kind": "very long computation",
+  "statement": "Consider the graph whose 125 vertices are the points (x, y, z) with x, y, z in {0, 1, 2, 3, 4}, where two points are adjacent when they differ by exactly 1 in exactly one coordinate. A particle starts at (0, 0, 0) and each second moves to a neighbor of its current vertex chosen uniformly at random. The expected number of seconds until it first reaches (4, 4, 4) can be written as m/n in lowest terms. Find m + n.",
+  "answer": 94677189},
+ {"id": "F02", "topic": "banded derangements, width 4", "kind": "very long computation",
+  "statement": "How many permutations p of {1, 2, ..., 15} satisfy 1 <= |p(i) - i| <= 4 for every i in {1, 2, ..., 15}?",
+  "answer": 8192120},
+ {"id": "F03", "topic": "half-plane self-avoiding walks", "kind": "very long enumeration",
+  "statement": "A self-avoiding walk of length 10 on the square lattice is a sequence of 11 distinct lattice points, starting at (0, 0), in which each point is obtained from the previous one by a unit step up, down, left, or right. How many self-avoiding walks of length 10 never visit a point with negative y-coordinate?",
+  "answer": 16225},
+ {"id": "F04", "topic": "totient summatory function", "kind": "insight + long computation",
+  "statement": "Compute phi(1) + phi(2) + ... + phi(2026), where phi is Euler's totient function (phi(n) is the number of integers k with 1 <= k <= n and gcd(k, n) = 1).",
+  "answer": 1247816}
+]

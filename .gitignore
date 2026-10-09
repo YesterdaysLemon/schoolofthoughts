@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+env.sh
+*.key
+.env
+school/runs/
+bench/results/*/vote_batch_id.txt

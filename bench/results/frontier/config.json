@@ -1,0 +1,20 @@
+{
+ "tag": "frontier",
+ "arms": "swarm",
+ "problems": "all",
+ "problem_file": "problems_frontier.json",
+ "vote_n": 50,
+ "swarm_budget": 50,
+ "game": "procedural",
+ "haiku_effort": "high",
+ "fable_effort": "xhigh",
+ "fable_max_tokens": 100000,
+ "haiku_max_tokens": 64000,
+ "cap": 45.0,
+ "mock": false,
+ "vote_batch": false,
+ "cutoff_policy": "continue",
+ "arm_suffix": "_v2",
+ "swarm_max_tokens": 48000,
+ "haiku_conc": 24
+}

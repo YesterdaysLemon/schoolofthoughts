@@ -1,0 +1,28 @@
+{
+ "arm": "fable",
+ "pid": "H04",
+ "sample": 0,
+ "answer": -1098,
+ "correct": true,
+ "cost": 4.06554,
+ "wall": 763.141428232193,
+ "usage": {
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 0,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "cache_creation_input_tokens": 0,
+  "cache_read_input_tokens": 0,
+  "inference_geo": "global",
+  "input_tokens": 209,
+  "output_tokens": 81269,
+  "output_tokens_details": {
+   "thinking_tokens": 79706
+  },
+  "service_tier": "standard"
+ },
+ "stop": "end_turn",
+ "text": "**Setting up.** Residues mod 7 of the vertices: $1,2,3,4,5,6,0,1,2,3$. Vertex 7 has weight $-3$ to everything; vertices $8,9,10$ are \"twins\" of $1,2,3$. The required sum is the hafnian of the weight matrix $A$.\n\n**Low-rank (Gaussian) representation.** Writing $C_{ab}=(ab \\bmod 7)-3$ on nonzero residues and using multiplicative characters of $\\mathbb{Z}_7^*$, one finds (and verifies entry by entry) \n$$\\tfrac12\\sum_{a,b}C_{ab}x_ax_b=\\tfrac14Z_0^2-\\tfrac7{12}Z_3^2-\\tfrac1{24}V^2+\\tfrac78R^2,$$\nwith $Z_0=\\sum x_a$, $Z_3=x_1+x_2+x_4-x_3-x_5-x_6$, $V=4x_1+x_2+5x_3-5x_4-x_5-4x_6$, $R=x_2+x_3-x_4-x_5$.\n\nHence by Wick's theorem, $\\operatorname{Haf}(A)=\\mathbb E\\big[\\prod_v L_v\\big]$ where, with independent formal Gaussians $u,\\eta_3,\\eta_V,\\eta_R$ of variances $\\tfrac12,-\\tfrac76,-\\tfrac1{12},\\tfrac74$:\n$$L_7=-6u,\\quad L_1=L_8=u+\\alpha,\\ L_6=u-\\alpha,\\quad L_2=L_9=u+\\beta,\\ L_5=u-\\beta,\\quad L_3=L_{10}=u+\\gamma,\\ L_4=u-\\gamma,$$\n$\\alpha=\\eta_3+4\\eta_V,\\ \\beta=\\eta_3+\\eta_V+\\eta_R,\\ \\gamma=-\\eta_3+5\\eta_V+\\eta_R$. Their covariance is\n$$\\Sigma=\\tfrac12\\begin{pmatrix}-5&-3&-1\\\\-3&1&5\\\\-1&5&-3\\end{pmatrix}.$$\n(I checked this against many small sub-hafnians computed directly, e.g. $\\operatorname{Haf}\\{1,\\dots,8\\}=-228$ both ways.)\n\n**Expansion.** \n$$\\prod_v L_v=-6u\\,(u^3+e_1u^2+e_2u+e_3)(u^6-E_1u^4+E_2u^2-E_3),$$\nwith $e_k$ the elementary symmetric functions of $\\alpha,\\beta,\\gamma$ and $E_k$ those of $\\alpha^2,\\beta^2,\\gamma^2$. Only odd powers $u^j$ survive:\n$$Q_9=1,\\ Q_7=e_2-E_1,\\ Q_5=E_2-e_2E_1,\\ Q_3=e_2E_2-E_3,\\ Q_1=-e_2E_3 .$$\nUsing $\\mathbb E[u^{2k}]=(2k-1)!!/2^k$:\n$$\\operatorname{Haf}(A)=-\\tfrac{6}{32}\\Big[945+210\\,\\mathbb E Q_7+60\\,\\mathbb E Q_5+24\\,\\mathbb E Q_3+16\\,\\mathbb E Q_1\\Big].$$\n\n**Gaussian moments** (Wick, cross-checked with Stein's identity):\n- $\\mathbb E Q_7=\\tfrac12+\\tfrac72=4$\n- $\\mathbb E[E_2]=\\tfrac{77}{4},\\ \\mathbb E[e_2E_1]=-\\tfrac{21}4\\Rightarrow \\mathbb E Q_5=\\tfrac{49}{2}$\n- $\\mathbb E[e_2E_2]=\\tfrac{945}{8},\\ \\mathbb E[E_3]=-\\tfrac{167}{8}\\Rightarrow \\mathbb E Q_3=139$\n- $\\mathbb E[e_2E_3]=\\tfrac{5607-2877-1995}{16}=\\tfrac{735}{16}\\Rightarrow \\mathbb E Q_1=-\\tfrac{735}{16}$\n\n**Total.**\n$$\\operatorname{Haf}(A)=-\\tfrac{3}{16}\\big[945+840+1470+3336-735\\big]=-\\tfrac{3}{16}\\cdot 5856=-3\\cdot 366=-1098.$$\n\nANSWER: -1098",
+ "thinking_chars": 0,
+ "expected": -1098
+}

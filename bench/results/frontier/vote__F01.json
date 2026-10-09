@@ -1,0 +1,1179 @@
+{
+ "arm": "haiku_vote",
+ "pid": "F01",
+ "answer": 94677189,
+ "correct": true,
+ "tie": false,
+ "n": 50,
+ "n_parsed": 49,
+ "distribution": [
+  [
+   94677189,
+   45
+  ],
+  [
+   22419,
+   4
+  ]
+ ],
+ "single_acc": 0.9,
+ "pass_at_n": true,
+ "cost": 0.33141425,
+ "wall": 33.309213638305664,
+ "errors": [],
+ "samples": [
+  {
+   "sample": 0,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0073712,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 29437,
+    "output_tokens_details": {
+     "thinking_tokens": 27936
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 1,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0064786999999999996,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 25867,
+    "output_tokens_details": {
+     "thinking_tokens": 24573
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 2,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00600195,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 23960,
+    "output_tokens_details": {
+     "thinking_tokens": 22542
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 3,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0075731999999999996,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 30245,
+    "output_tokens_details": {
+     "thinking_tokens": 28667
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 4,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00715645,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 28578,
+    "output_tokens_details": {
+     "thinking_tokens": 27221
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 5,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00798195,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 31880,
+    "output_tokens_details": {
+     "thinking_tokens": 30406
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 6,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0054692,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 21829,
+    "output_tokens_details": {
+     "thinking_tokens": 20412
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 7,
+   "answer": 22419,
+   "correct": false,
+   "cost": 0.00198745,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 7902,
+    "output_tokens_details": {
+     "thinking_tokens": 6635
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 8,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0050022,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 19961,
+    "output_tokens_details": {
+     "thinking_tokens": 18409
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 9,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.008302450000000001,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 33162,
+    "output_tokens_details": {
+     "thinking_tokens": 31653
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 10,
+   "answer": 22419,
+   "correct": false,
+   "cost": 0.00198545,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 7894,
+    "output_tokens_details": {
+     "thinking_tokens": 6338
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 11,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.007927449999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 31662,
+    "output_tokens_details": {
+     "thinking_tokens": 30538
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 12,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0077586999999999995,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 30987,
+    "output_tokens_details": {
+     "thinking_tokens": 29606
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 13,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.011227200000000001,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 44861,
+    "output_tokens_details": {
+     "thinking_tokens": 43386
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 14,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0060547,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 24171,
+    "output_tokens_details": {
+     "thinking_tokens": 22711
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 15,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0057656999999999995,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 23015,
+    "output_tokens_details": {
+     "thinking_tokens": 21643
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 16,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00814295,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 32524,
+    "output_tokens_details": {
+     "thinking_tokens": 31251
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 17,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00527345,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 21046,
+    "output_tokens_details": {
+     "thinking_tokens": 19592
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 18,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0059946999999999995,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 23931,
+    "output_tokens_details": {
+     "thinking_tokens": 22434
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 19,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00721045,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 28794,
+    "output_tokens_details": {
+     "thinking_tokens": 27250
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 20,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00583045,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 23274,
+    "output_tokens_details": {
+     "thinking_tokens": 21769
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 21,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0062467,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 24939,
+    "output_tokens_details": {
+     "thinking_tokens": 23388
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 22,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0053441999999999995,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 21329,
+    "output_tokens_details": {
+     "thinking_tokens": 19774
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 23,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0046827,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 18683,
+    "output_tokens_details": {
+     "thinking_tokens": 17331
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 24,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.007474199999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 29849,
+    "output_tokens_details": {
+     "thinking_tokens": 28666
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 25,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.008651200000000001,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 34557,
+    "output_tokens_details": {
+     "thinking_tokens": 33045
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 26,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0055549499999999995,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 22172,
+    "output_tokens_details": {
+     "thinking_tokens": 20812
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 27,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.006730949999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 26876,
+    "output_tokens_details": {
+     "thinking_tokens": 25459
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 28,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.006206199999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 24777,
+    "output_tokens_details": {
+     "thinking_tokens": 23367
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 29,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.008661700000000001,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 34599,
+    "output_tokens_details": {
+     "thinking_tokens": 33250
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 30,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0073501999999999994,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 29353,
+    "output_tokens_details": {
+     "thinking_tokens": 27943
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 31,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.007555699999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 30175,
+    "output_tokens_details": {
+     "thinking_tokens": 28781
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 32,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00767595,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 30656,
+    "output_tokens_details": {
+     "thinking_tokens": 29196
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 33,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0090662,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 36217,
+    "output_tokens_details": {
+     "thinking_tokens": 34747
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 34,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0050547,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 20171,
+    "output_tokens_details": {
+     "thinking_tokens": 18477
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 35,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00613395,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 24488,
+    "output_tokens_details": {
+     "thinking_tokens": 23094
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 36,
+   "answer": 22419,
+   "correct": false,
+   "cost": 0.0022841999999999997,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 9089,
+    "output_tokens_details": {
+     "thinking_tokens": 7607
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 37,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0058147,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 23211,
+    "output_tokens_details": {
+     "thinking_tokens": 21858
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 38,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00736995,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 29432,
+    "output_tokens_details": {
+     "thinking_tokens": 27923
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 39,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.00660595,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 26376,
+    "output_tokens_details": {
+     "thinking_tokens": 24883
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 40,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0100397,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 40111,
+    "output_tokens_details": {
+     "thinking_tokens": 38826
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 41,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0066416999999999995,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 26519,
+    "output_tokens_details": {
+     "thinking_tokens": 25272
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 42,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0040717,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 16239,
+    "output_tokens_details": {
+     "thinking_tokens": 14757
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 43,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0066762,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 26657,
+    "output_tokens_details": {
+     "thinking_tokens": 25259
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 44,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01601195,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 45,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0070342,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 28089,
+    "output_tokens_details": {
+     "thinking_tokens": 26638
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 46,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0063152,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 25213,
+    "output_tokens_details": {
+     "thinking_tokens": 23722
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 47,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0059897,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 23911,
+    "output_tokens_details": {
+     "thinking_tokens": 22244
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 48,
+   "answer": 22419,
+   "correct": false,
+   "cost": 0.0025756999999999998,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 10255,
+    "output_tokens_details": {
+     "thinking_tokens": 8968
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 49,
+   "answer": 94677189,
+   "correct": true,
+   "cost": 0.0050979499999999995,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 239,
+    "output_tokens": 20344,
+    "output_tokens_details": {
+     "thinking_tokens": 19159
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  }
+ ],
+ "texts": [
+  "## Answer\n\n**94677189**\n\n## Approach\n\n**Step 1: Reduce to effective resistance.** For a graph with $m$ edges and degrees $d(x)$, Tetali's formula gives\n$$E_a T_b = \\tfrac12\\sum_x d(x)\\,[R_{ab} + R_{bx} - R_{ax}].$$\nThe map $x \\mapsto (4-x,4-y,4-z)$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$ and preserving degrees. This makes $\\sum_x d(x)R_{bx} = \\sum_x d(x)R_{ax}$, so the last two terms cancel and $E_aT_b = m\\,R_{ab}$. The grid has $m = 3\\cdot 4\\cdot 25 = 300$ edges.\n\n(Check: for the cube, this gives $12\\cdot\\tfrac56 = 10$, the known antipodal hitting time.)\n\n**Step 2: Spectral formula for $R_{ab}$.** The Laplacian of the grid is a Cartesian product of three copies of the path $P_5$. Let $u_k$ be the orthonormal eigenvectors of $P_5$, with $f_k = u_k(0)$ and $g_k = u_k(4) = (-1)^k f_k$, and eigenvalues $\\lambda_k = 2-2\\cos(k\\pi/5)$. Then\n$$R_{ab} = \\sum_{K\\neq 0} \\frac{(f_K - g_K)^2}{\\mu_K}, \\qquad \\mu_K = \\lambda_{k_1}+\\lambda_{k_2}+\\lambda_{k_3}.$$\nSince $f_K - g_K = f_K(1-(-1)^{\\sum k_j})$, only triples with odd $k_1+k_2+k_3$ contribute, each with weight $4f_K^2$. (I checked this method on the cube, giving $5/6$, and on the $3\\times3$ grid, giving $3/2$.)\n\n**Step 3: Values.** Let $r=\\sqrt5$, and $W_k = 20 f_k^2$:\n- $W_0=4$, $W_1=5+r$, $W_2=3+r$, $W_3=5-r$, $W_4=3-r$ (sum $=20$).\n- $L_1=\\tfrac{3-r}{2}$, $L_2=\\tfrac{5-r}{2}$, $L_3=\\tfrac{3+r}{2}$, $L_4=\\tfrac{5+r}{2}$.\n\nThen $R_{ab} = \\frac{1}{2000}\\sum_{\\sum k\\text{ odd}} \\frac{\\prod W_{k_j}}{\\mu_K}$.\n\n**Step 4: Sum over triples.**\n- *All three indices odd* (values in $\\{1,3\\}$): the contributions are $\\frac{1000}{3}$ from the $(1,1,1)$ and $(3,3,3)$ terms together, and $\\frac{3000}{19}$ from the $(1,1,3)$ and $(1,3,3)$ terms together. Total $\\frac{28000}{57}$.\n- *Exactly one index odd*: the sum equals $3\\cdot 2a$, where $a$ is the rational part of $W_1 T_1$ and $T_1 = \\sum_{\\text{even pairs}} P/(L_1+E)$. Evaluating the six even-pair groups gives\n$$a = 180 + \\tfrac{960}{11} + \\tfrac{980}{31} + \\tfrac{580}{41} = \\tfrac{4376500}{13981},$$\nso this part totals $\\frac{26259000}{13981}$.\n\nAdding the two parts and dividing by 2000:\n$$R_{ab} = \\frac{26259}{27962} + \\frac{14}{57} = \\frac{1888231}{1593834} \\approx 1.18471.$$\nThe fraction is in lowest terms (the numerator is not divisible by 2, 3, 11, 19, 31 or 41).\n\n**Step 5: Expected time.**\n$$E = 300\\cdot\\frac{1888231}{1593834} = \\frac{94411550}{265639}.$$\nHere $265639 = 11\\cdot19\\cdot31\\cdot41$, and the numerator is $50\\cdot1888231$, so the fraction is reduced.\n\nTherefore $m+n = 94411550 + 265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\nUse the commute-time identity with symmetry. The map $v \\mapsto (4,4,4) - v$ is a graph automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_a T_b = E_b T_a$. Since $E_aT_b + E_bT_a = 2mR_{ab}$, we get $E_aT_b = mR_{ab}$, where $m$ is the number of edges and $R_{ab}$ is the effective resistance.\n\n**Edges:** each direction has $25$ lines of $4$ edges, so $m = 300$.\n\n**Spectral formula for $R_{ab}$:** The path $P_5$ has normalized Laplacian eigenvectors $\\varphi_k(x)$ with $\\varphi_k(4)=(-1)^k\\varphi_k(0)$. Let $w_k=\\varphi_k(0)^2$ and $\\mu_k$ the eigenvalues. The product eigenvectors on the 3D grid give\n$$R_{ab}=4\\sum_{i+j+k\\ \\text{odd}}\\frac{w_iw_jw_k}{\\mu_i+\\mu_j+\\mu_k}.$$\n\nWith $s=\\sqrt5$, $p=3+s$, $q=3-s$ (so $p+q=6$, $pq=4$):\n\n- $a_k=20w_k$: $a_0=4,\\ a_1=2+p,\\ a_2=p,\\ a_3=2+q,\\ a_4=q$\n- $b_k=2\\mu_k$: $b_0=0,\\ b_1=q,\\ b_2=2+q,\\ b_3=p,\\ b_4=2+p$\n\nThen $E = 300R = \\tfrac{3}{10}S$, where $S=\\sum_{\\text{odd}} \\dfrac{a_ia_ja_k}{b_i+b_j+b_k}$ over the 62 ordered triples with odd index sum.\n\n## Evaluating $S$\n\nPairing each term with its Galois conjugate ($s\\to -s$), $S$ is a sum of traces $\\mathrm{Tr}(x)=x+\\bar x$ with multiplicities:\n\n| Index multiset | Mult. | Trace | Contribution |\n|---|---|---|---|\n| $\\{1,1,1\\}$ | 1 | $500/3$ | $500/3$ |\n| $\\{1,1,3\\}$ | 3 | $500/19$ | $1500/19$ |\n| $\\{0,0,1\\}$ | 3 | $160$ | $480$ |\n| $\\{0,1,2\\}$ | 6 | $480/11$ | $2880/11$ |\n| $\\{0,1,4\\}$ | 6 | $10$ | $60$ |\n| $\\{1,2,2\\}$ | 3 | $980/31$ | $2940/31$ |\n| $\\{1,2,4\\}$ | 6 | $140/41$ | $840/41$ |\n| $\\{1,4,4\\}$ | 3 | $300/41$ | $900/41$ |\n\nSumming (with $S\\approx 1184.71$ as a check):\n$$S = \\frac{944115500}{796917},\\qquad 796917 = 3\\cdot 11\\cdot 19\\cdot 31\\cdot 41.$$\n\nThen\n$$E=\\frac{3}{10}S=\\frac{94411550}{265639},\\qquad 265639 = 11\\cdot19\\cdot31\\cdot41.$$\n\nChecking divisibility, the numerator $94411550$ is not divisible by $11$, $19$, $31$, or $41$, so the fraction is in lowest terms. (Numerically $E\\approx 355.4$, which is consistent with the rough Nash-Williams lower bound on $R$.)\n\nTherefore\n$$m+n = 94411550+265639 = 94677189.$$\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** For a graph with $E$ edges, Tetali's formula gives\n$$H(a,b)=\\tfrac12\\sum_v d(v)\\,[R(a,b)+R(b,v)-R(a,v)].$$\nThe central inversion $\\sigma: v\\mapsto (4,4,4)-v$ is an automorphism that swaps $a=(0,0,0)$ and $b=(4,4,4)$ and preserves degrees. So $\\sum_v d(v)R(b,v)=\\sum_v d(v)R(a,v)$, and those terms cancel. Since $\\sum_v d(v)=2E$ with $E=300$,\n$$H(a,b)=E\\cdot R(a,b)=300\\,R(a,b).$$\n\n**Step 2: Spectral formula for $R$.** The Laplacian of the grid is a Kronecker sum of path Laplacians $P_5$. The path eigenvalues are $\\lambda_k=2-2\\cos(k\\pi/5)$ with eigenvectors $\\varphi_k(i)\\propto\\cos(k\\pi(2i+1)/10)$. Since $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, only triples with odd $K=k_1+k_2+k_3$ contribute, and\n$$R=\\frac{1}{1000}\\sum_{K\\text{ odd}}\\frac{p_{k_1}p_{k_2}p_{k_3}}{\\mu_{k_1}+\\mu_{k_2}+\\mu_{k_3}},$$\nwhere $\\mu_k=2\\lambda_k$ and $p_k=20\\varphi_k(0)^2$:\n\n| $k$ | $\\mu_k$ | $p_k$ |\n|---|---|---|\n| 0 | 0 | 4 |\n| 1 | $3-\\alpha$ | $5+\\alpha$ |\n| 2 | $5-\\alpha$ | $3+\\alpha$ |\n| 3 | $3+\\alpha$ | $5-\\alpha$ |\n| 4 | $5+\\alpha$ | $3-\\alpha$ |\n\nwith $\\alpha=\\sqrt5$. (Check: the same method gives the known value $5/6$ for the body diagonal of a unit cube, and gives $4$ for a 1D path of length 4.)\n\n**Step 3: Evaluate.** There are 16 multisets $\\{k_1,k_2,k_3\\}$ with odd sum, with orbit sizes totalling 62. Pairing each term with its Galois conjugate ($\\alpha\\to-\\alpha$) makes every pair sum rational. The contributions are:\n\n| Pair | Contribution |\n|---|---|\n| $(0,0,1)$ & $(0,0,3)$ | $480$ |\n| $(0,1,2)$ & $(0,3,4)$ | $2880/11$ |\n| $(0,1,4)$ & $(0,2,3)$ | $60$ |\n| $(1,1,1)$ & $(3,3,3)$ | $500/3$ |\n| $(1,1,3)$ & $(1,3,3)$ | $1500/19$ |\n| $(1,2,2)$ & $(3,4,4)$ | $2940/31$ |\n| $(1,2,4)$ & $(2,3,4)$ | $840/41$ |\n| $(1,4,4)$ & $(2,2,3)$ | $900/41$ |\n\nSumming with common denominator $796917 = 3\\cdot11\\cdot19\\cdot31\\cdot41$ gives\n$$S=\\frac{944115500}{796917}\\approx 1184.7,\\qquad R=\\frac{S}{1000}=\\frac{1888231}{1593834}.$$\n\n**Step 4: Hitting time.**\n$$H=300R=\\frac{300\\cdot 1888231}{1593834}=\\frac{94411550}{265639}.$$\nThe denominator is $11\\cdot19\\cdot31\\cdot41$, and the numerator $50\\cdot1888231$ is not divisible by any of these primes, so the fraction is in lowest terms.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\nFor a simple random walk on a connected graph with $m$ edges, the commute time satisfies $E_aT_b + E_bT_a = 2mR_{\\text{eff}}(a,b)$. The map $(x,y,z)\\mapsto(4-x,4-y,4-z)$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_aT_b = E_bT_a$ and\n\n$$E_aT_b = mR_{\\text{eff}}(a,b).$$\n\nHere $m = 3\\cdot 4\\cdot 25 = 300$, so the task reduces to computing $R_{\\text{eff}}$ between opposite corners of the $5\\times5\\times5$ grid.\n\n## Spectral formula\n\nThe grid is the product $P_5^{\\,3}$. The path $P_5$ has normalized eigenvectors $\\varphi_k$ with eigenvalues $\\lambda_k = 2-2\\cos(\\pi k/5)$, and $\\varphi_k(4)=(-1)^k\\varphi_k(0)$. Writing $c_k=\\varphi_k(0)^2$, one finds $c_0=\\tfrac15$ and $c_k=\\tfrac{1+\\cos(\\pi k/5)}{5}$ for $k\\ge1$.\n\nFor a product eigenvector $(i,j,k)$, the potential difference between $a$ and $b$ is $2\\varphi_i(0)\\varphi_j(0)\\varphi_k(0)$ when $i+j+k$ is odd, and $0$ otherwise. Hence\n\n$$R_{\\text{eff}}=\\sum_{i+j+k\\text{ odd}}\\frac{4c_ic_jc_k}{\\lambda_i+\\lambda_j+\\lambda_k}.$$\n\nRescaling with $r=\\sqrt5$, $e_k=4\\cdot 5c_k$ and $g_k=4\\cos(\\pi k/5)$ gives\n\n$$R_{\\text{eff}}=\\frac{1}{1000}\\sum_{i+j+k\\text{ odd}}\\frac{e_ie_je_k}{12-(g_i+g_j+g_k)},$$\n\nwith\n\n| $k$ | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| $e_k$ | 4 | $5+r$ | $3+r$ | $5-r$ | $3-r$ |\n| $g_k$ | 4 | $1+r$ | $-1+r$ | $1-r$ | $-1-r$ |\n\n(I checked this normalization on $P_5$, where it gives $R=4$, and on $Q_3$, where it gives $5/6$.)\n\n## Evaluation\n\nThe odd-sum triples split into two cases.\n\n**Exactly one odd index** (54 ordered triples). The contribution is $3\\sum_{o\\in\\{1,3\\}}\\sum_{a,b\\in\\{0,2,4\\}}$. The $o=3$ terms are the $r\\mapsto -r$ conjugates of the $o=1$ terms, so this equals $6\\,\\mathrm{Rat}(X_1)$, where\n$$\\mathrm{Rat}(X_1)=90+\\frac{480}{11}+\\frac{490}{31}+\\frac{290}{41}.$$\n\n**All three indices odd** (8 ordered triples). Grouping by type gives\n$$\\frac{500}{3}+\\frac{1500}{19}.$$\n\nSo the total is\n$$\\sum = 540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}+\\frac{500}{3}+\\frac{1500}{19},$$\nand $R_{\\text{eff}}=\\sum/1000\\approx 1.18471$.\n\nThen $E = 300R_{\\text{eff}} = \\tfrac{3}{10}\\sum$:\n$$E = 212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}.$$\n\nOver the common denominator $L=11\\cdot19\\cdot31\\cdot41=265639$, the numerator is\n$$212L+864\\cdot24149+882\\cdot8569+522\\cdot6479+450\\cdot13981 = 94{,}411{,}550.$$\n\nSo $E = \\dfrac{94411550}{265639}\\approx 355.41$.\n\n**Reduced form.** The denominator's prime factors are 11, 19, 31, 41. The numerator leaves remainders 2, \u22121, 27, \u221211 modulo these, respectively, so the fraction is in lowest terms.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Reduce to effective resistance.** The map $(x,y,z)\\mapsto(4-x,4-y,4-z)$ is an automorphism swapping $(0,0,0)$ and $(4,4,4)$, so $E_a T_b = E_b T_a$. The commute-time identity $E_aT_b + E_bT_a = 2|E|\\,R_{ab}$ then gives $E_aT_b = |E|\\,R_{ab}$. The grid has $3\\cdot 100 = 300$ edges, so the answer is $300R$, where $R$ is the effective resistance between opposite corners.\n\n**Spectral formula.** The Laplacian of the grid is a Kronecker sum of three copies of the $P_5$ Laplacian. Its eigenvalues are $\\mu_{k_1}+\\mu_{k_2}+\\mu_{k_3}$, with $\\mu_k = 2-2\\cos(\\pi k/5)$. The eigenvectors are $\\cos(\\pi k(2x+1)/10)$, normalized. Since $v_k(4)=(-1)^k v_k(0)$, the potential difference between the corners vanishes unless $k_1+k_2+k_3$ is odd. Writing $s=\\sqrt5$:\n\n- Weights $w_k$ (with $\\prod w = \\prod a/8000$): $a_0=4$, $a_1=5+s$, $a_2=3+s$, $a_3=5-s$, $a_4=3-s$.\n- Eigenvalues $\\mu_k = m_k/2$: $m_0=0$, $m_1=3-s$, $m_2=5-s$, $m_3=3+s$, $m_4=5+s$.\n\nThis gives\n$$R=\\frac{1}{1000}S,\\qquad S=\\sum_{\\substack{(k_1,k_2,k_3)\\\\ \\text{sum odd}}}\\frac{a_{k_1}a_{k_2}a_{k_3}}{m_{k_1}+m_{k_2}+m_{k_3}}.$$\n\n**Check of the method.** The same formula applied to the 2\u00d72\u00d72 cube gives $5/6$, the known value.\n\n**Evaluating $S$.** There are 62 ordered odd-sum triples. Grouping them by multiset and pairing each term with its Galois conjugate ($s\\to -s$) makes the irrational parts cancel. The paired sums are:\n\n- $480$ (from $\\{1,0,0\\}$), $60$ (from $\\{1,0,4\\}$ and $\\{3,0,2\\}$)\n- $\\frac{2880}{11}$, $\\frac{2940}{31}$, $\\frac{840}{41}$, $\\frac{900}{41}$\n- $\\frac{500}{3}$ (from $\\{1,1,1\\}$ and $\\{3,3,3\\}$), $\\frac{1500}{19}$ (from $\\{1,1,3\\}$ and $\\{1,3,3\\}$)\n\nSo\n$$S = 540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}+\\frac{500}{3}+\\frac{1500}{19}\\approx 1184.71.$$\n\n**Expected time.** $E = 300R = \\frac{3S}{10}$:\n$$E = 212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}\\approx 355.41.$$\n\nOver the common denominator $L = 11\\cdot19\\cdot31\\cdot41 = 265639$, the numerator is\n$$212L + 864\\cdot 24149 + 882\\cdot 8569 + 522\\cdot 6479 + 450\\cdot 13981 = 94{,}411{,}550.$$\n\n**Reduced form.** Checking residues shows the numerator is not divisible by 11, 19, 31, or 41, so the fraction is in lowest terms:\n$$E=\\frac{94411550}{265639}.$$\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\nThe expected hitting time is found from effective resistance. The map $(x,y,z)\\mapsto(4-x,4-y,4-z)$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_a[T_b]=E_b[T_a]$. The commute-time identity $E_a T_b + E_b T_a = 2m R_{ab}$ then gives $E_a[T_b] = mR_{ab}$. The graph has $m = 3\\cdot 100 = 300$ edges, so the answer is $300R_{ab}$.\n\n## Spectral computation of $R_{ab}$\n\nThe Laplacian of $P_5^{\\,3}$ is a sum of three commuting copies of the path Laplacian. For $P_5$, the orthonormal eigenvectors are $v_k(j)=c_k\\cos\\!\\big(\\tfrac{\\pi k(2j+1)}{10}\\big)$, with $c_0^2=\\tfrac15$, $c_k^2=\\tfrac25$ for $k\\ge1$, and eigenvalues $\\mu_k = 2-2\\cos(\\pi k/5)$.\n\nSince $v_k(4)=(-1)^k v_k(0)$, the difference $u(a)-u(b)$ vanishes unless $K=k_1+k_2+k_3$ is odd, in which case it equals $2u(a)$. Hence\n$$R_{ab}=\\sum_{K\\text{ odd}} \\frac{4\\,\\prod_i w_{k_i}}{\\sum_i \\mu_{k_i}},\\qquad w_k=c_k^2\\cos^2\\!\\tfrac{\\pi k}{10}.$$\n\nWriting $\\alpha=\\sqrt5$, set $\\omega_k=20w_k$ and $\\nu_k=2\\mu_k$:\n\n| $k$ | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| $\\omega_k$ | 4 | $5+\\alpha$ | $3+\\alpha$ | $5-\\alpha$ | $3-\\alpha$ |\n| $\\nu_k$ | 0 | $3-\\alpha$ | $5-\\alpha$ | $3+\\alpha$ | $5+\\alpha$ |\n\nThis gives $R_{ab} = \\frac{S}{1000}$ with $S=\\sum_{K\\text{ odd}}\\frac{\\prod\\omega_{k_i}}{\\sum\\nu_{k_i}}$. (The prefactor was checked on $P_5$, where it gives $R=4$, and the same method gives $5/6$ for $Q_3$.)\n\n**Case A: exactly one odd index** (3 positions \u00d7 2 odd values \u00d7 9 ordered even pairs). Summing over the even pairs and simplifying with $1/(a+b\\alpha)=(a-b\\alpha)/(a^2-5b^2)$, the irrational parts cancel:\n$$S_A = 3\\left(180+\\frac{960}{11}+\\frac{980}{31}+\\frac{580}{41}\\right).$$\n\n**Case B: all three indices odd.** Pairing conjugate terms:\n$$S_B=\\frac{500}{3}+\\frac{1500}{19}.$$\n\nSo\n$$S = 540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}+\\frac{500}{3}+\\frac{1500}{19}\\approx 1184.71,$$\nwhich gives $R_{ab}\\approx 1.185$, a plausible value.\n\n## Expected time\n\n$$E = 300R_{ab}=\\frac{3}{10}S = 212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}\\approx 355.41.$$\n\nOver the common denominator $11\\cdot31\\cdot41\\cdot19 = 265639$, the numerator is\n$$212\\cdot265639+864\\cdot24149+882\\cdot8569+522\\cdot6479+450\\cdot13981 = 94{,}411{,}550.$$\n\nEach prime in the denominator divides exactly one term with a numerator nonzero mod that prime, so the fraction is in lowest terms:\n$$E=\\frac{94411550}{265639}.$$\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** For a random walk on a graph with $m$ edges, Tetali's formula gives\n$$H(a,b)=\\tfrac12\\sum_z d(z)\\,[R(a,b)+R(b,z)-R(a,z)].$$\nThe central reflection $v\\mapsto (4,4,4)-v$ swaps $a=(0,0,0)$ and $b=(4,4,4)$ and preserves degrees, so $\\sum_z d(z)R(b,z)=\\sum_z d(z)R(a,z)$. Hence $H(a,b)=m\\,R(a,b)$. Here $m=3\\cdot 4\\cdot 5\\cdot 5=300$, so the answer is $300R$, where $R$ is the corner-to-corner resistance.\n\n**Step 2: Spectral formula.** The grid Laplacian is a sum of three copies of the path $P_5$ Laplacian. Using the orthonormal path eigenvectors $\\varphi_i(x)\\propto\\cos\\frac{\\pi i(2x+1)}{10}$ with eigenvalues $\\lambda_i=2-2\\cos\\frac{\\pi i}{5}$, and noting $\\varphi_i(4)=(-1)^i\\varphi_i(0)$, we get\n$$R=\\sum_{\\substack{(i,j,k)\\neq 0\\\\ i+j+k\\text{ odd}}}\\frac{4\\,w_iw_jw_k}{\\lambda_i+\\lambda_j+\\lambda_k},\\qquad w_i=\\varphi_i(0)^2.$$\nWith $s=\\sqrt5$, $w_i=W_i/20$ and $\\lambda_i=L_i/2$, where\n- $(W_0,L_0)=(4,0)$, $(W_1,L_1)=(5+s,3-s)$, $(W_2,L_2)=(3+s,5-s)$, $(W_3,L_3)=(5-s,3+s)$, $(W_4,L_4)=(3-s,5+s)$.\n\nThis gives $300R = \\frac{3}{10}\\Sigma$, where $\\Sigma=\\sum W_iW_jW_k/(L_i+L_j+L_k)$ over ordered odd-sum triples.\n\n**Sanity check.** The same formula gives $R=5/6$ for the unit cube, and $mR=10$ matches a direct hitting-time computation on the 3-cube.\n\n**Step 3: Evaluate the sum.** There are 62 odd-sum triples, split into two cases.\n\n*All three indices odd (8 triples):* \n$$\\frac{500}{3}+\\frac{1500}{19}=\\frac{14000}{57}.$$\n\n*Exactly one odd index (54 triples):* The sum equals $3T$, where $T=2a$ and $a$ is the rational part of $T_1$ (the $o=1$ contribution, with $o=3$ its Galois conjugate). Computing the six even-pair contributions and taking rational parts gives\n$$a=90+\\frac{480}{11}+\\frac{490}{31}+\\frac{290}{41}.$$\nSo this case contributes $6a=540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}$.\n\n**Step 4: Assemble.** Multiplying $\\Sigma$ by $\\frac{3}{10}$:\n$$H=162+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{1400}{19}\\approx 355.41.$$\n\nOver the common denominator $D=11\\cdot 19\\cdot 31\\cdot 41=265639$, the numerator is\n$$N=94{,}411{,}550,\\qquad H=\\frac{94{,}411{,}550}{265{,}639}.$$\n\n**Step 5: Reduce.** Checking each prime factor of $D$ shows none divides $N$ (the residues mod 11, 19, 31, 41 are 2, 18, 27, 30, all nonzero), so the fraction is in lowest terms.\n\nTherefore $m+n = 94{,}411{,}550+265{,}639 = 94{,}677{,}189$.\n\nANSWER: 94677189",
+  "## Approach\n\nFor a random walk on a graph with $m$ edges, Tetali's formula gives the expected hitting time:\n$$E_a[T_b] = \\tfrac12 \\sum_x d(x)\\left(R_{ab} + R_{bx} - R_{ax}\\right),$$\nwhere $R$ is effective resistance and $d(x)$ is the degree.\n\n**Symmetry step.** The map $\\sigma: (x,y,z)\\mapsto(4-x,4-y,4-z)$ is a graph automorphism that swaps $a=(0,0,0)$ and $b=(4,4,4)$. Since $R$ is invariant under automorphisms, $\\sum_x d(x)R_{bx} = \\sum_x d(x)R_{ax}$, so those terms cancel and\n$$E_a[T_b] = m\\,R_{ab}.$$\n\n**Edge count.** Each direction has $4\\cdot 5\\cdot 5 = 100$ edges, so $m = 300$.\n\n**Effective resistance.** The Laplacian of $P_5^{\\,3}$ is a Cartesian sum, so its pseudoinverse can be expanded using the path eigenvectors $v_k(i)=c_k\\cos\\frac{k\\pi(i+1/2)}{5}$ with eigenvalues $\\lambda_k = 2-2\\cos\\frac{k\\pi}{5}$.\n\nFor the path, $v_k(0)-v_k(4)=c_k\\cos\\frac{k\\pi}{10}\\,(1-(-1)^k)$, which vanishes for even $k$. So only $k\\in\\{1,3\\}$ contribute, with weights\n- $A = w_1 = \\frac{5+\\sqrt5}{5}$, $\\lambda_1 = p = \\frac{3-\\sqrt5}{2}$,\n- $B = w_3 = \\frac{5-\\sqrt5}{5}$, $\\lambda_3 = q = \\frac{3+\\sqrt5}{2}$.\n\nUseful facts: $A+B=2$, $AB=\\frac45$, $pq=1$, $p+q=3$. (Check: $Aq+Bp=4$ reproduces the 1D resistance $4$ of $P_5$.)\n\nThen\n$$R_{ab}=\\sum_{k,l,m\\in\\{1,3\\}}\\frac{w_kw_lw_m}{\\lambda_k+\\lambda_l+\\lambda_m}\n=\\frac{A^3q}{3}+\\frac{B^3p}{3}+\\frac{3A^2B}{p+3}+\\frac{3AB^2}{q+3}.$$\n\nEvaluating with $s=\\sqrt5$:\n- $\\frac{A^3q+B^3p}{3} = \\frac{(200+88s)+(200-88s)}{150} = \\frac{8}{3}$.\n- Using $\\frac{1}{p+3}=\\frac{9+s}{38}$ and $\\frac{1}{q+3}=\\frac{9-s}{38}$: $\\frac{3A^2B}{p+3}+\\frac{3AB^2}{q+3} = \\frac{(300+84s)+(300-84s)}{475} = \\frac{24}{19}$.\n\nSo\n$$R_{ab}=\\frac83+\\frac{24}{19}=\\frac{224}{57}.$$\n\nNumerical checks of each term agree with the decimal values.\n\n**Hitting time.**\n$$E_a[T_b] = 300\\cdot\\frac{224}{57} = \\frac{67200}{57} = \\frac{22400}{19}.$$\n\nSince $22400 = 2^7\\cdot 5^2\\cdot 7$ is coprime to $19$, the fraction is in lowest terms. Therefore $m+n = 22400+19 = 22419$.\n\nANSWER: 22419",
+  "## Approach\n\n**Reduce to effective resistance.** The graph has $|E| = 3\\cdot 5\\cdot 5\\cdot 4 = 300$ edges. The map $x \\mapsto 4-x$ (applied to every coordinate) swaps $(0,0,0)$ and $(4,4,4)$, so $E_a T_b = E_b T_a$. Since the commute time is $E_aT_b + E_bT_a = 2|E|R_{ab}$, we get\n$$E_a T_b = 300\\,R_{ab}.$$\n\n**Spectral formula.** The graph is $P_5 \\times P_5 \\times P_5$. The path Laplacian $P_5$ has eigenvalues $\\lambda_k = 2-2\\cos(k\\pi/5)$ with eigenvectors $u_k(j)\\propto\\cos(k\\pi(2j+1)/10)$. Since $u_k(4) = (-1)^k u_k(0)$, the resistance is\n$$R = \\sum_{(k_1,k_2,k_3)\\neq 0,\\ \\text{odd sum}} \\frac{4\\,w_{k_1}w_{k_2}w_{k_3}}{\\lambda_{k_1}+\\lambda_{k_2}+\\lambda_{k_3}}, \\qquad w_k = u_k(0)^2.$$\n\nWrite $a=\\sqrt5$. With $\\omega_k = 20w_k$ and $\\mu_k = 2\\lambda_k$:\n\n| $k$ | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| $\\omega_k$ | 4 | $5+a$ | $3+a$ | $5-a$ | $3-a$ |\n| $\\mu_k$ | 0 | $3-a$ | $5-a$ | $3+a$ | $5+a$ |\n\nThis gives $R = \\frac{1}{1000}S$, where $S = \\sum \\frac{\\prod\\omega}{\\sum\\mu}$ over odd-sum triples, so $E = 0.3\\,S$.\n\nI checked this normalization on the 2-vertex path and on the cube $Q_3$, where it gives $R=5/6$ and the known antipodal hitting time 10.\n\n**Odd-sum triples.** The sum has odd parity when it has one or three indices in $\\{1,3\\}$.\n\n*Case A (all three in $\\{1,3\\}$):* the rational parts of $\\frac{(5+a)^3}{9-3a}$ and $\\frac{20(5+a)}{9-a}$ are $\\frac{250}{3}$ and $\\frac{250}{19}$. With conjugates and multiplicities,\n$$S_A = \\frac{500}{3} + \\frac{1500}{19}.$$\n\n*Case B (one index in $\\{1,3\\}$, two in $\\{0,2,4\\}$):* the rational parts for odd index 1 are\n- $\\{1,0,0\\}$ (\u00d73): $80$\n- $\\{1,2,2\\}$ (\u00d73): $\\frac{490}{31}$\n- $\\{1,4,4\\}$ (\u00d73): $\\frac{150}{41}$\n- $\\{1,0,2\\}$ (\u00d76): $\\frac{240}{11}$\n- $\\{1,0,4\\}$ (\u00d76): $5$\n- $\\{1,2,4\\}$ (\u00d76): $\\frac{70}{41}$\n\nSumming gives $T_1 = 270 + \\frac{1470}{31} + \\frac{870}{41} + \\frac{1440}{11}$. The index-3 terms are the Galois conjugates, so Case B contributes $2T_1$.\n\n**Total.**\n$$S = \\frac{500}{3} + \\frac{1500}{19} + 540 + \\frac{2940}{31} + \\frac{1740}{41} + \\frac{2880}{11}$$\n$$E = \\tfrac{3}{10}S = 212 + \\frac{450}{19} + \\frac{882}{31} + \\frac{522}{41} + \\frac{864}{11} \\approx 355.4.$$\n\n**Combine.** Over the common denominator $265639 = 11\\cdot19\\cdot31\\cdot41$:\n- $\\frac{450}{19} + \\frac{882}{31} + \\frac{522}{41} + \\frac{864}{11} = \\frac{38096082}{265639}$\n- $212 = \\frac{56315468}{265639}$\n\nSo $E = \\frac{94411550}{265639}$. Each prime in the denominator fails to divide its own numerator term, so the fraction is in lowest terms.\n\nTherefore $m+n = 94411550 + 265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** Tetali's formula gives $H(a,b)=\\tfrac12\\sum_z d(z)\\,[R(a,b)+R(b,z)-R(a,z)]$. Let $a=(0,0,0)$, $b=(4,4,4)$, and let $\\sigma(x,y,z)=(4-x,4-y,4-z)$. Since $\\sigma$ swaps $a$ and $b$ and preserves degrees, $\\sum_z d(z)R(a,z)=\\sum_z d(z)R(b,z)$, so $H(a,b)=m\\,R(a,b)$. The grid has $m=3\\cdot 4\\cdot 25=300$ edges, so $E=300\\,R$.\n\n(Checked on $Q_3$: $m=12$, $R=5/6$, giving $10$, which matches a direct computation.)\n\n**Step 2: Spectral formula for $R$.** The path $P_5$ has eigenvalues $\\lambda_k=2-2\\cos(k\\pi/5)$ with eigenvectors $\\cos(k\\pi(2i+1)/10)$, and $u_k(4)=(-1)^k u_k(0)$. Writing $c_k=u_k(0)^2\\cdot 5$ (so $c_0=1$, $c_k=1+\\cos(k\\pi/5)$ for $k\\ge1$), the product-graph resistance is\n$$R=\\frac{4}{125}\\sum_{\\substack{(k_1,k_2,k_3)\\\\ k_1+k_2+k_3\\ \\text{odd}}}\\frac{c_{k_1}c_{k_2}c_{k_3}}{\\lambda_{k_1}+\\lambda_{k_2}+\\lambda_{k_3}}=\\frac{4}{125}T.$$\n(Checked on $P_5$ alone, giving 4, and on $Q_3$, giving $5/6$.)\n\n**Step 3: Exact values in $\\mathbb{Q}(\\sqrt5)$, with $s=\\sqrt5$.**\n- $\\lambda_1=\\tfrac{3-s}{2}$, $\\lambda_3=\\tfrac{3+s}{2}$, $\\lambda_2=\\tfrac{5-s}{2}$, $\\lambda_4=\\tfrac{5+s}{2}$\n- $c_1=\\tfrac{5+s}{4}$, $c_3=\\tfrac{5-s}{4}$, $c_2=\\tfrac{3+s}{4}$, $c_4=\\tfrac{3-s}{4}$\n\n**Case A (one odd index, two even):** $T_A=3\\,[c_1G(\\lambda_1)+c_3G(\\lambda_3)]$, where\n$$G(\\mu)=\\frac1\\mu+\\frac{2c_2}{\\mu+\\lambda_2}+\\frac{2c_4}{\\mu+\\lambda_4}+\\frac{c_2^2}{\\mu+2\\lambda_2}+\\frac{c_4^2}{\\mu+2\\lambda_4}+\\frac{1}{2(\\mu+5)}.$$\nComputing $G(\\lambda_1)=G_r+G_s\\sqrt5$ gives $G_r+G_s=\\tfrac{218825}{55924}$, so $T_A=\\tfrac{15}{2}\\cdot\\tfrac{218825}{55924}=\\tfrac{3282375}{111848}$.\n\n**Case B (three odd indices):**\n- $\\{1,1,1\\}$ and $\\{3,3,3\\}$ together: $\\tfrac{125}{24}$\n- $\\{1,1,3\\}$ and $\\{1,3,3\\}$ together: $\\tfrac{375}{152}$\n\nSo $T=\\tfrac{3282375}{111848}+\\tfrac{125}{24}+\\tfrac{375}{152}\\approx 37.0222$, and $R\\approx 1.18471$. Numerically $E\\approx 355.41$.\n\n**Step 4: Assemble $E=300R=\\tfrac{48}{5}T$.**\n$$E=50+\\frac{450}{19}+\\frac{3938850}{13981}=\\frac{94411550}{265639},$$\nwhere $265639=11\\cdot19\\cdot31\\cdot41$. The numerator is not divisible by 11, 19, 31, or 41, so the fraction is in lowest terms.\n\nTherefore $m+n=94411550+265639=94677189$.\n\nANSWER: 94677189",
+  "## Answer: 22419\n\n**Approach.** Use Tetali's formula for hitting times in terms of effective resistance:\n$$E_a[T_b]=\\tfrac12\\sum_v d(v)\\big(R(a,b)+R(b,v)-R(a,v)\\big).$$\n\n**Step 1: Simplify with symmetry.** Let $a=(0,0,0)$, $b=(4,4,4)$, and let $\\varphi(x)=4-x$ coordinatewise. This is an automorphism that swaps $a$ and $b$ and preserves degrees, so $\\sum_v d(v)R(b,v)=\\sum_v d(v)R(a,v)$. These cancel, leaving\n$$E_a[T_b]=|E|\\cdot R(a,b).$$\nThe graph has $3\\cdot 4\\cdot 25=300$ edges, so $E_a[T_b]=300\\,R(a,b)$.\n\n**Step 2: Spectral formula for $R(a,b)$.** The Laplacian is $L=L_1\\otimes I\\otimes I+I\\otimes L_1\\otimes I+I\\otimes I\\otimes L_1$, where $L_1$ is the path $P_5$ Laplacian with eigenvalues $\\lambda_k=2-2\\cos(k\\pi/5)$ and eigenvectors $v_k(j)=\\cos(k\\pi(j+\\tfrac12)/5)$, $\\|v_k\\|^2=5/2$ for $k\\ge1$.\n\nWith $u=e_0-e_4$, we have $u\\cdot v_k=\\cos(k\\pi/10)(1-(-1)^k)$, which vanishes for even $k$. So only $k\\in\\{1,3\\}$ contribute, with per-coordinate weights\n$$p=\\tfrac{8}{5}\\cos^2\\tfrac{\\pi}{10}=1+\\tfrac{1}{\\sqrt5},\\qquad q=\\tfrac{8}{5}\\cos^2\\tfrac{3\\pi}{10}=1-\\tfrac{1}{\\sqrt5}.$$\nThe eigenvalues are $\\alpha=\\lambda_1=\\frac{3-\\sqrt5}{2}$ and $\\beta=\\lambda_3=\\frac{3+\\sqrt5}{2}$, with $\\alpha\\beta=1$, $\\alpha+\\beta=3$. Summing over $(k_1,k_2,k_3)\\in\\{1,3\\}^3$:\n$$R=\\frac{p^3}{3\\alpha}+\\frac{q^3}{3\\beta}+\\frac{3p^2q}{2\\alpha+\\beta}+\\frac{3pq^2}{\\alpha+2\\beta}.$$\n\n**Step 3: Evaluate.** Write $s=\\sqrt5$.\n\n- $p^3=\\frac{40+16s}{25}$, $q^3=\\frac{40-16s}{25}$. Then $\\frac{p^3\\beta+q^3\\alpha}{3}=\\frac{1}{3}\\cdot\\frac{200}{25}=\\frac83$.\n- Since $pq=\\frac45$ and $2\\alpha+\\beta=\\alpha+3$, $\\alpha+2\\beta=\\beta+3$:\n$$\\frac{3p^2q}{\\alpha+3}+\\frac{3pq^2}{\\beta+3}=\\frac{12}{5}\\left[\\frac{p}{\\alpha+3}+\\frac{q}{\\beta+3}\\right].$$\nHere $\\alpha+3=\\frac{9-s}{2}$, $\\beta+3=\\frac{9+s}{2}$, and\n$$\\frac{p}{\\alpha+3}+\\frac{q}{\\beta+3}=\\frac25\\left[\\frac{5+s}{9-s}+\\frac{5-s}{9+s}\\right]=\\frac25\\cdot\\frac{100}{76}=\\frac{10}{19}.$$\nSo this part equals $\\frac{12}{5}\\cdot\\frac{10}{19}=\\frac{24}{19}$.\n\nTherefore $R(a,b)=\\frac83+\\frac{24}{19}=\\frac{224}{57}\\approx 3.9298$, which matches a direct numerical check.\n\n(As a sanity check, the same formula applied to a 5-vertex path gives resistance $4$, as expected.)\n\n**Step 4: Hitting time.**\n$$E_a[T_b]=300\\cdot\\frac{224}{57}=\\frac{22400}{19}.$$\nSince $19\\nmid 22400$, the fraction is in lowest terms, so $m+n=22400+19=22419$.\n\nANSWER: 22419",
+  "## Approach\n\n**Step 1: Reduce to an effective resistance.** The reflection $x \\mapsto 4-x$ (applied to all coordinates) is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $H(a,b)=H(b,a)$. The commute-time identity gives $H(a,b)+H(b,a)=2|E|\\,R(a,b)$, where $|E|=300$. Hence\n$$H(a,b)=300\\,R(a,b).$$\n\n**Step 2: Spectral formula for $R$.** The grid is the Cartesian product of three copies of the path $P_5$. The 1D normalized eigenvectors satisfy $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, so $(\\Psi(a)-\\Psi(b))^2=4\\Psi(a)^2$ when $i+j+k$ is odd and $0$ otherwise. Writing $W_k=20\\,\\varphi_k(0)^2$ and $\\Lambda_k=2\\lambda_k$ (with $r=\\sqrt5$):\n\n| $k$ | $W_k$ | $\\Lambda_k$ |\n|---|---|---|\n| 0 | 4 | 0 |\n| 1 | $5+r$ | $3-r$ |\n| 2 | $3+r$ | $5-r$ |\n| 3 | $5-r$ | $3+r$ |\n| 4 | $3-r$ | $5+r$ |\n\nThis gives $R=\\frac{1}{2000}T$, where $T=\\sum \\frac{2\\,W_iW_jW_k}{\\Lambda_i+\\Lambda_j+\\Lambda_k}$ over ordered triples with $i+j+k$ odd. There are 62 such ordered triples.\n\n**Step 3: Evaluate by multiset.** There are 16 sorted odd-sum multisets. Computing each (with multiplicity $m$) and rationalizing, the $\\sqrt5$ parts cancel in conjugate pairs, leaving\n$$T = 960 + 120 + \\frac{5760}{11} + \\frac{1000}{3} + \\frac{3000}{19} + \\frac{5880}{31} + \\frac{3480}{41}.$$\nNumerically $T\\approx 2369.42$, so $R\\approx 1.185$.\n\n**Step 4: Assemble $H$.** $H = 300R = \\frac{3}{20}T$:\n$$H = 212 + \\frac{864}{11} + \\frac{450}{19} + \\frac{882}{31} + \\frac{522}{41}.$$\n\nOver the common denominator $11\\cdot19\\cdot31\\cdot41 = 265639$, the numerator is\n$$56{,}315{,}468 + 20{,}864{,}736 + 6{,}291{,}450 + 7{,}557{,}858 + 3{,}382{,}038 = 94{,}411{,}550.$$\n\nSo $H = \\dfrac{94411550}{265639}\\approx 355.41$.\n\n**Step 5: Check reduction.** Checking the numerator modulo 11, 19, 31, and 41 gives nonzero residues (2, 18, 27, and 30 respectively), so the fraction is in lowest terms.\n\nTherefore $m+n = 94411550 + 265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Answer\n\nThe expected hitting time is $H = \\frac{94{,}411{,}550}{265{,}639}$ in lowest terms, so $m+n = 94{,}677{,}189$.\n\n## Approach\n\n**Step 1: Reduce to effective resistance.** Tetali's formula gives $H(a,b)=\\tfrac12\\sum_z d(z)\\,[R(a,b)+R(b,z)-R(a,z)]$. The central reflection $v\\mapsto(4,4,4)-v$ swaps $a=(0,0,0)$ and $b=(4,4,4)$ and preserves degrees, so $\\sum_z d(z)R(b,z)=\\sum_z d(z)R(a,z)$. Hence $H=\\tfrac12 R(a,b)\\sum_z d(z)=|E|\\,R(a,b)$. The grid has $3\\cdot 4\\cdot 25=300$ edges, so $H=300R$.\n\n**Step 2: Spectral formula for $R$.** The path $P_5$ has orthonormal eigenvectors $\\varphi_k$ with eigenvalues $\\mu_k=2-2\\cos(\\pi k/5)$, and $p_k=\\varphi_k(0)^2$. Using $\\varphi_k(4)=(-1)^k\\varphi_k(0)$ on the product graph,\n$$R=\\sum_{i+j+k\\ \\text{odd}} \\frac{4\\,p_ip_jp_k}{\\mu_i+\\mu_j+\\mu_k}.$$\nWith $s=\\sqrt5$:\n- $\\mu_0=0,\\ \\mu_1=\\tfrac{3-s}{2},\\ \\mu_2=\\tfrac{5-s}{2},\\ \\mu_3=\\tfrac{3+s}{2},\\ \\mu_4=\\tfrac{5+s}{2}$\n- $20p_k = P_k$ with $P_0=4,\\ P_1=5+s,\\ P_2=3+s,\\ P_3=5-s,\\ P_4=3-s$\n\nWriting $T=\\sum_{i+j+k\\text{ odd}} \\frac{P_iP_jP_k}{\\mu_i+\\mu_j+\\mu_k}$ gives $R=T/2000$, so $H=\\tfrac{3}{20}T$.\n\n(Sanity checks: the same formula gives $R=4$ for $P_5$, and $R=5/6$ for $Q_3$.)\n\n**Step 3: Evaluate $T$.** Odd triples split into two cases.\n\n*Exactly one odd index* ($o\\in\\{1,3\\}$, even pair $(e,f)$ ordered, factor 3 for position). Computing the $o=1$ part $T_1$ and using conjugation for $o=3$ gives\n$$T_A = 30\\left(36+\\tfrac{192}{11}+\\tfrac{196}{31}+\\tfrac{116}{41}\\right).$$\n\n*All three indices odd.* The $(1,1,1)+(3,3,3)$ terms give $\\tfrac{1000}{3}$, and the mixed terms give $\\tfrac{3000}{19}$.\n\nSo\n$$T = 1080+\\tfrac{5760}{11}+\\tfrac{5880}{31}+\\tfrac{3480}{41}+\\tfrac{1000}{3}+\\tfrac{3000}{19}=\\frac{1{,}888{,}231{,}000}{796{,}917}\\approx 2369.42.$$\n\n**Step 4: Hitting time.**\n$$H=\\frac{3}{20}T=\\frac{94{,}411{,}550}{265{,}639}\\approx 355.41.$$\n\n**Step 5: Lowest terms.** $265{,}639=11\\cdot19\\cdot31\\cdot41$. The numerator leaves remainders $-9$ (mod 11), $-1$ (mod 19), $27$ (mod 31), and $-11$ (mod 41), so it shares no factor with the denominator.\n\nTherefore $m+n = 94{,}411{,}550+265{,}639 = 94{,}677{,}189$.\n\nANSWER: 94677189",
+  "## Answer: 94677189\n\n**Approach.** Use the commute-time identity and symmetry to reduce the hitting time to an effective resistance, then evaluate that resistance by spectral decomposition of the grid Laplacian.\n\n**Step 1: Reduce to resistance.** The grid has $m = 300$ edges. The map $v \\mapsto (4,4,4) - v$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $H(a,b)=H(b,a)$. The commute-time identity $H(a,b)+H(b,a)=2mR(a,b)$ then gives\n$$H(a,b) = 300\\,R(a,b).$$\n\n**Step 2: Spectral formula.** The grid Laplacian is a Kronecker sum of three copies of the path $P_5$. For $P_5$, the eigenvalues are $\\mu_k = 2-2\\cos(\\pi k/5)$ and the normalized eigenvectors satisfy $\\varphi_k(4)=(-1)^k\\varphi_k(0)$. Writing $p_k = \\varphi_k(0)^2$ gives\n$$p_0=\\tfrac15,\\quad p_1=\\tfrac{5+\\sqrt5}{20},\\quad p_2=\\tfrac{3+\\sqrt5}{20},\\quad p_3=\\tfrac{5-\\sqrt5}{20},\\quad p_4=\\tfrac{3-\\sqrt5}{20},$$\n$$\\mu_0=0,\\quad \\mu_1=\\tfrac{3-\\sqrt5}{2},\\quad \\mu_2=\\tfrac{5-\\sqrt5}{2},\\quad \\mu_3=\\tfrac{3+\\sqrt5}{2},\\quad \\mu_4=\\tfrac{5+\\sqrt5}{2}.$$\n(Check: the endpoint resistance of $P_5$ comes out to $4$, as it should.)\n\nSince $\\psi(b)=(-1)^{K}\\psi(a)$ for the product eigenvector with index sum $K=k_1+k_2+k_3$, only $K$ odd contributes:\n$$R = 4\\sum_{K\\text{ odd}} \\frac{p_{k_1}p_{k_2}p_{k_3}}{\\mu_{k_1}+\\mu_{k_2}+\\mu_{k_3}}.$$\n\n**Step 3: Evaluate the sum $\\Sigma$.** Split by parity pattern.\n\n*All three indices odd* (indices in $\\{1,3\\}$, 8 ordered triples). Using $p_1p_3=\\tfrac1{20}$, the terms pair up so the surds cancel:\n$$T_B=\\frac1{24}+\\frac{3}{152}=\\frac{7}{114}.$$\n\n*Exactly one odd index* (3 positions \u00d7 $\\sum_{o\\in\\{1,3\\}} p_o S(o)$, where $S(o)$ sums over the two even indices). Since $S(3)$ is the Galois conjugate of $S(1)$ and $p_3=\\bar p_1$, the sum is rational:\n$$A = \\frac{x+y}{2},$$\nwhere $S(1)=x+y\\sqrt5$. Summing the six pair-contributions to $S(1)$ gives\n$$x+y=\\frac{8753}{55924},\\qquad\\text{so}\\qquad A=\\frac{8753}{111848}.$$\n\nTherefore\n$$\\Sigma = \\frac{7}{114}+3\\cdot\\frac{8753}{111848}=\\frac{1888231}{6375336},$$\nand\n$$R=4\\Sigma=\\frac{1888231}{1593834}\\approx 1.18472.$$\n\n**Step 4: Hitting time.**\n$$H = 300R = \\frac{300\\cdot 1888231}{1593834}=\\frac{94411550}{265639},$$\nwhere $265639 = 11\\cdot19\\cdot31\\cdot41$, and the numerator is coprime to it (checked by direct division). So the fraction is in lowest terms.\n\n**Checks.** The same resistance method gives $H=10$ for the 3-cube, matching a direct Markov-chain calculation. The numerical value $H\\approx 355.4$ agrees with the decimal evaluation of each piece.\n\nHence $m+n = 94411550 + 265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\nThe expected hitting time comes from electrical network theory. For a random walk on a graph with $m$ edges, $H(a,b)+H(b,a)=2mR_{\\text{eff}}(a,b)$. The map $(x,y,z)\\mapsto(4-x,4-y,4-z)$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $H(a,b)=H(b,a)$. With $m=300$ edges (100 per direction), this gives $H(a,b)=300\\,R_{\\text{eff}}(a,b)$.\n\n## Effective resistance via eigenmodes\n\nThe Laplacian of $P_5^3$ is a sum of path Laplacians. Using the normalized path eigenfunctions $\\varphi_k(x)=c_k\\cos\\frac{\\pi k(2x+1)}{10}$, with $\\mu_k = 2-2\\cos\\frac{\\pi k}{5}$, one gets\n\n$$R=\\sum_{k\\neq 0}\\frac{(\\varphi_k(a)-\\varphi_k(b))^2}{\\mu_{k_1}+\\mu_{k_2}+\\mu_{k_3}}.$$\n\nSince $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, the numerator is $4\\prod a_{k_i}$ when $k_1+k_2+k_3$ is odd, and $0$ otherwise. Here $a_k=c_k^2\\cos^2\\frac{\\pi k}{10}$:\n\n- $a_0=\\tfrac15$, $a_1=\\tfrac{5+\\sqrt5}{20}$, $a_2=\\tfrac{3+\\sqrt5}{20}$, $a_3=\\tfrac{5-\\sqrt5}{20}$, $a_4=\\tfrac{3-\\sqrt5}{20}$\n- $\\mu_1=\\tfrac{3-\\sqrt5}{2}$, $\\mu_2=\\tfrac{5-\\sqrt5}{2}$, $\\mu_3=\\tfrac{3+\\sqrt5}{2}$, $\\mu_4=\\tfrac{5+\\sqrt5}{2}$\n\nSo $R=4T$, where $T$ sums $\\prod a/\\sum\\mu$ over ordered triples with odd sum.\n\n## Evaluating the sum\n\nThe Galois conjugation $\\sqrt5\\mapsto-\\sqrt5$ (which sends $k\\mapsto 5-k$ for $k\\ne0$) pairs the 16 unordered multisets into 8 orbits without fixed points. Hence $T=2\\sum_{\\text{orbits}}(\\text{rational part})$. Computing each representative term exactly (with orderings) gives rational parts:\n\n| Multiset | Rational part |\n|---|---|\n| $\\{1;0,0\\}$ | $3/50$ |\n| $\\{1;0,2\\}$ | $9/275$ |\n| $\\{1;0,4\\}$ | $3/400$ |\n| $\\{1;2,2\\}$ | $147/12400$ |\n| $\\{1;2,4\\}$ | $21/8200$ |\n| $\\{1;4,4\\}$ | $9/3280$ |\n| $\\{1,1,1\\}$ | $1/48$ |\n| $\\{1,1,3\\}$ | $3/304$ |\n\nThen $H = 300\\cdot 4\\cdot T = 2400\\sum p_i$, which gives\n\n$$H = 212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}.$$\n\nNumerically $H\\approx 355.41$, consistent with $R\\approx1.1847$.\n\n**Checks:** The same method on $Q_3$ gives $R=5/6$, which is correct. The conjugate-pair structure and the numerical sum were both verified.\n\n## Exact fraction\n\nOver the common denominator $265639 = 11\\cdot19\\cdot31\\cdot41$, the numerator is\n\n$$94{,}411{,}550,$$\n\nso $H = \\dfrac{94411550}{265639}$. Checking divisibility of the numerator by $11$, $19$, $31$, $41$ shows none divides it, so the fraction is in lowest terms.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\nSince the map $(x,y,z)\\mapsto(4-x,4-y,4-z)$ is an automorphism swapping $(0,0,0)$ and $(4,4,4)$, we have $H(a,b)=H(b,a)$. The commute-time identity $H(a,b)+H(b,a)=2E\\cdot R_{\\text{eff}}(a,b)$ then gives\n\n$$H(a,b)=E\\cdot R_{\\text{eff}}(a,b).$$\n\nThe graph has $E=300$ edges (three directions, each with $4\\cdot 5\\cdot 5=100$ edges), so $H=300R$.\n\n## Spectral computation of $R$\n\nThe Laplacian of $P_5^3$ is a Kronecker sum of three copies of the path Laplacian $L_1$. Its eigenvectors are products of the path eigenvectors $u_k(x)\\propto\\cos\\frac{k\\pi(2x+1)}{10}$, with eigenvalues $\\lambda_p+\\lambda_q+\\lambda_r$, where $\\lambda_k=2-2\\cos\\frac{k\\pi}{5}$.\n\nUsing $u_k(4)=(-1)^k u_k(0)$, the eigenvector values at $a=(0,0,0)$ and $b=(4,4,4)$ differ only when $p+q+r$ is odd, in which case $(\\psi(a)-\\psi(b))^2=4\\psi(a)^2$. This gives\n\n$$R=\\sum_{p+q+r\\text{ odd}} \\frac{4\\,c_pc_qc_r}{\\lambda_p+\\lambda_q+\\lambda_r},\\qquad c_k=u_k(0)^2.$$\n\nWith $s=\\sqrt5$, set $a_k=20c_k$ and $\\mu_k=2\\lambda_k$:\n\n| $k$ | $a_k$ | $\\mu_k$ |\n|---|---|---|\n| 0 | $4$ | $0$ |\n| 1 | $5+s$ | $3-s$ |\n| 2 | $3+s$ | $5-s$ |\n| 3 | $5-s$ | $3+s$ | \n| 4 | $3-s$ | $5+s$ |\n\nThen $R=\\frac{1}{1000}\\sum_{\\text{odd}}\\frac{a_pa_qa_r}{\\mu_p+\\mu_q+\\mu_r}$, summed over ordered triples with odd index sum (62 triples).\n\n## Evaluating the sum\n\nGrouping by multisets and pairing each term with its conjugate under $s\\to-s$ (so only rational parts survive), the sum is\n\n$$\\Sigma = 540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}+\\frac{500}{3}+\\frac{1500}{19}.$$\n\nEach multiset contribution was checked numerically. For example, $\\{1,0,2\\}$ gives $(80+32s)/(8-2s)=(240+104s)/11\\approx 43.0$, matching the decimal value.\n\nThen $H = 300\\cdot\\frac{\\Sigma}{1000}=\\frac{3\\Sigma}{10}$, so\n\n$$H = 212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}.$$\n\nOver the common denominator $11\\cdot19\\cdot31\\cdot41=265639$, the numerator is\n\n$$56{,}315{,}468+20{,}864{,}736+7{,}557{,}858+3{,}382{,}038+6{,}291{,}450=94{,}411{,}550.$$\n\nSo $H=\\dfrac{94{,}411{,}550}{265{,}639}\\approx 355.41$.\n\n## Reduction check\n\nThe numerator is not divisible by 11, 19, 31, or 41: the residues are $2$, $18$, $27$, and $30$ respectively. The fraction is therefore in lowest terms.\n\nHence $m+n = 94{,}411{,}550+265{,}639 = 94{,}677{,}189$.\n\nANSWER: 94677189",
+  "## Approach\n\nThe expected hitting time can be computed from effective resistance. The graph is vertex-transitive under coordinate reflections, and the map $x\\mapsto 4-x$ (applied to all coordinates) swaps $(0,0,0)$ and $(4,4,4)$, so $E_a T_b = E_b T_a$. The commute-time identity $E_aT_b + E_bT_a = 2|E|R_{ab}$ then gives\n\n$$E_a T_b = |E|\\,R_{ab}, \\qquad |E| = 3\\cdot 100 = 300.$$\n\n## Spectral computation of $R_{ab}$\n\nThe Laplacian of $P_5^{\\otimes 3}$ decomposes over products of path eigenvectors $u_{k_1}\\otimes u_{k_2}\\otimes u_{k_3}$ with eigenvalue $\\mu_{k_1}+\\mu_{k_2}+\\mu_{k_3}$. For $P_5$, $u_k(4)=(-1)^k u_k(0)$, so the projection of $e_a-e_b$ onto such an eigenvector is $2\\prod u_{k_i}(0)$ when $\\sum k_i$ is odd, and $0$ otherwise. Hence\n\n$$R_{ab}=\\sum_{\\substack{(k_1,k_2,k_3)\\\\ \\sum k_i \\text{ odd}}} \\frac{4\\prod p_{k_i}}{\\sum \\mu_{k_i}},\\qquad p_k=u_k(0)^2.$$\n\nWith $\\varphi=\\frac{1+\\sqrt5}{2}$, write $p_k=q_k/10$ where\n\n| $k$ | $q_k$ | $\\mu_k$ |\n|---|---|---|\n| 0 | 2 | 0 |\n| 1 | $2+\\varphi$ | $2-\\varphi$ |\n| 2 | $1+\\varphi$ | $3-\\varphi$ |\n| 3 | $3-\\varphi$ | $1+\\varphi$ |\n| 4 | $2-\\varphi$ | $2+\\varphi$ |\n\nThis gives $R_{ab}=T/250$, where $T=\\sum \\prod q_{k_i}/\\sum\\mu_{k_i}$ over ordered odd-sum triples. Splitting into triples with one odd index (3 placements) and with three odd indices, and using $\\frac1{2-\\varphi}=1+\\varphi$, $\\frac1{1+\\varphi}=2-\\varphi$, and the norm computations in $\\mathbb{Z}[\\varphi]$, all $\\varphi$-terms cancel. The result is\n\n$$T = 3\\left(45+\\tfrac{240}{11}+\\tfrac{245}{31}+\\tfrac{145}{41}\\right)+\\tfrac{125}{3}+\\tfrac{375}{19}\\approx 296.18.$$\n\n**Check of the method:** the same procedure on the $3\\times3$ grid gives $R=3/2$ and $E=18$, which matches a direct solution of the hitting-time equations.\n\n## Expected hitting time\n\n$$E = 300\\cdot\\frac{T}{250}=\\frac{6}{5}T = 212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}\\approx 355.41.$$\n\nOver the common denominator $11\\cdot19\\cdot31\\cdot41 = 265639$, the numerator is\n\n$$94{,}411{,}550.$$\n\nThe numerator is not divisible by 11, 19, 31, or 41 (checked modulo each prime), so the fraction is in lowest terms:\n\n$$E=\\frac{94411550}{265639}.$$\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Commute-time identity.** For a simple random walk on a connected graph with $m$ edges, $E_a[T_b]+E_b[T_a]=2m\\,R_{ab}$, where $R_{ab}$ is the effective resistance. The map $v\\mapsto(4,4,4)-v$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_a[T_b]=E_b[T_a]=m R_{ab}$. Here $m=300$ (each of the 3 directions has 100 edges), so the answer is $300\\,R_{ab}$.\n\n**Spectral formula for $R_{ab}$.** The Laplacian of the Cartesian product is a Kronecker sum, so its eigenvectors are products of path eigenvectors. For $P_5$, the eigenvalues are $\\mu_j=2-2\\cos(\\pi j/5)$ and the orthonormal eigenvectors are $f_j(x)=c_j\\cos\\!\\big(\\pi j(2x+1)/10\\big)$ with $c_0^2=\\tfrac15$, $c_j^2=\\tfrac25$ for $j\\ge1$. Since $f_j(4)=(-1)^j f_j(0)$, the difference of a product eigenvector between $a$ and $b$ vanishes unless $j_1+j_2+j_3$ is odd, and then its square is $4\\prod g_{j_i}$ with $g_j=f_j(0)^2$. Hence\n$$R_{ab}=\\sum_{\\substack{j_1+j_2+j_3\\text{ odd}}}\\frac{4\\prod g_{j_i}}{\\mu_{j_1}+\\mu_{j_2}+\\mu_{j_3}}.$$\n\n**Exact values in $\\mathbb{Q}(\\sqrt5)$.** Write $s=\\sqrt5$. Setting $G_j=20g_j$ and $M_j=2\\mu_j$:\n\n| $j$ | 0 | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|---|\n| $G_j$ | 4 | $5+s$ | $3+s$ | $5-s$ | $3-s$ |\n| $M_j$ | 0 | $3-s$ | $5-s$ | $3+s$ | $5+s$ |\n\nThis gives $R_{ab}=\\frac{1}{1000}S$, where $S=\\sum \\prod G_{j_i}/\\sum M_{j_i}$ over odd-sum triples, and $E=\\frac{3}{10}S$.\n\n**Case A: exactly one odd index** (3 positions \u00d7 2 odd values \u00d7 9 ordered even pairs). Using the conjugation symmetry $s\\to -s$, the sum equals $30(\\beta_0+\\beta_1)$ where $\\beta_0+\\beta_1=18+\\frac{96}{11}+\\frac{98}{31}+\\frac{58}{41}$.\n\n**Case B: three odd indices** (8 ordered triples). Grouping by multiset:\n- $\\{1,1,1\\}$ and $\\{3,3,3\\}$ give $\\frac{500}{3}$ in total.\n- The six mixed triples give $\\frac{1500}{19}$ in total.\n\nSo Case B contributes $\\frac{14000}{57}$.\n\n**Assembling.**\n$$E=\\frac{3}{10}\\Big(30\\big(18+\\tfrac{96}{11}+\\tfrac{98}{31}+\\tfrac{58}{41}\\big)+\\tfrac{14000}{57}\\Big)=162+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{1400}{19}.$$\n\nNumerically $E\\approx 355.413$, which is consistent with $R_{ab}\\approx 1.185$.\n\n**Combining over the common denominator** $L=11\\cdot19\\cdot31\\cdot41=265639$:\n$$E=\\frac{94411550}{265639}.$$\n\nEach of the denominators 11, 19, 31, 41 divides $L$ exactly once, and none of the numerators $864, 1400, 882, 522$ is divisible by the corresponding prime. So the fraction is already in lowest terms.\n\nTherefore $m+n=94411550+265639=94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** The map $(x,y,z)\\mapsto(4-x,4-y,4-z)$ is a graph automorphism swapping $(0,0,0)$ and $(4,4,4)$, so $E_a T_b = E_b T_a$. The commute-time identity says $E_aT_b + E_bT_a = 2|E|\\,R_{\\text{eff}}(a,b)$. With $|E| = 300$ (100 edges in each of 3 directions), the expected hitting time is\n$$E = 300\\,R_{\\text{eff}}.$$\n\n**Step 2: Spectral formula for $R_{\\text{eff}}$.** The grid is the Cartesian product of three copies of the path $P_5$. The path Laplacian has eigenvalues $\\lambda_k = 2-2\\cos(k\\pi/5)$ with normalized eigenvectors $\\varphi_k(j)=\\sqrt{2/5}\\cos(k\\pi(2j+1)/10)$ (for $k\\ge1$), and $\\varphi_0 = 1/\\sqrt5$. Write $s=\\sqrt5$ and $c_k=\\varphi_k(0)^2$. Then $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, so only triples $(k_1,k_2,k_3)$ with $K=k_1+k_2+k_3$ odd contribute, each with weight $4c_{k_1}c_{k_2}c_{k_3}$. Using $c_k=C_k/20$ and $\\lambda_k=L_k/2$:\n\n| $k$ | $C_k$ | $L_k$ |\n|---|---|---|\n| 0 | 4 | 0 |\n| 1 | $5+s$ | $3-s$ |\n| 2 | $3+s$ | $5-s$ |\n| 3 | $5-s$ | $3+s$ |\n| 4 | $3-s$ | $5+s$ |\n\nThis gives\n$$R_{\\text{eff}} = \\frac{1}{1000}\\sum_{\\substack{(a,b,c)\\\\ a+b+c\\text{ odd}}} \\frac{C_aC_bC_c}{L_a+L_b+L_c}.$$\n(Check: the same method on $P_5$ gives $R=4$, as it should.)\n\n**Step 3: Evaluate the sum.** There are 62 ordered triples with odd sum, grouped into 16 multisets.\n\n*Triples with all three indices odd* (from $\\{1,3\\}$), using conjugation $s\\to -s$:\n- $\\{1,1,1\\}$ and $\\{3,3,3\\}$ together give $\\tfrac{500}{3}$.\n- $\\{1,1,3\\}$ (\u00d73) and $\\{1,3,3\\}$ (\u00d73) together give $\\tfrac{1500}{19}$.\n\nSo this part totals $\\tfrac{14000}{57}$.\n\n*Triples with exactly one odd index:* the sum over the $o=1$ terms has rational part\n$$240+\\frac{1440}{11}+30+\\frac{1470}{31}+\\frac{420}{41}+\\frac{450}{41}.$$\nThe $o=3$ terms are the conjugates, so this part contributes twice the rational part:\n$$540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}.$$\n\nNumerically the total is $\\approx 1184.7$, so $R_{\\text{eff}}\\approx 1.185$ (checked against a term-by-term numerical evaluation).\n\n**Step 4: Assemble.** Since $E = \\tfrac{3}{10}\\sum$,\n$$E = \\frac{1400}{19} + 162 + \\frac{864}{11} + \\frac{882}{31} + \\frac{522}{41}\\approx 355.4.$$\n\nOver the common denominator $19\\cdot 11\\cdot 31\\cdot 41 = 265639$, the numerator is\n$$162\\cdot265639+1400\\cdot13981+864\\cdot24149+882\\cdot8569+522\\cdot6479 = 94411550.$$\n\nEach fractional part has a distinct prime denominator and nonzero residue (e.g. $1400\\equiv 13 \\pmod{19}$), so the fraction is already in lowest terms:\n$$E=\\frac{94411550}{265639}.$$\n\nTherefore $m+n = 94411550 + 265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** The map $\\sigma(x,y,z)=(4-x,4-y,4-z)$ is a graph automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_aT_b=E_bT_a$. Since the commute time is $E_aT_b+E_bT_a=2mR_{ab}$, we get $E_aT_b = mR_{ab}$, where $m$ is the number of edges.\n\nHere $m = 3\\cdot 4\\cdot 25 = 300$.\n\n**Step 2: Heat-kernel formula for resistance.** For a graph Laplacian $L$,\n$$R_{ab}=\\int_0^\\infty\\big(p_t(a,a)+p_t(b,b)-2p_t(a,b)\\big)\\,dt,\\qquad p_t=e^{-tL}.$$\nThe 3D grid Laplacian is a Kronecker sum of three copies of the $P_5$ Laplacian, so the heat kernel factorizes. With $q_t$ the $P_5$ heat kernel,\n$$R=2\\int_0^\\infty\\big(q(0,0)^3-q(0,4)^3\\big)\\,dt.$$\n\n**Step 3: Spectral data for $P_5$.** The eigenvalues are $\\lambda_1=\\frac{3-\\sqrt5}{2}$, $\\lambda_2=\\frac{5-\\sqrt5}{2}$, $\\lambda_3=\\frac{3+\\sqrt5}{2}$, $\\lambda_4=\\frac{5+\\sqrt5}{2}$, with $x_k=e^{-\\lambda_k t}$. Using $\\cos^2$ values $a=\\frac{5+\\sqrt5}{8}$, $b=\\frac{3+\\sqrt5}{8}$, $c=\\frac{5-\\sqrt5}{8}$, $d=\\frac{3-\\sqrt5}{8}$ (note $a=\\lambda_4/4$, $b=\\lambda_3/4$, $c=\\lambda_2/4$, $d=\\lambda_1/4$), set\n$$O=ax_1+cx_3,\\qquad E=bx_2+dx_4.$$\nThen $q(0,0)=\\tfrac15+\\tfrac25(O+E)$ and $q(0,4)=\\tfrac15+\\tfrac25(E-O)$.\n\n**Step 4: Expand.** Writing $u=\\tfrac25(O+E)$, $v=\\tfrac25(E-O)$ and expanding $p^3-r^3$ gives\n$$R=\\frac{2}{125}\\int_0^\\infty\\big[12O+48OE+48E^2O+16O^3\\big]\\,dt.$$\n\n**Step 5: Evaluate the integrals exactly** (using $\\int x_{i}x_jx_k\\,dt = 1/(\\lambda_i+\\lambda_j+\\lambda_k)$ and $\\sqrt5$ arithmetic):\n- $\\int O = \\tfrac52$, so $12\\int O = 30$.\n- $\\int OE = \\tfrac{295}{704}$, so $48\\int OE = \\tfrac{885}{44}$.\n- $\\int E^2O = \\tfrac{3635}{20336}$, so $48\\int E^2O = \\tfrac{10905}{1271}$.\n- $\\int O^3 = \\tfrac{875}{912}$, so $16\\int O^3 = \\tfrac{875}{57}$.\n\nEach value was checked numerically (e.g. $\\int OE\\approx0.4190$, $\\int E^2O\\approx0.1787$, $\\int O^3\\approx0.9594$).\n\nSumming:\n$$S = 30+\\frac{885}{44}+\\frac{10905}{1271}+\\frac{875}{57}=\\frac{236028875}{3187668}\\approx 74.044.$$\n\nThen $R=\\frac{2S}{125}=\\frac{1888231}{1593834}\\approx 1.1847$. The denominator factors as $2\\cdot3\\cdot11\\cdot19\\cdot31\\cdot41$, and the numerator is coprime to it.\n\n**Step 6: Hitting time.**\n$$E_aT_b = 300R = \\frac{94411550}{265639},$$\nwhere $265639 = 11\\cdot19\\cdot31\\cdot41$. This fraction is in lowest terms, since $1888231$ is not divisible by $11$, $19$, $31$, or $41$.\n\nTherefore\n$$m+n = 94411550+265639 = 94677189.$$\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** The Tetali formula gives $E_a T_b = \\tfrac12\\sum_z d(z)\\,[R_{ab}+R_{bz}-R_{az}]$. The map $c\\mapsto 4-c$ (applied to each coordinate) is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$ and preserving degrees, so $\\sum_z d(z)R_{bz}=\\sum_z d(z)R_{az}$. Hence $E_aT_b = m\\,R_{ab}$, where $m=300$ is the number of edges.\n\n(Check on the cube $Q_3$: $m=12$, $R=5/6$, giving $E=10$, which matches a direct computation of the hitting time.)\n\n**Step 2: Spectral formula for $R_{ab}$.** The $5\\times5\\times5$ grid is a Cartesian product of three copies of $P_5$. Path eigenvectors are $f_k(i)=\\cos\\frac{\\pi k(2i+1)}{10}$ with eigenvalues $\\lambda_k=2-2\\cos\\frac{\\pi k}{5}$. Since $\\psi_k(4)=(-1)^k\\psi_k(0)$, a product eigenvector $(k_1,k_2,k_3)$ contributes to $R_{ab}$ only when $K=k_1+k_2+k_3$ is odd, with contribution $4\\prod u_{k_j}/\\sum\\lambda_{k_j}$. Here $u_0=\\tfrac15$ and $u_k=\\tfrac{2}{5}\\cos^2\\frac{\\pi k}{10}$ for $k\\ge1$.\n\nWriting $s=\\sqrt5$ and scaling by $20$ and $2$, the definitions become\n- $U_0=4$, $U_1=5+s$, $U_2=3+s$, $U_3=5-s$, $U_4=3-s$,\n- $\\Lambda_0=0$, $\\Lambda_1=3-s$, $\\Lambda_2=5-s$, $\\Lambda_3=3+s$, $\\Lambda_4=5+s$.\n\nThis gives $E = \\tfrac{3}{10}\\,T$ with $T=\\sum \\frac{\\prod U}{\\sum\\Lambda}$ over the 62 ordered triples with odd $K$.\n\n**Step 3: Evaluate $T$.**\n\n*Case A (three odd entries, 8 triples):*\n$$\\frac{(5+s)^3}{9-3s}+\\frac{(5-s)^3}{9+3s}+\\frac{60(5+s)}{9-s}+\\frac{60(5-s)}{9+s}=\\frac{500}{3}+\\frac{1500}{19}.$$\n\n*Case B (one odd entry, 54 triples):* By Galois conjugation ($s\\to -s$), this equals $6\\cdot\\mathrm{Rat}\\big((5+s)P_1\\big)$, where $P_1$ sums over the even pairs. Computing $P_1=p+qs$ gives $p+q = 18+\\frac{96}{11}+\\frac{98}{31}+\\frac{58}{41}$, so Case B $=30(p+q)=540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}$.\n\nNumerically, $T\\approx 1184.71$, so $E\\approx 355.41$, which is consistent with $R\\approx1.18$.\n\n**Step 4: Assemble.**\n$$E=\\tfrac{3}{10}T = 212+\\frac{450}{19}+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}.$$\n\nOver the common denominator $19\\cdot11\\cdot31\\cdot41=265639$, the numerator is\n$$56{,}315{,}468+6{,}291{,}450+20{,}864{,}736+7{,}557{,}858+3{,}382{,}038=94{,}411{,}550.$$\n\n**Step 5: Reduce.** The numerator leaves nonzero remainders modulo $11$ (remainder 2), $19$ (18), $31$ (27), and $41$ (30), so the fraction is in lowest terms:\n$$E=\\frac{94{,}411{,}550}{265{,}639}.$$\n\nTherefore $m+n = 94{,}411{,}550+265{,}639 = 94{,}677{,}189$.\n\nANSWER: 94677189",
+  "## Approach\n\nThe expected hitting time can be computed with electrical networks. The map $v \\mapsto (4,4,4) - v$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $H(a,b)=H(b,a)$. The commute-time identity $H(a,b)+H(b,a)=2mR(a,b)$ then gives $H(a,b)=mR(a,b)$, where $m$ is the number of edges and $R$ is the effective resistance.\n\n**Edge count:** each of the 3 directions has $25$ lines of $4$ edges, so $m=300$.\n\n**Effective resistance via eigenmodes:** The path $P_5$ has Laplacian eigenvalues $\\lambda_i = 2-2\\cos(\\pi i/5)$ with orthonormal eigenvectors $u_i(x)=c_i\\cos(\\pi i(2x+1)/10)$, where $c_0^2=1/5$ and $c_i^2=2/5$ for $i\\ge1$. Since $u_i(4)=(-1)^i u_i(0)$, only triples $(i,j,k)$ with $i+j+k$ odd contribute:\n$$R=\\sum_{i+j+k\\text{ odd}} \\frac{4\\,w_iw_jw_k}{\\lambda_i+\\lambda_j+\\lambda_k},\\qquad w_i=u_i(0)^2.$$\n\nWith $s=\\sqrt5$, set $\\omega_i=20w_i$ and $\\mu_i=2\\lambda_i$:\n\n| $i$ | $\\mu_i$ | $\\omega_i$ |\n|---|---|---|\n| 0 | $0$ | $4$ |\n| 1 | $3-s$ | $5+s$ |\n| 2 | $5-s$ | $3+s$ |\n| 3 | $3+s$ | $5-s$ |\n| 4 | $5+s$ | $3-s$ |\n\nThis gives $R=\\frac{1}{1000}X$ with $X=\\sum \\frac{\\omega_i\\omega_j\\omega_k}{\\mu_i+\\mu_j+\\mu_k}$ over odd triples. (As a check, the same formula gives $R=3/2$ for the $3\\times3$ grid corner-to-corner, which is correct.)\n\nSince the sum is invariant under $s\\mapsto -s$, $X$ is rational and equals the rational part of the sum.\n\n**Case 1: exactly one index in $\\{1,3\\}$.** Let $T_1$ be the sum over the $b=1$ term with the other two indices in $\\{0,2,4\\}$. Its rational part is\n$$\\mathrm{Rat}(T_1)=80+\\frac{480}{11}+10+\\frac{490}{31}+\\frac{150}{41}+\\frac{140}{41}=90+\\frac{480}{11}+\\frac{490}{31}+\\frac{290}{41}.$$\nIncluding the position multiplicity 3 and the conjugate $b=3$ terms, this contributes $6\\,\\mathrm{Rat}(T_1)=540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}$.\n\n**Case 2: all indices in $\\{1,3\\}$.**\n- $(1,1,1)$ and $(3,3,3)$ together give $\\frac{500}{3}$.\n- The three orderings of $(1,1,3)$ and of $(1,3,3)$ together give $\\frac{1500}{19}$.\n\nSo\n$$X=540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}+\\frac{500}{3}+\\frac{1500}{19}\\approx 1184.71,$$\nwhich matches a direct numerical evaluation of the terms.\n\n**Hitting time:** $H=300\\cdot\\frac{X}{1000}=\\frac{3X}{10}$, so\n$$H=212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}.$$\n\nOver the common denominator $L=11\\cdot19\\cdot31\\cdot41=265639$, the numerator is\n$$212L+\\big(864\\cdot24149+882\\cdot8569+522\\cdot6479+450\\cdot13981\\big)=56315468+38096082=94411550.$$\n\nChecking each prime $11,19,31,41$ shows the remaining numerator term is not divisible by it, so the fraction is in lowest terms:\n$$H=\\frac{94411550}{265639}.$$\n\nTherefore $m+n=94411550+265639=94677189$.\n\nANSWER: 94677189",
+  "## Answer\n\nThe expected hitting time is $m/n = 94{,}411{,}550/265{,}639$ (lowest terms), so $m+n = 94{,}677{,}189$.\n\n## Approach\n\n**Step 1: Reduce to effective resistance.** Let $a=(0,0,0)$ and $b=(4,4,4)$. Tetali's formula gives\n$$H(a,b)=\\tfrac12\\sum_z d(z)\\big[R(a,b)+R(b,z)-R(a,z)\\big].$$\nThe reflection $\\sigma: x\\mapsto 4-x$ (in every coordinate) swaps $a$ and $b$ and preserves degrees, so $\\sum_z d(z)R(b,z)=\\sum_z d(z)R(a,z)$. The last two terms cancel, leaving\n$$H(a,b)=|E|\\,R(a,b)=300\\,R(a,b),$$\nsince the grid has $3\\cdot 5\\cdot5\\cdot4=300$ edges.\n\n**Step 2: Spectral formula for $R$.** The path $P_5$ has orthonormal Laplacian eigenvectors $u_k$ with eigenvalues $\\mu_k=2-2\\cos(\\pi k/5)$, and $u_k(4)=(-1)^k u_k(0)$. Writing $p_k=u_k(0)^2$, the values are\n$$p_0=\\tfrac15,\\quad p_1=\\tfrac{5+\\sqrt5}{20},\\quad p_2=\\tfrac{3+\\sqrt5}{20},\\quad p_3=\\tfrac{5-\\sqrt5}{20},\\quad p_4=\\tfrac{3-\\sqrt5}{20}.$$\nFor the product graph, $(\\varphi(a)-\\varphi(b))^2=4\\prod p_{k_i}$ when $k_1+k_2+k_3$ is odd, and $0$ otherwise. Summing over odd-sum triples,\n$$R=\\sum_{\\text{odd}}\\frac{4\\prod p_{k_i}}{\\sum \\mu_{k_i}}=\\frac{S}{1000},\\qquad S=\\sum_{\\text{odd}}\\frac{\\prod P_{k_i}}{\\sum M_{k_i}},$$\nwhere $P_k=20p_k$ and $M_k=2\\mu_k$. Hence $H=\\tfrac{3}{10}S$.\n\n(Checks: the same method gives $5/6$ for $Q_3$ and $4$ for the 5-vertex path, both correct.)\n\n**Step 3: Evaluate $S$.** There are 62 odd-sum ordered triples, falling into 16 multisets (6 with one odd entry and two evens, 6 with one odd entry of the other type, and 4 with three odd entries). Pairing each multiset with its conjugate under $\\sqrt5\\mapsto-\\sqrt5$ gives:\n\n| Pair | Contribution |\n|---|---|\n| $\\{1,0,0\\}$ + $\\{3,0,0\\}$ | $480$ |\n| $\\{1,0,4\\}$ + $\\{3,0,2\\}$ | $60$ |\n| $\\{1,0,2\\}$ + $\\{3,0,4\\}$ | $2880/11$ |\n| $\\{1,2,2\\}$ + $\\{3,4,4\\}$ | $2940/31$ |\n| $\\{1,2,4\\}$ + $\\{3,2,4\\}$ | $840/41$ |\n| $\\{1,4,4\\}$ + $\\{3,2,2\\}$ | $900/41$ |\n| $\\{1,1,1\\}$ + $\\{3,3,3\\}$ | $500/3$ |\n| $\\{1,1,3\\}$ + $\\{1,3,3\\}$ | $1500/19$ |\n\nSo\n$$S=540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}+\\frac{500}{3}+\\frac{1500}{19}=\\frac{944{,}115{,}500}{796{,}917}\\approx 1184.71.$$\n\n**Step 4: Final value.**\n$$H=\\frac{3}{10}S=\\frac{283{,}234{,}650}{796{,}917}=\\frac{94{,}411{,}550}{265{,}639}\\approx 355.4.$$\nThe denominator is $11\\cdot19\\cdot31\\cdot41$, and the numerator is not divisible by any of these primes, so the fraction is in lowest terms.\n\nTherefore $m+n = 94{,}411{,}550+265{,}639 = 94{,}677{,}189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** The commute-time identity gives $E_a T_b + E_b T_a = 2m\\,R_{ab}$, where $m$ is the number of edges and $R_{ab}$ is the effective resistance. The map $v \\mapsto (4,4,4) - v$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_aT_b = E_bT_a$ and $E_aT_b = mR_{ab}$. Here $m = 3\\cdot 4\\cdot 25 = 300$.\n\n**Step 2: Spectral formula.** The Laplacian eigenvalues of the path $P_5$ are $\\lambda_k = 2-2\\cos(\\pi k/5)$, with normalized eigenvectors $\\varphi_k(x)$. Since $\\varphi_k(4) = (-1)^k\\varphi_k(0)$, only modes with $i+j+k$ odd contribute, giving\n$$R = \\sum_{i+j+k\\text{ odd}} \\frac{4\\,p_ip_jp_k}{\\lambda_i+\\lambda_j+\\lambda_k},\\qquad p_k=\\varphi_k(0)^2.$$\nUsing $s=\\sqrt5$, write $p_k = q_k/20$ and $\\lambda_k=\\mu_k/2$ with\n\n| k | $q_k$ | $\\mu_k$ |\n|---|---|---|\n| 0 | 4 | 0 |\n| 1 | $5+s$ | $3-s$ |\n| 2 | $3+s$ | $5-s$ |\n| 3 | $5-s$ | $3+s$ |\n| 4 | $3-s$ | $5+s$ |\n\nThis gives $R = S/1000$ with $S=\\sum_{\\text{odd}} \\dfrac{q_iq_jq_k}{\\mu_i+\\mu_j+\\mu_k}$.\n\n**Step 3: Case B (all three indices in {1,3}).** Summing the four index patterns gives\n$$B = \\frac{500}{3}+\\frac{1500}{19}=\\frac{14000}{57}.$$\n\n**Step 4: Case A (one index in {1,3}, two in {0,2,4}).** By symmetry this equals $3\\cdot 2a = 6a$, where $a$ is the rational part of the $o=1$ sum over the nine ordered even pairs. The contributions are:\n\n- $(0,0)$: $80+32s$\n- $(0,2)\\times2$: $\\frac{480+208s}{11}$\n- $(0,4)\\times2$: $10-2s$\n- $(2,2)$: $\\frac{490+218s}{31}$\n- $(4,4)$: $\\frac{150-62s}{41}$\n- $(2,4)\\times2$: $\\frac{140+36s}{41}$\n\nRational part:\n$$a = 90+\\frac{480}{11}+\\frac{490}{31}+\\frac{290}{41}=\\frac{2188250}{13981},\\qquad A=\\frac{13129500}{13981}.$$\n\n**Step 5: Combine.** \n$$S = \\frac{13129500}{13981}+\\frac{14000}{57}=\\frac{944115500}{796917}.$$\n\nNumerically $S\\approx 1184.7$, so $R\\approx 1.1847$, which is plausible for corner-to-corner resistance in a $5\\times5\\times5$ grid.\n\n**Step 6: Expected time.** $E = 300R = \\dfrac{3S}{10} = \\dfrac{94411550}{265639}$, where $265639 = 11\\cdot19\\cdot31\\cdot41$.\n\nThe numerator is $2\\cdot 5^2\\cdot 1888231$. Checking $1888231$ modulo $11, 19, 31, 41$ gives remainders $-7, 11, 21, 17$ (none zero), so the fraction is in lowest terms.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Reduce to effective resistance.** For a graph with $|E|$ edges, Tetali's formula gives $H(a,b)=\\tfrac12\\sum_z d(z)\\,[R(a,b)+R(b,z)-R(a,z)]$. The reflection $(x,y,z)\\mapsto(4-x,4-y,4-z)$ swaps $a=(0,0,0)$ and $b=(4,4,4)$ and preserves degrees, so $\\sum_z d(z)R(b,z)=\\sum_z d(z)R(a,z)$. Hence\n\n$$H(a,b)=|E|\\,R(a,b).$$\n\nHere $|E|=3\\cdot 4\\cdot 25=300$.\n\n**Spectral formula for $R$.** The grid is $P_5^3$. The path $P_5$ has eigenvalues $\\mu_k=4\\sin^2(\\pi k/10)$ with eigenvectors $\\cos(\\pi k(2x+1)/10)$. Since $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, only triples $(i,j,k)$ with $i+j+k$ odd contribute, and\n\n$$R=\\sum_{i+j+k\\text{ odd}}\\frac{4\\,w_iw_jw_k}{\\mu_i+\\mu_j+\\mu_k},\\qquad w_0=\\tfrac15,\\; w_k=\\tfrac25\\cos^2\\tfrac{\\pi k}{10}\\ (k\\ge1).$$\n\nWriting $a_0=\\tfrac12$ and $a_k=\\cos^2(\\pi k/10)$ gives $R=\\tfrac{32}{125}S$, where $S=\\sum_{i+j+k\\text{ odd}} \\dfrac{a_ia_ja_k}{\\mu_i+\\mu_j+\\mu_k}$.\n\n(Sanity check: the same method on a 1D path $P_5$ gives $R=4$, the correct resistance across 4 unit edges.)\n\n**Exact evaluation.** Let $s=\\sqrt5$. The 16 unordered odd-sum multisets $\\{i,j,k\\}$ were evaluated exactly in $\\mathbb{Q}(\\sqrt5)$, each weighted by its number of orderings. The $\\sqrt5$-parts cancel in conjugate pairs, leaving\n\n$$S=\\frac{15}{8}+\\frac{45}{44}+\\frac{15}{64}+\\frac{125}{192}+\\frac{375}{1216}+\\frac{735}{1984}+\\frac{105}{1312}+\\frac{225}{2624}=\\frac{236028875}{51002688}.$$\n\nA direct decimal evaluation gives $S\\approx4.6278$, consistent with this.\n\nTherefore\n\n$$R=\\frac{32}{125}\\cdot\\frac{236028875}{51002688}=\\frac{1888231}{1593834},$$\n\nwhich is in lowest terms since $1593834=2\\cdot3\\cdot11\\cdot19\\cdot31\\cdot41$ and $1888231$ is divisible by none of these.\n\n**Hitting time.**\n\n$$H=300\\cdot\\frac{1888231}{1593834}=\\frac{50\\cdot 1888231}{265639}=\\frac{94411550}{265639}\\approx 355.4,$$\n\nwith $265639=11\\cdot19\\cdot31\\cdot41$ coprime to $50\\cdot1888231$.\n\nSo $m+n=94411550+265639=94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** Let $a=(0,0,0)$ and $b=(4,4,4)$. The reflection $x\\mapsto 4-x$ (in every coordinate) is an automorphism swapping $a$ and $b$, so $H(a,b)=H(b,a)$. The commute-time identity $H(a,b)+H(b,a)=2mR_{ab}$ then gives\n$$H(a,b)=m\\,R_{ab},$$\nwhere $m=300$ is the number of edges (100 per direction) and $R_{ab}$ is the effective resistance.\n\n**Step 2: Spectral formula for $R_{ab}$.** The Laplacian of $P_5^{\\,3}$ is a Cartesian sum of path Laplacians. The path $P_5$ has eigenvalues $\\lambda_k=2-2\\cos(\\pi k/5)$ with eigenvectors $u_k(x)=c_k\\cos(\\pi k(2x+1)/10)$. Since $u_k(4)=(-1)^k u_k(0)$, only triples $(i,j,k)$ with $i+j+k$ odd contribute, each with numerator $4\\,q_iq_jq_k$, where $q_k=u_k(0)^2$. Writing $q_k=Q_k/10$ gives $R_{ab}=\\tfrac{S}{250}$, where\n$$S=\\sum_{i+j+k\\text{ odd}}\\frac{Q_iQ_jQ_k}{\\lambda_i+\\lambda_j+\\lambda_k}.$$\n\nWith $\\varphi=\\frac{1+\\sqrt5}{2}$ the values are:\n\n| index | $Q_k$ | $\\lambda_k$ |\n|---|---|---|\n| 0 | 2 | 0 |\n| 1 | $2+\\varphi$ | $2-\\varphi$ |\n| 2 | $1+\\varphi$ | $3-\\varphi$ |\n| 3 | $3-\\varphi$ | $1+\\varphi$ |\n| 4 | $2-\\varphi$ | $2+\\varphi$ |\n\n**Step 3: Evaluate $S$.** Split the odd-sum triples into those with three odd indices (8 ordered triples) and those with exactly one odd index (54 ordered triples).\n\n- Three odd indices: $\\dfrac{D^3}{3A}+\\dfrac{B^3}{3C}+\\dfrac{3D^2B}{2A+C}+\\dfrac{3DB^2}{A+2C}=\\dfrac{125}{3}+\\dfrac{375}{19}$, where $A=2-\\varphi$, $B=3-\\varphi$, $C=1+\\varphi$, $D=2+\\varphi$. The $\\varphi$-terms cancel exactly.\n\n- Exactly one odd index: $S_1=3\\,[D\\,T_1+B\\,T_3]$, where $T_1$ and $T_3$ are the sums over even-index pairs with $o=1$ and $o=3$ respectively. Computing these in $\\mathbb{Q}(\\varphi)$ and combining, all $\\varphi$-terms cancel, leaving\n$$D\\,T_1+B\\,T_3=45+\\frac{240}{11}+\\frac{245}{31}+\\frac{145}{41},$$\nso $S_1=135+\\dfrac{720}{11}+\\dfrac{735}{31}+\\dfrac{435}{41}$.\n\nSumming over the common denominator $796917=3\\cdot11\\cdot19\\cdot31\\cdot41$:\n$$S=\\frac{236028875}{796917}\\approx 296.1775.$$\n\nA numerical check of the individual pieces agrees with this value.\n\n**Step 4: Compute $H$.** \n$$H=300\\cdot\\frac{S}{250}=\\frac{6S}{5}=\\frac{6\\cdot 47205775}{796917}=\\frac{283234650}{796917}=\\frac{94411550}{265639}.$$\n\nReducing: $265639=11\\cdot19\\cdot31\\cdot41$, and $94411550$ leaves nonzero remainders modulo $11$ (remainder 2), $19$ (remainder 18), $31$ (remainder 27), and $41$ (remainder 30). So the fraction is in lowest terms. As a check, $H\\approx 355.41$, consistent with $1.2\\cdot S$.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\nThe expected hitting time can be found from effective resistance. The automorphism $(x,y,z)\\mapsto(4-x,4-y,4-z)$ swaps $a=(0,0,0)$ and $b=(4,4,4)$, so $E_a[T_b]=E_b[T_a]$. The commute time identity $E_a[T_b]+E_b[T_a]=2mR_{ab}$ then gives $E_a[T_b]=mR_{ab}$. Here $m=300$ edges (100 per direction), so the answer is $300R_{ab}$.\n\n## Effective resistance via the spectrum\n\nFor the path $P_5$, the orthonormal Laplacian eigenvectors are $\\varphi_k(x)=c_k\\cos\\frac{\\pi k(2x+1)}{10}$, with eigenvalues $\\lambda_k=2-2\\cos\\frac{\\pi k}{5}$. Since $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, the product eigenvectors of $P_5^3$ satisfy\n\n$$R=\\sum_{i+j+k\\ \\text{odd}}\\frac{4\\,a_ia_ja_k}{\\lambda_i+\\lambda_j+\\lambda_k},\\qquad a_k=\\varphi_k(0)^2.$$\n\nWith $s=\\sqrt5$, write $A_k=20a_k$ and $L_k=2\\lambda_k$:\n\n| $k$ | $A_k$ | $L_k$ |\n|---|---|---|\n| 0 | 4 | 0 |\n| 1 | $5+s$ | $3-s$ |\n| 2 | $3+s$ | $5-s$ |\n| 3 | $5-s$ | $3+s$ |\n| 4 | $3-s$ | $5+s$ |\n\nThis gives $R=\\frac{1}{1000}S$ with $S=\\sum_M N_M\\,\\dfrac{\\prod A}{\\sum L}$, summed over the 16 multisets $M$ with odd sum ($N_M$ = number of orderings).\n\n## Evaluating the sum\n\nPairing each multiset with its conjugate ($s\\mapsto -s$, which swaps $1\\leftrightarrow3$, $2\\leftrightarrow4$) gives:\n\n- $(0,0,1)+(0,0,3)$: $48(5+2s)+48(5-2s)=480$\n- $(0,1,2)+(0,3,4)$: $\\frac{2880}{11}$\n- $(0,1,4)+(0,2,3)$: $60$\n- $(1,1,3)+(1,3,3)$: $\\frac{1500}{19}$\n- $(1,2,2)+(3,4,4)$: $\\frac{2940}{31}$\n- $(1,2,4)+(2,3,4)$: $\\frac{840}{41}$\n- $(1,4,4)+(2,2,3)$: $\\frac{900}{41}$\n- $(1,1,1)+(3,3,3)$: $\\frac{500}{3}$\n\nSumming (with numerical checks, e.g. $S\\approx 1184.7$):\n\n$$S=540+\\frac{2880}{11}+\\frac{1500}{19}+\\frac{2940}{31}+\\frac{1740}{41}+\\frac{500}{3}=\\frac{944{,}115{,}500}{796{,}917},$$\n\nwhere $796917=3\\cdot11\\cdot19\\cdot31\\cdot41$.\n\n## Hitting time\n\n$$E_a[T_b]=300\\cdot\\frac{S}{1000}=\\frac{3S}{10}=\\frac{94{,}411{,}550}{265{,}639}.$$\n\nThe denominator is $11\\cdot19\\cdot31\\cdot41$. Checking remainders modulo each prime gives $3,\\ 18,\\ 27,\\ 30$ respectively, so none divides the numerator and the fraction is in lowest terms.\n\nTherefore $m+n = 94{,}411{,}550+265{,}639 = 94{,}677{,}189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** The map $v \\mapsto (4,4,4) - v$ is a graph automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_a T_b = E_b T_a$. The commute-time identity $E_aT_b + E_bT_a = 2m R_{ab}$ then gives $E_a T_b = m R_{ab}$. The grid has $m = 3\\cdot 4\\cdot 5\\cdot 5 = 300$ edges, so the answer is $300\\,R_{ab}$.\n\n**Step 2: Spectral formula for $R_{ab}$.** The Laplacian of the 5\u00d75\u00d75 grid is a Kronecker sum of three copies of the path $P_5$ Laplacian. Its orthonormal eigenvectors are products of path eigenvectors, indexed by $(j_1,j_2,j_3)\\in\\{0,\\dots,4\\}^3$, with eigenvalue $\\Lambda=\\lambda_{j_1}+\\lambda_{j_2}+\\lambda_{j_3}$. Here:\n\n- $\\lambda_j = 2-2\\cos(\\pi j/5)$, so $\\lambda_0=0$, $\\lambda_1=\\frac{3-\\sqrt5}{2}$, $\\lambda_2=\\frac{5-\\sqrt5}{2}$, $\\lambda_3=\\frac{3+\\sqrt5}{2}$, $\\lambda_4=\\frac{5+\\sqrt5}{2}$.\n- The weights $w_j = \\varphi_j(0)^2$ are $w_0=\\frac15$, $w_1=\\frac{5+\\sqrt5}{20}$, $w_2=\\frac{3+\\sqrt5}{20}$, $w_3=\\frac{5-\\sqrt5}{20}$, $w_4=\\frac{3-\\sqrt5}{20}$.\n\nSince $\\varphi_j(4) = (-1)^j\\varphi_j(0)$, the difference $(\\varphi(a)-\\varphi(b))^2$ equals $4W$ when $J=j_1+j_2+j_3$ is odd and $0$ otherwise, where $W=\\prod w_{j_i}$. Hence\n$$R_{ab} = 4S,\\qquad S=\\sum_{\\text{ordered triples, } J \\text{ odd}} \\frac{W}{\\Lambda}.$$\n\nI checked this method on the 2\u00d72 grid, where it correctly gives $R=1$.\n\n**Step 3: Evaluate $S$.** There are 62 ordered odd-sum triples, which group into 16 multisets. Pairing each multiset with its Galois conjugate ($\\sqrt5\\to-\\sqrt5$) makes the irrational parts cancel. The pair sums are:\n\n| Pair | Contribution to $S$ | Contribution to $E=1200S$ |\n|---|---|---|\n| 001 + 003 | $3/25$ | $144$ |\n| 012 + 034 | $18/275$ | $864/11$ |\n| 014 + 023 | $3/200$ | $18$ |\n| 111 + 333 | $1/24$ | $50$ |\n| 113 + 133 | $3/152$ | $450/19$ |\n| 122 + 344 | $147/6200$ | $882/31$ |\n| 124 + 234 | $21/4100$ | $252/41$ |\n| 223 + 144 | $9/1640$ | $270/41$ |\n\nSumming the $E$-contributions:\n$$E = 212 + \\frac{864}{11} + \\frac{450}{19} + \\frac{882}{31} + \\frac{522}{41}\\approx 355.41.$$\n\n**Step 4: Combine into one fraction.** With $D = 11\\cdot19\\cdot31\\cdot41 = 265639$:\n$$E = \\frac{94\\,411\\,550}{265\\,639}.$$\nThe denominator's prime factors do not divide the numerator (checked modulo 11, 19, 31, 41), so the fraction is in lowest terms.\n\nTherefore $m+n = 94\\,411\\,550 + 265\\,639 = 94\\,677\\,189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** For a simple random walk on a graph, Tetali's formula gives\n\n$$H(a,b)=\\tfrac12\\sum_v d(v)\\,[R(a,b)+R(b,v)-R(a,v)].$$\n\nThe map $v\\mapsto(4,4,4)-v$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $\\sum_v d(v)R(b,v)=\\sum_v d(v)R(a,v)$. The bracketed correction sums to zero, leaving $H(a,b)=|E|\\,R(a,b)$.\n\nThe grid has $3\\cdot 4\\cdot 25=300$ edges, so the answer is $300\\,R(a,b)$.\n\n**Step 2: Spectral formula for $R$.** The path $P_5$ has orthonormal eigenvectors $\\varphi_k(x)$ with eigenvalues $\\mu_k=2-2\\cos(\\pi k/5)$. Write $w_k=\\varphi_k(0)^2$ and note $\\varphi_k(4)=(-1)^k\\varphi_k(0)$. For the product graph, only triples $(k_1,k_2,k_3)$ with $K=k_1+k_2+k_3$ odd contribute, each with numerator $(2P)^2=4\\,w_{k_1}w_{k_2}w_{k_3}$. Let $s=\\sqrt5$ and set\n\n$$W_0=4,\\ W_1=5+s,\\ W_2=3+s,\\ W_3=5-s,\\ W_4=3-s \\quad(w_k=W_k/20),$$\n$$M_0=0,\\ M_1=3-s,\\ M_2=5-s,\\ M_3=3+s,\\ M_4=5+s \\quad(\\mu_k=M_k/2).$$\n\nThen each term simplifies to $\\dfrac{\\prod W}{1000\\,\\sum M}$, so $R=S/1000$, where $S$ sums $\\prod W/\\sum M$ over ordered triples with odd sum.\n\n(Check: the same method on $P_5$ gives end-to-end resistance $4$, as expected.)\n\n**Step 3: Evaluate $S$.** The sum is invariant under $s\\to-s$, so $S$ is rational. Grouping the odd-sum triples by multiset:\n\n- **One odd entry** (6 multisets with 1 or 3 and an even pair): the sum over these equals $2\\cdot\\mathrm{Rat}(A)$, where\n$$\\mathrm{Rat}(A)=240+\\tfrac{1440}{11}+30+\\tfrac{1470}{31}+\\tfrac{420}{41}+\\tfrac{450}{41}=270+\\tfrac{1440}{11}+\\tfrac{1470}{31}+\\tfrac{870}{41}.$$\n- **Three odd entries:** $(1,1,1)$ and $(3,3,3)$ give $\\tfrac{500}{3}$ total; $(1,1,3)$ and $(1,3,3)$ give $\\tfrac{1500}{19}$ total.\n\nHence\n$$S=540+\\tfrac{2880}{11}+\\tfrac{2940}{31}+\\tfrac{1740}{41}+\\tfrac{500}{3}+\\tfrac{1500}{19}\\approx 1184.71,$$\nwhich I checked numerically term by term.\n\n**Step 4: Expected time.** $E=300\\cdot\\dfrac{S}{1000}=\\dfrac{3S}{10}$:\n\n$$E=212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}.$$\n\nOver the common denominator $11\\cdot31\\cdot41\\cdot19=265639$, the numerator is $212\\cdot265639+38096082=94411550$. Checking residues modulo 11, 19, 31, 41 shows the fraction is in lowest terms. Numerically $E\\approx355.41$, consistent with the decimal sum.\n\nSo $m/n=94411550/265639$, and\n\n$$m+n=94411550+265639=94677189.$$\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to an effective resistance.** The graph has 300 edges, so the degrees sum to 600. For a random walk on a graph, the expected hitting time is given by Tetali's formula\n\n$$E_a[T_b]=\\tfrac12\\sum_x d_x\\left(R_{ab}+R_{bx}-R_{ax}\\right).$$\n\nThe reflection $v\\mapsto(4,4,4)-v$ swaps $a=(0,0,0)$ and $b=(4,4,4)$ and preserves degrees, so $\\sum_x d_x R_{bx}=\\sum_x d_x R_{ax}$. Hence $E_a[T_b]=300\\,R_{ab}$.\n\n**Step 2: Spectral formula for $R_{ab}$.** The path $P_5$ has normalized Laplacian eigenvectors $\\psi_k(i)=\\cos\\!\\big(\\tfrac{\\pi k(2i+1)}{10}\\big)/\\sqrt{N_k}$ with eigenvalues $\\lambda_k=2-2\\cos(\\pi k/5)$. Since $\\psi_k(4)=(-1)^k\\psi_k(0)$, the product eigenvectors $(k_1,k_2,k_3)$ contribute only when $K=k_1+k_2+k_3$ is odd, each with weight $4\\psi(a)^2$. Writing $\\psi(a)^2=\\prod_i \\gamma_{k_i}/10$ with $\\gamma_0=2$ and $\\gamma_k=10\\cos^2(\\pi k/10)/N_k$, and using $\\phi=\\frac{1+\\sqrt5}{2}$:\n\n- $\\gamma_0=2,\\ \\gamma_1=2+\\phi,\\ \\gamma_2=1+\\phi,\\ \\gamma_3=3-\\phi,\\ \\gamma_4=2-\\phi$\n- $\\lambda_0=0,\\ \\lambda_1=2-\\phi,\\ \\lambda_2=3-\\phi,\\ \\lambda_3=1+\\phi,\\ \\lambda_4=2+\\phi$\n\nThis gives $R_{ab}=\\frac{S}{250}$ with $S=\\sum_{K\\text{ odd}}\\frac{\\prod\\gamma_{k_i}}{\\sum\\lambda_{k_i}}$, so $E=\\frac{6S}{5}$.\n\n**Step 3: Evaluate $S$.** There are 62 odd-sum triples. Grouping by multiset:\n\n- All odd entries (weights 1,3,3,1): the $\\phi$-terms cancel, giving $\\frac{125}{3}+\\frac{375}{19}=\\frac{3500}{57}$.\n- One odd entry, two even entries: grouping by denominator (11, 31, 41) and integer parts, the $\\phi$-terms cancel, giving $\\frac{720}{11}+\\frac{735}{31}+\\frac{435}{41}+135$.\n\nSo $S=\\frac{3500}{57}+\\frac{720}{11}+\\frac{735}{31}+\\frac{435}{41}+135\\approx 296.1775$, which I checked term-by-term numerically. This gives $E\\approx 355.413$.\n\n**Step 4: Exact expectation.**\n\n$$E=\\frac{6}{5}S=162+\\frac{1400}{19}+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}.$$\n\nOver the common denominator $265639=11\\cdot19\\cdot31\\cdot41$, the numerator is\n\n$$162\\cdot265639+1400\\cdot13981+864\\cdot24149+882\\cdot8569+522\\cdot6479=94{,}411{,}550.$$\n\nChecking residues modulo 11, 19, 31 and 41 shows none divides the numerator, so the fraction is in lowest terms:\n\n$$E=\\frac{94411550}{265639}\\approx 355.413.$$\n\nTherefore $m+n=94411550+265639=94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to a resistance.** The map $(x,y,z)\\mapsto(4-x,4-y,4-z)$ swaps $a=(0,0,0)$ and $b=(4,4,4)$, so $E_aT_b=E_bT_a$. Since the commute time is $E_aT_b+E_bT_a=2|E|R(a,b)$, we get\n$$E_aT_b=|E|\\,R(a,b).$$\nHere $|E|=3\\cdot 4\\cdot 25=300$.\n\n**Step 2: Spectral formula for $R$.** The grid is a Cartesian product of three copies of $P_5$. The $P_5$ Laplacian has eigenvalues $\\mu_k=2-2\\cos(k\\pi/5)$ with orthonormal eigenvectors $f_k(x)=c_k\\cos(k\\pi(2x+1)/10)$. Let $a_k=f_k(0)^2$. Then $f_k(4)=(-1)^k f_k(0)$, so the 3D mode $K=(k_1,k_2,k_3)$ contributes $4\\prod a_{k_i}/\\sum\\mu_{k_i}$ exactly when $\\sum k_i$ is odd. Thus\n$$R=4\\sum_{\\sum k_i\\text{ odd}}\\frac{\\prod a_{k_i}}{\\sum \\mu_{k_i}}.$$\n\nWith $s=\\sqrt5$:\n- $a_0=\\tfrac15$, $a_1=\\tfrac{5+s}{20}$, $a_2=\\tfrac{3+s}{20}$, $a_3=\\tfrac{5-s}{20}$, $a_4=\\tfrac{3-s}{20}$\n- $\\mu_0=0$, $\\mu_1=\\tfrac{3-s}{2}$, $\\mu_2=\\tfrac{5-s}{2}$, $\\mu_3=\\tfrac{3+s}{2}$, $\\mu_4=\\tfrac{5+s}{2}$\n\n**Step 3: Enumerate.** There are 16 multisets $\\{k_1,k_2,k_3\\}$ with odd sum, accounting for 62 ordered triples (matching $(125-1)/2$). Writing $R=S/1000$ with $S=\\sum_M n_M t_M$, where $n_M$ is the number of orderings and $t_M=P_{\\text{num}}/D_{\\text{num}}$ in $\\mathbb{Q}(\\sqrt5)$, the conjugate pairs give rational sums:\n\n| Multiset(s) | $n$ | Rational contribution to $S$ |\n|---|---|---|\n| 001, 003 | 3 | 480 |\n| 012, 034 | 6 | $2880/11$ |\n| 014, 023 | 6 | 60 |\n| 111, 333 | 1 | $500/3$ |\n| 113, 133 | 3 | $1500/19$ |\n| 122, 344 | 3 | $2940/31$ |\n| 124, 234 | 6 | $840/41$ |\n| 144, 223 | 3 | $900/41$ |\n\nThe irrational parts cancel within each pair. Checks: $t_{001}=80+32s$, $t_{012}=(240+104s)/11$, $t_{124}=(70+18s)/41$, and the cube test (2\u00d72\u00d72 gives $R=5/6$) confirm the method.\n\n**Step 4: Sum exactly.** Over the common denominator $796917=3\\cdot11\\cdot19\\cdot31\\cdot41$:\n$$S=\\frac{944115500}{796917}\\approx 1184.7,$$\nso $R\\approx1.1847$.\n\n**Step 5: Expected time.**\n$$E=300\\cdot\\frac{S}{1000}=\\frac{3S}{10}=\\frac{94411550}{265639}.$$\n\nThe denominator is $11\\cdot19\\cdot31\\cdot41$, and the numerator is not divisible by 11, 19, 31, or 41, so the fraction is in lowest terms. (Numerically $E\\approx355.4$.)\n\nTherefore $m+n=94411550+265639=94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** The map $p \\mapsto (4,4,4) - p$ is a graph automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_a T_b = E_b T_a$. The commute-time identity $E_aT_b + E_bT_a = 2m\\,R_{\\text{eff}}(a,b)$ then gives $E_aT_b = m\\,R_{\\text{eff}}(a,b)$. The graph has $m = 3\\cdot 100 = 300$ edges.\n\n**Step 2: Spectral formula.** The path $P_5$ has Laplacian eigenvectors $v_k(j)=\\cos\\!\\big(k\\pi(j+\\tfrac12)/5\\big)$ with eigenvalues $\\mu_k = 2-2\\cos(k\\pi/5)$. For the product graph, $R_{\\text{eff}}(a,b)=\\sum_{(k_1,k_2,k_3)\\ne 0}\\frac{(\\varphi(a)-\\varphi(b))^2}{\\sum\\mu_{k_i}}$. Since $v_k(4)=(-1)^k v_k(0)$, the difference vanishes unless $k_1+k_2+k_3$ is odd, in which case the squared normalized difference is $4\\prod w_{k_i}$, where $w_k = t_k/10$ with\n\n| $k$ | $t_k$ | $\\mu_k$ |\n|---|---|---|\n| 0 | $2$ | $0$ |\n| 1 | $2+\\varphi$ | $2-\\varphi$ |\n| 2 | $1+\\varphi$ | $3-\\varphi$ |\n| 3 | $3-\\varphi$ | $1+\\varphi$ |\n| 4 | $2-\\varphi$ | $2+\\varphi$ |\n\nHere $\\varphi=(1+\\sqrt5)/2$. This gives $R_{\\text{eff}} = \\frac{4}{1000}S$, where $S=\\sum \\frac{\\prod t_{k_i}}{\\sum \\mu_{k_i}}$ over triples with odd index sum. Hence $E = 300R = \\frac{6}{5}S$.\n\n**Step 3: Evaluate $S$ exactly in $\\mathbb{Q}(\\varphi)$.** The triples split into:\n\n- *Exactly one odd index* (3 positions \u00d7 2 odd choices \u00d7 9 ordered even pairs). Writing $Q_o$ for the inner sum over even pairs, the $\\varphi$-terms cancel in $t_1Q_1+t_3Q_3$, leaving\n$$t_1Q_1+t_3Q_3 = 45+\\tfrac{240}{11}+\\tfrac{245}{31}+\\tfrac{145}{41},$$\nso this part contributes $135+\\tfrac{720}{11}+\\tfrac{735}{31}+\\tfrac{435}{41}$.\n\n- *All three indices odd*: \n$$\\tfrac{35+55\\varphi}{3}+3\\cdot\\tfrac{45+35\\varphi}{19}+3\\cdot\\tfrac{80-35\\varphi}{19}+\\tfrac{90-55\\varphi}{3} = \\tfrac{125}{3}+\\tfrac{375}{19}.$$\n\nTherefore\n$$S = \\frac{530}{3}+\\frac{720}{11}+\\frac{375}{19}+\\frac{735}{31}+\\frac{435}{41} = \\frac{236028875}{796917}\\approx 296.18,$$\nwhich matches a direct numerical evaluation.\n\n**Step 4: Expected time.**\n$$E=\\frac{6}{5}S=\\frac{6\\cdot 47205775}{796917}=\\frac{2\\cdot 47205775}{265639}=\\frac{94411550}{265639}\\approx 355.41.$$\n\nThe numerator is not divisible by 11, 19, 31, or 41 (remainders 1, 9, 29, 15), so the fraction is in lowest terms.\n\nThus $m+n = 94411550 + 265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\nThe expected hitting time comes from Tetali's formula, which expresses $H(a,b)$ through effective resistances. Those resistances are then computed with the eigendecomposition of the path Laplacian, since the grid is a Cartesian product of paths $P_5$.\n\n**Step 1: Tetali's formula.** For a graph with $m$ edges and degrees $d(v)$,\n$$H(a,b)=\\tfrac12\\sum_v d(v)\\,[R(a,b)+R(b,v)-R(a,v)].$$\nHere $m=300$, and $a=(0,0,0)$, $b=(4,4,4)$. Writing $Q=L^+$ for the pseudoinverse of the Laplacian, the degree-correction term $\\sum_v d(v)(Q_{bv}-Q_{av})$ vanishes because a separable solution $u(v)=\\sum_i w(v_i)$ with $w=(0,0.6,0.8,0.6,0)$ solves $Lu=d-4.8\\cdot\\mathbf 1$ and $u(a)=u(b)=0$. This gives\n$$H(a,b)=600\\,(Q_{bb}-Q_{ab}).$$\n(Checked on $P_2$ and $P_3$.)\n\n**Step 2: Spectral sum.** The path $P_5$ has eigenvectors $\\cos\\!\\big(\\tfrac{k\\pi(2t+1)}{10}\\big)$ with eigenvalues $\\mu_k=2-2\\cos\\tfrac{k\\pi}{5}$. Let $s_k=\\psi_k(0)^2$ for orthonormal $\\psi_k$. Since $\\psi_k(4)=(-1)^k\\psi_k(0)$, the summand for $K=(k_1,k_2,k_3)$ is $\\prod s_{k_i}\\,(1-(-1)^{K})$, which is nonzero only when $k_1+k_2+k_3$ is odd. Setting $r=\\sqrt5$ and\n$$t_k=20s_k:\\quad t_0=4,\\ t_1=5+r,\\ t_2=3+r,\\ t_3=5-r,\\ t_4=3-r,$$\n$$m_k=2\\mu_k:\\quad m_0=0,\\ m_1=3-r,\\ m_2=5-r,\\ m_3=3+r,\\ m_4=5+r,$$\none gets\n$$H=\\tfrac{3}{10}\\sum_{\\substack{K\\neq 0\\\\ \\sum k_i\\ \\text{odd}}}\\frac{t_{k_1}t_{k_2}t_{k_3}}{m_{k_1}+m_{k_2}+m_{k_3}}.$$\n\n**Step 3: Evaluate the 62 odd-sum triples** by grouping into multisets (16 multisets, with permutation counts summing to 62):\n\n- Three odd entries: $\\{1,1,1\\}$ and $\\{3,3,3\\}$ give $\\tfrac{500}{3}$; $\\{1,1,3\\}$ and $\\{1,3,3\\}$ give $\\tfrac{1500}{19}$.\n- One odd entry: the twelve multisets contribute $540+\\tfrac{2880}{11}+\\tfrac{2940}{31}+\\tfrac{1740}{41}$.\n\nSo\n$$\\Sigma = 540+\\tfrac{500}{3}+\\tfrac{2880}{11}+\\tfrac{2940}{31}+\\tfrac{1740}{41}+\\tfrac{1500}{19}\\approx 1184.71,$$\nand\n$$H=\\tfrac{3}{10}\\Sigma = 212+\\tfrac{864}{11}+\\tfrac{882}{31}+\\tfrac{522}{41}+\\tfrac{450}{19}\\approx 355.41.$$\n\n**Step 4: Combine into one fraction.** With denominator $D=11\\cdot19\\cdot31\\cdot41=265639$, the numerator is\n$$N=94{,}411{,}550,$$\nso $H=\\dfrac{94411550}{265639}$. Checking divisibility of $N$ by $11$, $19$, $31$, $41$ shows none divides it, so the fraction is in lowest terms.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\nSince the walk is simple on a graph, the expected hitting time is $E_a T_b = mR_{ab}$ when the commute time is split evenly. The map $\\sigma(x,y,z)=(4-x,4-y,4-z)$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_aT_b=E_bT_a$, and the commute-time identity $E_aT_b+E_bT_a=2mR_{ab}$ gives $E_aT_b=mR_{ab}$.\n\nHere $m = 3\\cdot 4\\cdot 25 = 300$.\n\n## Spectral computation of $R_{ab}$\n\nThe graph is the Cartesian product of three copies of the path $P_5$. For $P_5$, the normalized eigenvectors are $c_k(j)$ with eigenvalues $\\lambda_k = 2-2\\cos(k\\pi/5)$, and $c_k(4)=(-1)^k c_k(0)$. Hence for a product eigenvector indexed by $(i,j,k)$, the value at $b$ equals $(-1)^{i+j+k}$ times the value at $a$. Only triples with odd index sum contribute:\n\n$$R_{ab}=4\\sum_{i+j+k\\text{ odd}} \\frac{w_iw_jw_k}{\\lambda_i+\\lambda_j+\\lambda_k},\\qquad w_k=c_k(0)^2.$$\n\nWriting $s=\\sqrt5$, set $W_k=20w_k$ and $L_k=2\\lambda_k$:\n\n| $k$ | $W_k$ | $L_k$ |\n|---|---|---|\n| 0 | 4 | 0 |\n| 1 | $5+s$ | $3-s$ |\n| 2 | $3+s$ | $5-s$ |\n| 3 | $5-s$ | $3+s$ |\n| 4 | $3-s$ | $5+s$ |\n\nThese satisfy the checks $\\sum_k w_k=1$, $\\sum_k w_k\\lambda_k=1$, and reproduce $R=4$ for the endpoints of $P_5$. Defining $T=\\sum_{\\text{odd}} \\frac{W_iW_jW_k}{L_i+L_j+L_k}$ gives $R_{ab}=T/1000$, so $E=\\tfrac{3}{10}T$.\n\n**Case I (all three indices odd, from $\\{1,3\\}$):**\n- $\\{1,1,1\\}$ and $\\{3,3,3\\}$ together give $\\frac{500}{3}$.\n- The multisets $\\{1,1,3\\}$ and $\\{1,3,3\\}$ (each with multiplicity 3) together give $\\frac{1500}{19}$.\n\n**Case II (exactly one odd index):** the total is $3(F_1+F_3)$, where $F_3=\\overline{F_1}$ by Galois conjugation. Summing over the ordered even pairs gives the rational part of $F_1$:\n$$\\operatorname{Re}F_1 = 90+\\frac{480}{11}+\\frac{490}{31}+\\frac{290}{41},$$\nso Case II $= 6\\operatorname{Re}F_1 = 540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}$.\n\nThe irrational parts cancel, as they must since $R_{ab}$ is rational.\n\n## Assembling\n\n$$T = \\frac{2120}{3}+\\frac{1500}{19}+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}$$\n\n$$E=\\tfrac{3}{10}T = 212+\\frac{450}{19}+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}.$$\n\nOver the common denominator $19\\cdot11\\cdot31\\cdot41 = 265639$, the fractional part has numerator $38{,}096{,}082$, so\n\n$$E=\\frac{212\\cdot 265639+38096082}{265639}=\\frac{94411550}{265639}.$$\n\nEach prime in the denominator divides exactly one term with a nonzero residue, so the fraction is in lowest terms. Numerically $E\\approx 355.41$, which is plausible.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** For a graph with $|E|$ edges, Tetali's formula gives\n$$E_a[T_b]=\\tfrac12\\sum_v d(v)\\big(R(a,b)+R(b,v)-R(a,v)\\big).$$\nThe map $v\\mapsto (4,4,4)-v$ swaps $a$ and $b$, preserves degrees, and preserves resistances, so $\\sum_v d(v)R(b,v)=\\sum_v d(v)R(a,v)$. These cancel, leaving $E_a[T_b]=|E|\\,R(a,b)$. The $5\\times5\\times5$ grid has $3\\cdot 4\\cdot 25=300$ edges, so the answer is $300\\,R(a,b)$.\n\n**Step 2: Spectral formula for $R$.** The graph is $P_5\\,\\square\\,P_5\\,\\square\\,P_5$. The eigenvalues of $P_5$ are $\\mu_k=2-2\\cos(k\\pi/5)$ with normalized eigenvectors $\\varphi_k(j)\\propto\\cos(k\\pi(2j+1)/10)$. Since $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, the potential difference between $a$ and $b$ vanishes unless $k_1+k_2+k_3$ is odd, in which case $(\\psi(a)-\\psi(b))^2=4\\,w_{k_1}w_{k_2}w_{k_3}$, where $w_k=\\varphi_k(0)^2$. Thus\n$$R=\\sum_{\\substack{(k_1,k_2,k_3)\\\\ \\sum k_i\\ \\text{odd}}}\\frac{4\\,w_{k_1}w_{k_2}w_{k_3}}{\\mu_{k_1}+\\mu_{k_2}+\\mu_{k_3}}.$$\n\nWith $s=\\sqrt5$:\n- $w_0=\\tfrac{4}{20}$, $w_1=\\tfrac{5+s}{20}$, $w_2=\\tfrac{3+s}{20}$, $w_3=\\tfrac{5-s}{20}$, $w_4=\\tfrac{3-s}{20}$\n- $\\mu_0=0$, $\\mu_1=\\tfrac{3-s}{2}$, $\\mu_2=\\tfrac{5-s}{2}$, $\\mu_3=\\tfrac{3+s}{2}$, $\\mu_4=\\tfrac{5+s}{2}$\n\nWriting $a_k=20w_k$ and $n_k=2\\mu_k$, each term becomes $\\dfrac{P}{1000N}$ with $P=\\prod a_{k_i}$ and $N=\\sum n_{k_i}$. So $R=S/1000$ where $S=\\sum P/N$ over ordered triples with odd sum, and $E=\\tfrac{3}{10}S$.\n\n**Step 3: Enumerate.** There are 62 ordered triples with odd sum. Conjugation $s\\to -s$ pairs the cases with an odd index in $\\{1\\}$ against those with $\\{3\\}$, so each pair contributes twice the rational part.\n\nThree odd entries:\n- $\\{1,1,1\\}$: $\\tfrac{250+110s}{3}$, rational part $\\tfrac{250}{3}$\n- $\\{1,1,3\\}$ (count 3): rational part $\\tfrac{750}{19}$\n\nOne odd entry (odd $=1$, rational parts including multiplicity):\n- $\\{1,0,0\\}$: $240$\n- $\\{1,0,2\\}$: $\\tfrac{1440}{11}$\n- $\\{1,0,4\\}$: $30$\n- $\\{1,2,2\\}$: $\\tfrac{1470}{31}$\n- $\\{1,2,4\\}$: $\\tfrac{420}{41}$\n- $\\{1,4,4\\}$: $\\tfrac{450}{41}$\n\nDoubling for conjugates:\n$$S=\\frac{500}{3}+\\frac{1500}{19}+540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}.$$\n\n**Step 4: Exact arithmetic.** Over the common denominator $796917=3\\cdot19\\cdot11\\cdot31\\cdot41$:\n$$S=\\frac{944115500}{796917}\\approx 1184.71,$$\nso\n$$E=\\frac{3}{10}S=\\frac{94411550}{265639}\\approx 355.4.$$\n\nThe fraction is in lowest terms: $265639=19\\cdot11\\cdot31\\cdot41$, and the numerator leaves nonzero remainders mod 11, 19, 31, and 41.\n\n**Check of the method.** The same formula applied to $Q_3$ (the $2\\times2\\times2$ cube) gives $R=5/6$, the known corner-to-opposite-corner resistance.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce hitting time to effective resistance.** Let $a=(0,0,0)$, $b=(4,4,4)$, and let $d_z$ be the degree of $z$. Tetali's formula gives\n$$H(a,b)=\\tfrac12\\sum_z d_z\\big(R_{ab}+R_{bz}-R_{az}\\big).$$\nThe map $x\\mapsto(4-x,4-y,4-z)$ is an automorphism swapping $a$ and $b$, so $\\sum_z d_zR_{bz}=\\sum_z d_zR_{az}$. Hence $H(a,b)=\\tfrac12 D R_{ab}$, where $D=2|E|=600$. So $H=300\\,R_{ab}$.\n\n**Step 2: Spectral formula for $R_{ab}$.** The path $P_5$ has Laplacian eigenvalues $\\lambda_k=2-2\\cos(\\pi k/5)$ with normalized eigenvectors $u_k(x)=\\sqrt{2/5}\\cos\\frac{\\pi k(2x+1)}{10}$ (for $k\\ge1$), and $u_0=1/\\sqrt5$. Write $s=\\sqrt5$ and $q_k=u_k(0)^2$:\n\n| $k$ | $\\lambda_k$ | $q_k$ |\n|---|---|---|\n| 0 | 0 | $1/5$ |\n| 1 | $(3-s)/2$ | $(5+s)/20$ |\n| 2 | $(5-s)/2$ | $(3+s)/20$ |\n| 3 | $(3+s)/2$ | $(5-s)/20$ | \n| 4 | $(5+s)/2$ | $(3-s)/20$ |\n\nSince $u_k(4)=(-1)^k u_k(0)$, the potential difference between $a$ and $b$ for the product mode $(i,j,k)$ is $2\\sqrt{q_iq_jq_k}$ when $i+j+k$ is odd, and zero otherwise. Therefore\n$$R_{ab}=4\\sum_{i+j+k\\ \\text{odd}}\\frac{q_iq_jq_k}{\\lambda_i+\\lambda_j+\\lambda_k}.$$\n(Checks: this reproduces $R=4$ for $P_5$ endpoints and $R=5/6$ for the $2\\times2\\times2$ cube.)\n\n**Step 3: Evaluate.** There are 16 multisets $\\{i,j,k\\}$ with odd sum, with multiplicities $m$ (number of distinct orderings), summing to 62 ordered triples. Computing each term in $\\mathbb{Q}(\\sqrt5)$ and pairing Galois conjugates, the $\\sqrt5$ parts cancel and\n$$\\sum m\\cdot\\frac{q_iq_jq_k}{\\lambda_i+\\lambda_j+\\lambda_k}\\cdot\\frac{1}{4}\\cdot 1000=S,$$\nwhere\n$$S=540+\\frac{2880}{11}+\\frac{500}{3}+\\frac{1500}{19}+\\frac{2940}{31}+\\frac{1740}{41}=\\frac{944{,}115{,}500}{796{,}917},$$\nwith $796917=3\\cdot11\\cdot19\\cdot31\\cdot41$. Thus $R_{ab}=S/1000\\approx1.1847$.\n\n**Step 4: Hitting time.**\n$$H=300R_{ab}=\\frac{3S}{10}=\\frac{283{,}234{,}650}{796{,}917}=\\frac{94{,}411{,}550}{265{,}639}.$$\n\nChecking divisibility, $265639=11\\cdot19\\cdot31\\cdot41$, and $94{,}411{,}550$ leaves nonzero remainders modulo 11, 19, 31, and 41 (residues $2$, $18$, $27$, $30$). So the fraction is in lowest terms.\n\nTherefore $m+n = 94{,}411{,}550+265{,}639 = 94{,}677{,}189$.\n\nANSWER: 94677189",
+  "## Answer: 22419\n\n**Approach.** Write the expected hitting time as $H(a,b)=m\\,R_{\\text{eff}}(a,b)$ using symmetry, then compute the effective resistance with the eigendecomposition of the path Laplacian.\n\n**Step 1: Reduce to effective resistance.** Let $a=(0,0,0)$, $b=(4,4,4)$. The map $(x,y,z)\\mapsto(4-x,4-y,4-z)$ is an automorphism swapping $a$ and $b$, so $H(a,b)=H(b,a)$. The commute-time identity gives $H(a,b)+H(b,a)=2mR_{\\text{eff}}(a,b)$, where $m$ is the number of edges. Here $m = 3\\cdot 25\\cdot 4 = 300$. Hence $H(a,b)=300\\,R_{\\text{eff}}(a,b)$.\n\n**Step 2: Spectral setup.** The grid Laplacian is the Cartesian sum $L=L_1\\otimes I\\otimes I+I\\otimes L_1\\otimes I+I\\otimes I\\otimes L_1$, where $L_1$ is the Laplacian of $P_5$. Its eigenvectors are $v_k(j)=\\cos\\!\\big(k\\pi(j+\\tfrac12)/5\\big)$ with eigenvalues $\\mu_k=2-2\\cos(k\\pi/5)$, $k=0,\\dots,4$, and $\\|v_k\\|^2=5$ for $k=0$ and $5/2$ otherwise.\n\nLet $u=e_0-e_4$. Then $\\langle u,v_k\\rangle = \\cos(k\\pi/10)(1-(-1)^k)$, which vanishes for even $k$. So only $k=1,3$ contribute, with normalized weights\n$$w_1=\\frac{4\\cos^2(\\pi/10)}{5/2}=1+\\tfrac{1}{\\sqrt5},\\qquad w_3=\\frac{4\\cos^2(3\\pi/10)}{5/2}=1-\\tfrac{1}{\\sqrt5}.$$\nCheck: $w_1+w_3=2=\\|u\\|^2$. The eigenvalues are $a_1=\\mu_1=\\frac{3-\\sqrt5}{2}$ and $a_3=\\mu_3=\\frac{3+\\sqrt5}{2}$, with $a_1a_3=1$ and $a_1+a_3=3$.\n\n**Step 3: Sum over product eigenvectors.** Let $s=1/\\sqrt5$, $r=\\sqrt5$. Then\n$$R_{\\text{eff}}=\\sum_{k\\in\\{1,3\\}^3}\\frac{w_{k_1}w_{k_2}w_{k_3}}{\\mu_{k_1}+\\mu_{k_2}+\\mu_{k_3}}.$$\nGrouping by the number of indices equal to 1:\n\n- **All 1s:** $\\frac{(1+s)^3}{3a_1}$. Using $(1+s)^3=\\frac{8+16s}{5}$ and $1/a_1=a_3$, this equals $\\frac{100+44r}{75}$.\n- **All 3s:** by the same computation with $r\\to -r$, it equals $\\frac{100-44r}{75}$.\n- **Two 1s, one 3:** $3\\cdot\\frac{(4/5)(1+s)}{2a_1+a_3}=\\frac{12(25+7r)}{475}$.\n- **One 1, two 3s:** $3\\cdot\\frac{(4/5)(1-s)}{a_1+2a_3}=\\frac{12(25-7r)}{475}$.\n\nAdding the first two groups gives $\\frac{200}{75}=\\frac83$. Adding the last two gives $\\frac{600}{475}=\\frac{24}{19}$. Therefore\n$$R_{\\text{eff}}(a,b)=\\frac83+\\frac{24}{19}=\\frac{224}{57}.$$\n\n**Step 4: Hitting time.**\n$$H=300\\cdot\\frac{224}{57}=\\frac{67200}{57}=\\frac{22400}{19}.$$\nSince $22400=2^7\\cdot 5^2\\cdot 7$ shares no factor with $19$, the fraction is in lowest terms. So $m+n=22400+19=22419$.\n\nANSWER: 22419",
+  "## Answer: 94677189\n\n**Approach.** Use the commute-time/Tetali formula $E_a T_b = \\tfrac12\\sum_z d_z\\,(R_{ab}+R_{bz}-R_{az})$, where $R$ is effective resistance. The central inversion $x\\mapsto(4,4,4)-x$ swaps $a=(0,0,0)$ and $b=(4,4,4)$ and preserves degrees, so the sums cancel and $E_aT_b = mR_{ab}$. Here $m=300$ edges.\n\n**Effective resistance via the spectrum.** The graph is $P_5\\times P_5\\times P_5$. The path $P_5$ has orthonormal eigenvectors $\\varphi_i(x)=\\sqrt{c}\\cos\\big(\\pi i(x+\\tfrac12)/5\\big)$ with eigenvalues $\\mu_i=2-2\\cos(\\pi i/5)$. Since $\\varphi_i(4)=(-1)^i\\varphi_i(0)$, the product eigenvectors contribute only when $i+j+k$ is odd, giving\n\n$$R_{ab}=\\sum_{i+j+k\\text{ odd}}\\frac{4\\,c_ic_jc_k}{\\mu_i+\\mu_j+\\mu_k},$$\n\nwith $c_i=\\varphi_i(0)^2$. Writing $s=\\sqrt5$, set $C_i=20c_i$ and $N_i=2\\mu_i$:\n\n- $C_0=4,\\ C_1=5+s,\\ C_2=3+s,\\ C_3=5-s,\\ C_4=3-s$\n- $N_0=0,\\ N_1=3-s,\\ N_2=5-s,\\ N_3=3+s,\\ N_4=5+s$\n\nThis simplifies to $R_{ab}=\\frac{1}{1000}\\sum \\frac{C_iC_jC_k}{N_i+N_j+N_k}$.\n\n**Evaluating the sum.** There are 16 odd-sum multisets (62 ordered triples). They pair up under $s\\mapsto -s$ (which swaps indices $1\\leftrightarrow3$, $2\\leftrightarrow4$), so each pair contributes twice its rational part. Multiplying by the number of permutations of each multiset:\n\n| Multiset (rep.) | Perms | Pair contribution |\n|---|---|---|\n| (0,0,1) | 3 | 480 |\n| (0,1,2) | 6 | 2880/11 |\n| (0,1,4) | 6 | 60 |\n| (1,1,1) | 1 | 500/3 |\n| (1,1,3) | 3 | 1500/19 |\n| (1,2,2) | 3 | 2940/31 |\n| (1,2,4) | 6 | 840/41 |\n| (1,4,4) | 3 | 900/41 |\n\nThe total is\n$$S = 540 + \\frac{2880}{11}+\\frac{500}{3}+\\frac{1500}{19}+\\frac{2940}{31}+\\frac{1740}{41}=\\frac{944115500}{796917},$$\nusing $796917 = 3\\cdot11\\cdot19\\cdot31\\cdot41$. Hence\n\n$$R_{ab}=\\frac{S}{1000}=\\frac{1888231}{1593834}\\approx 1.1847.$$\n\nAs a check, the 1D analogue of this normalization gives the correct endpoint resistance $4$ for $P_5$.\n\n**Hitting time.** \n$$E_aT_b = 300\\,R_{ab}=\\frac{50\\cdot1888231}{265639}=\\frac{94411550}{265639}\\approx 355.4.$$\n\nThe denominator $265639=11\\cdot19\\cdot31\\cdot41$ shares no factor with the numerator $94411550 = 2\\cdot 5^2\\cdot 1888231$ (checked modulo each prime), so the fraction is in lowest terms.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** By Tetali's formula, $E_a T_b = \\tfrac12\\sum_v d(v)\\,(R_{ab}+R_{bv}-R_{av})$. The central inversion $v\\mapsto(4,4,4)-v$ swaps $a=(0,0,0)$ and $b=(4,4,4)$ and preserves degrees, so the last two sums cancel. This gives $E_aT_b = |E|\\,R_{ab}$. The grid has $3\\cdot 4\\cdot 25 = 300$ edges, so $E = 300R$.\n\n**Step 2: Spectral formula for $R$.** The Laplacian of the 3D grid is the Kronecker sum of three copies of the path $P_5$. Its eigenvectors are products of path eigenvectors $\\varphi_k(x)=c_k\\cos\\frac{\\pi k(x+1/2)}{5}$, with eigenvalues $\\lambda_k = 2-2\\cos\\frac{\\pi k}{5}$.\n\nSince $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, only triples $K=(k_1,k_2,k_3)$ with odd $k_1+k_2+k_3$ contribute, each with factor $4\\prod w_{k_i}$, where $w_k=\\varphi_k(0)^2$. Hence $R = 4S$ with\n$$S=\\sum_{K\\text{ odd}}\\frac{\\prod w_{k_i}}{\\sum\\lambda_{k_i}}.$$\n\nThe values are (with $s=\\sqrt5$):\n- $w_0=\\tfrac15$, $w_2=\\tfrac{3+s}{20}$, $w_4=\\tfrac{3-s}{20}$ (even modes)\n- $p=w_1=\\tfrac{5+s}{20}$, $q=w_3=\\tfrac{5-s}{20}$ (odd modes)\n- $\\lambda_1=a=\\tfrac{3-s}{2}$, $\\lambda_3=c=\\tfrac{3+s}{2}$, $\\lambda_2=\\beta=\\tfrac{5-s}{2}$, $\\lambda_4=\\delta=\\tfrac{5+s}{2}$\n\nCheck: $\\sum_k w_k = 1$, and the $n=1$ case $P_5$ gives $R=4(p/a+q/c)=4$, which is correct.\n\n**Step 3: Case A (exactly one odd index).** Here the sum is $3\\sum_{o\\in\\{1,3\\}} w_o\\,T(\\lambda_o)$, where $T$ runs over the 9 ordered pairs of even modes. Computing exactly gives $T(a)=\\frac{7075+1678s}{55924}$, and $T(c)$ is its Galois conjugate. Therefore\n$$\\text{Case A}=3\\cdot\\frac{43765}{559240}=\\frac{26259}{111848}.$$\n\n**Step 4: Case B (all three odd).** Using $p^2=\\tfrac{3+s}{40}$, $p^3=\\tfrac{5+2s}{200}$, $a+c=3$, $ac=1$:\n- $\\frac{p^3}{3a}+\\frac{q^3}{3c}=\\frac{1}{24}$\n- $\\frac{3p^2q}{a+3}+\\frac{3pq^2}{c+3}=\\frac{3}{152}$\n\nSo $\\text{Case B}=\\frac1{24}+\\frac3{152}$.\n\n**Step 5: Combine.** Over the common denominator $6375336=2^3\\cdot3\\cdot11\\cdot19\\cdot31\\cdot41$:\n$$S=\\frac{1496763+265639+125829}{6375336}=\\frac{1888231}{6375336}\\approx 0.29618.$$\n\nThen\n$$E = 300\\cdot 4S = 1200S=\\frac{50\\cdot1888231}{265639}=\\frac{94411550}{265639}\\approx 355.41.$$\n\n**Step 6: Lowest terms.** $265639=11\\cdot19\\cdot31\\cdot41$. The numerator $1888231$ leaves nonzero remainders mod 11, 19, 31, 41 (namely $4, 11, 21, 17$), and $50$ is coprime to $265639$. So the fraction is reduced.\n\nThus $m=94411550$, $n=265639$, and\n$$m+n = 94677189.$$\n\nANSWER: 94677189",
+  "## Approach\n\nSince the graph is vertex-transitive under the antipodal map $p \\mapsto (4,4,4)-p$, which swaps $(0,0,0)$ and $(4,4,4)$, the commute-time identity gives\n$$E_{(0,0,0)}[T_{(4,4,4)}] = m\\,R_{\\text{eff}}\\big((0,0,0),(4,4,4)\\big),$$\nwhere $m = 300$ is the number of edges ($3 \\cdot 25 \\cdot 4$).\n\n## Spectral formula for $R_{\\text{eff}}$\n\nThe graph is a Cartesian product of three copies of the path $P_5$. For $P_5$, the Laplacian eigenvalues are $\\lambda_k = 2-2\\cos(k\\pi/5)$ with normalized eigenvectors $u_k$. Let $w_k = u_k(0)^2$, so $w_0 = \\tfrac15$ and $w_k=\\tfrac{1+\\cos(k\\pi/5)}{5}$ for $k\\ge1$. Since $u_k(4) = (-1)^k u_k(0)$, the potential difference between the two corners is nonzero only when $a+b+c$ is odd, and then equals $2u_a(0)u_b(0)u_c(0)$. Hence\n$$R_{\\text{eff}} = 4\\sum_{\\substack{a+b+c \\text{ odd}}} \\frac{w_aw_bw_c}{\\lambda_a+\\lambda_b+\\lambda_c}.$$\n\n(Sanity check: the same method on $P_5$ gives $R=4$ between its endpoints, as expected.)\n\nWith $p=\\varphi=\\tfrac{1+\\sqrt5}{2}$, write $10w_k = W_k$ where $W_0=2$, $W_1=2+p$, $W_2=1+p$, $W_3=3-p$, $W_4=2-p$, and $\\lambda_1=2-p$, $\\lambda_2=3-p$, $\\lambda_3=1+p$, $\\lambda_4=2+p$. Then $R = T/250$, where\n$$T=\\sum_{\\text{ordered }(a,b,c),\\ a+b+c\\text{ odd}} \\frac{W_aW_bW_c}{\\lambda_a+\\lambda_b+\\lambda_c},$$\nand $E = 300R = \\tfrac{6}{5}T$.\n\n## Evaluating $T$\n\nThere are 16 odd-sum multisets (62 ordered triples). Evaluating each exactly in $\\mathbb{Z}[p]$ (using $1/(x+yp) = (x+y-yp)/N$ with $N = x^2+xy-y^2$), the $p$-parts cancel in pairs and the groups sum to:\n\n- $(0,0,1)+(0,0,3)$: $120$\n- $(0,1,4)+(0,2,3)$: $15$\n- $(1,1,1)+(3,3,3)$: $\\tfrac{125}{3}$\n- $(0,1,2)+(0,3,4)$: $\\tfrac{720}{11}$\n- $(1,1,3)+(1,3,3)$: $\\tfrac{375}{19}$\n- $(1,2,2)+(3,4,4)$: $\\tfrac{735}{31}$\n- $(1,2,4)+(1,4,4)+(2,2,3)+(2,3,4)$: $\\tfrac{435}{41}$\n\nSo\n$$T = 135 + \\frac{125}{3}+\\frac{720}{11}+\\frac{375}{19}+\\frac{735}{31}+\\frac{435}{41} = \\frac{236028875}{796917} \\approx 296.18,$$\nwhich matches a direct decimal summation of the 16 terms.\n\n## Final value\n\n$$E = \\frac{6}{5}T = \\frac{6\\cdot 47205775}{796917} = \\frac{94411550}{265639}.$$\n\nThe denominator $265639 = 11\\cdot 19\\cdot 31\\cdot 41$. The numerator $94411550 = 2\\cdot 47205775$ leaves nonzero remainders modulo $11$ (remainder 2), $19$ (remainder 18), $31$ (remainder 58), and $41$ (remainder 30), so the fraction is in lowest terms. Numerically $E\\approx 355.41$.\n\nTherefore\n$$m+n = 94411550 + 265639 = 94677189.$$\n\nANSWER: 94677189",
+  "## Approach\n\nThe expected hitting time can be computed from an effective resistance, using Tetali's formula together with a symmetry argument.\n\n**Step 1: Tetali's formula.** For a random walk on a graph with edge set $E$ and degrees $d_z$,\n$$H(s,t)=\\tfrac12\\sum_z d_z\\big(R_{st}+R_{tz}-R_{sz}\\big).$$\nThe grid has $3\\cdot 4\\cdot 25=300$ edges, so $\\sum_z d_z = 600$.\n\n**Step 2: Symmetry.** The map $\\varphi:(x,y,z)\\mapsto(4-x,4-y,4-z)$ is a degree-preserving automorphism swapping $s=(0,0,0)$ and $t=(4,4,4)$. It gives $\\sum_z d_z R_{tz}=\\sum_z d_z R_{sz}$, so\n$$H(s,t)=300\\,R_{st}.$$\n\n**Step 3: Spectral formula for $R_{st}$.** The path $P_5$ has orthonormal Laplacian eigenvectors $u_k(j)=c_k\\cos\\!\\big(\\pi k(j+\\tfrac12)/5\\big)$ with eigenvalues $\\lambda_k=2-2\\cos(\\pi k/5)$, where $c_0^2=\\tfrac15$ and $c_k^2=\\tfrac25$ for $k\\ge1$. Since $u_k(4)=(-1)^k u_k(0)$, only odd-parity modes $a+b+c$ contribute:\n$$R_{st}=4\\sum_{a+b+c\\ \\text{odd}}\\frac{w_aw_bw_c}{\\lambda_a+\\lambda_b+\\lambda_c},\\qquad w_k=c_k^2\\cos^2(\\pi k/10).$$\n\nWriting $r=\\sqrt5$, set $W_k=20w_k$:\n- $W_0=4$, $W_1=5+r$, $W_2=3+r$, $W_3=5-r$, $W_4=3-r$,\n- $\\lambda_1=\\frac{3-r}{2}$, $\\lambda_2=\\frac{5-r}{2}$, $\\lambda_3=\\frac{3+r}{2}$, $\\lambda_4=\\frac{5+r}{2}$.\n\nThen $R_{st}=S/2000$ where $S=\\sum_{\\text{odd}} \\frac{W_aW_bW_c}{\\lambda_a+\\lambda_b+\\lambda_c}$.\n\n**Step 4: Evaluate.** There are 16 odd-sum multisets (62 ordered triples). Each term lies in $\\mathbb{Q}(\\sqrt5)$, and the $\\sqrt5$-parts cancel in conjugate pairs, which is a consistency check. Summing the rational parts gives\n$$S=1080+\\frac{5760}{11}+\\frac{1000}{3}+\\frac{3000}{19}+\\frac{5880}{31}+\\frac{3480}{41}\\approx 2369.42,$$\nso $R_{st}\\approx 1.185$. This is consistent with the lower bound $2/3$ from the corner degrees.\n\n**Step 5: Hitting time.** Since $H=300R_{st}=\\frac{3}{20}S$,\n$$H=212+\\frac{864}{11}+\\frac{450}{19}+\\frac{882}{31}+\\frac{522}{41}=\\frac{94411550}{265639}.$$\n\nThe denominator is $265639=11\\cdot19\\cdot31\\cdot41$. The numerator is not divisible by 11, 19, 31, or 41 (checked via the individual residues), so the fraction is in lowest terms.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** The map \u03c3: (x,y,z) \u21a6 (4\u2212x, 4\u2212y, 4\u2212z) is a graph automorphism swapping (0,0,0) and (4,4,4), so H(a,b) = H(b,a). The commute-time identity gives H(a,b) + H(b,a) = 2|E|\u00b7R(a,b), where |E| = 3\u00b75\u00b75\u00b74 = 300 and R is the effective resistance between opposite corners. Hence\n\n$$H = 300\\,R(a,b).$$\n\n**Step 2: Spectral formula.** The 5-vertex path has orthonormal eigenvectors u_i(x) = \u221a(2/5)\u00b7cos(\u03c0i(2x+1)/10) (with u_0 = 1/\u221a5), eigenvalues p_i = 2 \u2212 2cos(\u03c0i/5). The 3D grid has eigenvectors u_i(x)u_j(y)u_k(z) with eigenvalues p_i+p_j+p_k. Since u_i(4) = (\u22121)^i u_i(0), the squared potential difference between a and b is 4c_ic_jc_k when i+j+k is odd and 0 otherwise, where c_i = u_i(0)\u00b2. So\n\n$$R = \\sum_{i+j+k\\ \\text{odd}} \\frac{4\\,c_ic_jc_k}{p_i+p_j+p_k}.$$\n\n**Step 3: Exact values.** Let s = \u221a5. Setting \u03b1_0 = 4, \u03b1_1 = 5+s, \u03b1_2 = 3+s, \u03b1_3 = 5\u2212s, \u03b1_4 = 3\u2212s and \u03b2_0 = 0, \u03b2_1 = 3\u2212s, \u03b2_2 = 5\u2212s, \u03b2_3 = 3+s, \u03b2_4 = 5+s, one gets\n\n$$R = \\frac{1}{1000}\\sum_{i+j+k\\ \\text{odd}} \\frac{\\alpha_i\\alpha_j\\alpha_k}{\\beta_i+\\beta_j+\\beta_k}, \\qquad H = \\frac{3}{10}S',$$\n\nwhere S' is that sum. There are 62 ordered triples with odd index sum, forming 16 multisets. Grouping conjugate pairs (s \u21a6 \u2212s), each group is rational:\n\n- {0,0,1}, {0,0,3}: 480\n- {0,1,2}, {0,3,4}: 2880/11\n- {0,1,4}, {0,2,3}: 60\n- {1,1,1}, {3,3,3}: 500/3\n- {1,1,3}, {1,3,3}: 1500/19\n- {1,2,2}, {3,4,4}: 2940/31\n- {1,2,4}, {2,3,4}: 840/41\n- {1,4,4}, {2,2,3}: 900/41\n\nSo S' = 8820/11 + 500/3 + 1500/19 + 2940/31 + 1740/41 \u2248 1184.71, which I checked numerically term by term.\n\n**Step 4: Assemble H.**\n\n$$H = \\frac{2646}{11} + 50 + \\frac{450}{19} + \\frac{882}{31} + \\frac{522}{41}.$$\n\nOver the common denominator 11\u00b719\u00b731\u00b741 = 265639, the numerator is\n\n$$13{,}281{,}950 + 63{,}898{,}254 + 6{,}291{,}450 + 7{,}557{,}858 + 3{,}382{,}038 = 94{,}411{,}550.$$\n\nSo H = 94411550/265639 \u2248 355.41. Checking each prime 11, 19, 31, 41 shows none divides the numerator, so the fraction is in lowest terms.\n\nTherefore m + n = 94411550 + 265639 = **94677189**.\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** The commute-time identity gives $E_a T_b + E_b T_a = 2mR_{ab}$, where $m$ is the number of edges and $R_{ab}$ is the effective resistance. The map $v \\mapsto (4,4,4)-v$ is an automorphism swapping $(0,0,0)$ and $(4,4,4)$, so $E_aT_b = E_bT_a$. Hence $E = mR$ with $m = 300$ (100 edges in each of 3 directions).\n\n**Step 2: Spectral formula for $R$.** The graph is the Cartesian product $P_5^{\\,3}$. Using the path eigenvectors $\\varphi_k(x)$ (with $\\varphi_k(4-x) = (-1)^k\\varphi_k(x)$), only triples $(i,j,l)$ with $i+j+l$ odd contribute:\n$$R = 4\\sum_{\\substack{i+j+l \\text{ odd}}} \\frac{a_ia_ja_l}{\\lambda_i+\\lambda_j+\\lambda_l},\\qquad a_k=\\varphi_k(0)^2.$$\n\nWith $s=\\sqrt5$, the values are:\n- $a_k = A_k/20$, where $A_0=4$, $A_1=5+s$, $A_2=3+s$, $A_3=5-s$, $A_4=3-s$.\n- $\\lambda_k = L_k/2$, where $L_0=0$, $L_1=3-s$, $L_2=5-s$, $L_3=3+s$, $L_4=5+s$.\n\nSubstituting gives $E = \\tfrac{3}{10}T$, where $T=\\sum_{\\text{odd}} \\dfrac{A_iA_jA_l}{L_i+L_j+L_l}$.\n\n(Sanity check: the same method on the path $P_5$ gives $R=4$, i.e. hitting time 16, which is correct.)\n\n**Step 3: Evaluate $T$.** Each term is paired with its Galois conjugate ($s\\to -s$), so only traces are needed.\n\n- All-odd triples: $\\operatorname{Tr}\\!\\left[\\dfrac{A_1^3}{3L_1}\\right] = \\dfrac{500}{3}$ and $\\operatorname{Tr}\\!\\left[\\dfrac{3A_1^2A_3}{9-s}\\right] = \\dfrac{1500}{19}$.\n- Exactly one odd index: this equals $3\\operatorname{Tr}(C_1)$, where $C_1 = (5+s)\\sum q_i$ with\n$$q_i \\in\\left\\{12+4s,\\ \\tfrac{68+28s}{11},\\ 3-s,\\ \\tfrac{68+30s}{31},\\ \\tfrac{53-23s}{41},\\ \\tfrac{26+2s}{41}\\right\\}.$$\nUsing $\\operatorname{Tr}\\big((5+s)(p+rs)\\big)=10(p+r)$ gives\n$$3\\operatorname{Tr}(C_1) = 30\\left(18+\\tfrac{96}{11}+\\tfrac{98}{31}+\\tfrac{58}{41}\\right).$$\n\nSo\n$$T = \\frac{500}{3}+\\frac{1500}{19}+540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}.$$\n\n**Step 4: Multiply by $\\tfrac{3}{10}$.**\n$$E = 212+\\frac{450}{19}+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}\\approx 355.41.$$\n\n**Step 5: Combine into a single fraction.** The denominators are the distinct primes $19,11,31,41$, and each numerator is nonzero mod its prime, so the fraction is already reduced. The common denominator is $19\\cdot11\\cdot31\\cdot41 = 265639$, and the numerator is\n$$212\\cdot265639 + 450\\cdot13981 + 864\\cdot24149 + 882\\cdot8569 + 522\\cdot6479 = 94{,}411{,}550.$$\n\nSo $E = \\dfrac{94{,}411{,}550}{265{,}639}$, and\n$$m+n = 94{,}411{,}550 + 265{,}639 = 94{,}677{,}189.$$\n\nANSWER: 94677189",
+  "## Approach\n\n**Step 1: Reduce hitting time to resistance.** Let $a=(0,0,0)$, $b=(4,4,4)$, and let $d_v$ be the degree of $v$. Tetali's formula gives\n$$H(a,b)=\\tfrac12\\sum_v d_v\\big[R(a,b)+R(b,v)-R(a,v)\\big].$$\nThe reflection $v\\mapsto(4-x,4-y,4-z)$ is a degree-preserving automorphism swapping $a$ and $b$, so $\\sum_v d_v R(b,v)=\\sum_v d_v R(a,v)$. Hence $H(a,b)=E\\cdot R(a,b)$, where $E=300$ (100 edges in each of 3 directions). So $H=300R$.\n\n**Step 2: Spectral formula for $R$.** The graph is $P_5\\times P_5\\times P_5$. Write $P_5$ eigenpairs $u_k$ with $u_k(4)=(-1)^k u_k(0)$. Let $f_k=u_k(0)^2$ and $\\mu_k=2-2\\cos(k\\pi/5)$. Since $d=e_a-e_b$ has coefficient $u_k(0)u_l(0)u_m(0)\\,(1-(-1)^{k+l+m})$ on each product eigenvector,\n$$R=4\\sum_{k+l+m\\ \\text{odd}}\\frac{f_kf_lf_m}{\\mu_k+\\mu_l+\\mu_m}.$$\n(Check: for $Q_3=P_2^{\\times 3}$ this gives $5/6$, matching the known value.)\n\nWith $r=\\sqrt5$, set $F=20f$ and $M=2\\mu$:\n- $F=(4,\\ 5+r,\\ 3+r,\\ 5-r,\\ 3-r)$ for $k=0,\\dots,4$\n- $M=(0,\\ 3-r,\\ 5-r,\\ 3+r,\\ 5+r)$\n\nThen $R=\\frac{1}{1000}\\sum_{\\text{odd}}\\frac{F_kF_lF_m}{M_k+M_l+M_m}$.\n\n**Step 3: Evaluate the sum.** There are 62 odd-parity ordered triples, in two cases.\n\n*Case A (one odd index, two even indices).* The $o=1$ part is\n$$T_1=\\sum_{e_1,e_2\\in\\{0,2,4\\}}\\frac{(5+r)F_{e_1}F_{e_2}}{(3-r)+M_{e_1}+M_{e_2}}.$$\nIts rational part is $90+\\frac{480}{11}+\\frac{490}{31}+\\frac{290}{41}$. Adding the conjugate $o=3$ part and the factor 3 for position gives $6\\cdot\\text{rat}(T_1)=540+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}$.\n\n*Case B (all three indices odd).* The rational contributions are $\\frac{500}{3}$ from $(1,1,1),(3,3,3)$ and $\\frac{1500}{19}$ from the mixed triples.\n\nSo $\\sum=540+\\frac{500}{3}+\\frac{2880}{11}+\\frac{2940}{31}+\\frac{1740}{41}+\\frac{1500}{19}\\approx 1184.71$, and $R=\\sum/1000\\approx1.1847$.\n\n**Step 4: Hitting time.** $H=300R=\\frac{3}{10}\\sum$, which gives\n$$H=212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}=\\frac{94411550}{265639}\\approx 355.41.$$\n\n**Step 5: Lowest terms.** The denominator is $265639=11\\cdot19\\cdot31\\cdot41$. Checking the numerator $94411550$ modulo each prime gives remainders $2$, $18$, $27$, $30$ respectively, so the fraction is reduced.\n\nTherefore $m+n=94411550+265639=94677189$.\n\nANSWER: 94677189",
+  "",
+  "## Approach\n\n**Step 1: Reduce to effective resistance.** The map $v \\mapsto (4,4,4)-v$ is an automorphism swapping $a=(0,0,0)$ and $b=(4,4,4)$, so $E_aT_b = E_bT_a$. The commute time is $E_aT_b+E_bT_a = 2mR(a,b)$, hence $E_aT_b = mR(a,b)$. Here $m = 3\\cdot 4\\cdot 25 = 300$, so the answer is $300R$, where $R$ is the effective resistance between opposite corners of the $5\\times5\\times5$ unit-resistor grid.\n\n**Step 2: Spectral formula.** The graph is a Cartesian product of three copies of $P_5$. For $P_5$, the eigenvalues are $\\mu_k = 2-2\\cos(k\\pi/5)$ with eigenvectors $u_k(i)$, and $u_k(4) = (-1)^k u_k(0)$. Writing $e_a-e_b$ in the product eigenbasis gives coefficients $\\prod_i u_{k_i}(0)\\,(1-(-1)^K)$ with $K=\\sum k_i$. So only triples with $K$ odd contribute:\n$$R = 4\\sum_{K\\text{ odd}} \\frac{\\prod_i w_{k_i}}{\\sum_i \\mu_{k_i}}, \\qquad w_k = u_k(0)^2.$$\n\nWith $r=\\sqrt5$, set $W_k = 20w_k$ and $M_k = 2\\mu_k$:\n- $W = (4,\\ 5+r,\\ 3+r,\\ 5-r,\\ 3-r)$\n- $M = (0,\\ 3-r,\\ 5-r,\\ 3+r,\\ 5+r)$\n\nThis gives $R = \\frac{1}{1000}T$, where $T = \\sum_{K\\text{ odd}} \\frac{\\prod W_{k_i}}{\\sum M_{k_i}}$, and $E = 0.3\\,T$.\n\n**Step 3: Evaluate $T$.** The map $r\\to -r$ pairs the terms, so $T = 2\\sum(\\text{rational parts})$ over one representative from each conjugate pair. The ordered triples with odd sum number 62; the representatives (with permutation counts) and their rational parts are:\n\n| Multiset | Perms | Rational part of term | Weighted |\n|---|---|---|---|\n| {1,1,1} | 1 | 250/3 | 250/3 |\n| {1,1,3} | 3 | 250/19 | 750/19 |\n| {1,0,0} | 3 | 80 | 240 |\n| {1,0,2} | 6 | 240/11 | 1440/11 |\n| {1,0,4} | 6 | 5 | 30 |\n| {1,2,2} | 3 | 490/31 | 1470/31 |\n| {1,2,4} | 6 | 70/41 | 420/41 |\n| {1,4,4} | 3 | 150/41 | 450/41 |\n\nSumming the weighted column gives $\\text{Sum}_1 = 270 + \\tfrac{250}{3} + \\tfrac{750}{19} + \\tfrac{1440}{11} + \\tfrac{1470}{31} + \\tfrac{870}{41}$, so $T = 2\\,\\text{Sum}_1$.\n\nTherefore\n$$E = \\tfrac{3}{10}T = 212 + \\frac{450}{19} + \\frac{864}{11} + \\frac{882}{31} + \\frac{522}{41} \\approx 355.41.$$\n\n**Step 4: Combine.** Over the common denominator $19\\cdot11\\cdot31\\cdot41 = 265639$, the numerator is\n$$94{,}411{,}550,$$\nso $E = \\dfrac{94411550}{265639}$. Checking residues modulo 19, 11, 31, 41 shows none divides the numerator, so the fraction is in lowest terms.\n\n**Checks.** The method reproduces the known values $R=5/6$ for the cube $Q_3$ and expected hitting time $10$ for the cube's antipodal pair. The formula $E=mR$ was verified on the cube as well.\n\n$$m+n = 94411550 + 265639 = 94677189$$\n\nANSWER: 94677189",
+  "## Answer: 94677189\n\n**Step 1: Reduce to an effective resistance.** Let $a=(0,0,0)$ and $b=(4,4,4)$. The map $x\\mapsto 4-x$ in every coordinate is an automorphism swapping $a$ and $b$, so $E_aT_b=E_bT_a$. The commute-time identity $E_aT_b+E_bT_a=2|E|\\,R_{ab}$ with $|E|=300$ gives\n$$E_aT_b = 300\\,R_{ab},$$\nwhere $R_{ab}$ is the effective resistance between opposite corners of the $5\\times5\\times5$ resistor grid.\n\n**Step 2: Spectral formula.** The grid Laplacian is a Kronecker sum of three copies of the path Laplacian $A$ on 5 vertices. Its eigenvectors are products of path eigenvectors, with eigenvalues $\\sum\\lambda_{k_i}$. Using $v_k(4)=(-1)^k v_k(0)$, only triples with $K=k_1+k_2+k_3$ odd contribute:\n$$R=4\\sum_{K\\text{ odd}}\\frac{\\prod_i u_{k_i}}{\\sum_i \\lambda_{k_i}},\\qquad u_k=v_k(0)^2.$$\n\nWith $s=\\sqrt5$, scaling by 20 for $u$ and by 2 for $\\lambda$:\n\n- $U_k=20u_k$: $U_0=4,\\ U_1=5+s,\\ U_2=3+s,\\ U_3=5-s,\\ U_4=3-s$.\n- $L_k=2\\lambda_k$: $L_0=0,\\ L_1=3-s,\\ L_2=5-s,\\ L_3=3+s,\\ L_4=5+s$.\n\nThis gives $R=\\frac{1}{1000}\\sum w\\,\\frac{\\prod U}{\\sum L}$, summed over multisets with multiplicity weight $w$ (the number of orderings).\n\n**Step 3: Group the terms.** The 16 odd-sum multisets split into:\n\n- $o=1$ with an even pair (6 pairs), and their $s\\to -s$ conjugates with $o=3$.\n- $\\{1,1,1\\}$, $\\{1,1,3\\}$, and their conjugates $\\{3,3,3\\}$, $\\{1,3,3\\}$.\n\nSince the total is rational, it equals $2\\,\\mathrm{Rat}(X)$, where $X$ is the sum over the $o=1$ terms plus $\\{1,1,1\\}$ and $\\{1,1,3\\}$. Rationalising each term gives the rational parts:\n\n| Term | Rational part |\n|---|---|\n| $\\{1,0,0\\}$ | $240$ |\n| $\\{1,0,2\\}$ | $1440/11$ |\n| $\\{1,0,4\\}$ | $30$ |\n| $\\{1,2,2\\}$ | $1470/31$ |\n| $\\{1,2,4\\}$ | $420/41$ |\n| $\\{1,4,4\\}$ | $450/41$ |\n| $\\{1,1,1\\}$ | $250/3$ |\n| $\\{1,1,3\\}$ | $750/19$ |\n\nSo $R=\\mathrm{Rat}(X)/500$.\n\n**Step 4: Assemble.** $E_aT_b=300R=\\tfrac35\\,\\mathrm{Rat}(X)$, which gives\n$$E_aT_b = 212+\\frac{864}{11}+\\frac{882}{31}+\\frac{522}{41}+\\frac{450}{19}.$$\n\nOver the common denominator $11\\cdot19\\cdot31\\cdot41=265639$, the numerator is\n$$212\\cdot 265639+38096082 = 94411550,$$\nso $E_aT_b=\\dfrac{94411550}{265639}$. The fraction is in lowest terms, since each prime in the denominator fails to divide the corresponding numerator term.\n\n**Checks.** The same method applied to the $2\\times2\\times2$ cube gives $R=5/6$ and hitting time $12\\cdot\\tfrac56=10$, matching the known antipodal hitting time of $Q_3$. For the $5\\times5\\times5$ case the value is $E_aT_b\\approx 355.4$, consistent with $R\\approx 1.185$.\n\nTherefore $m+n = 94411550+265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Approach\n\nThe expected hitting time can be computed from effective resistance. Let $a=(0,0,0)$ and $b=(4,4,4)$.\n\n**Commute-time identity.** For a simple random walk on a graph with $|E|$ edges, $E_aT_b + E_bT_a = 2|E|\\,R_{ab}$, where $R_{ab}$ is the effective resistance between $a$ and $b$ in the unit-resistor network. Here $|E| = 3\\cdot 4\\cdot 5\\cdot 5 = 300$.\n\n**Symmetry.** The map $(x,y,z)\\mapsto(4-x,4-y,4-z)$ is an automorphism swapping $a$ and $b$, so $E_aT_b = E_bT_a$. Hence $E_aT_b = 300\\,R_{ab}$.\n\n**Spectral formula for $R_{ab}$.** The graph Laplacian is a Cartesian sum of three copies of the path Laplacian $L_{P_5}$. Its eigenvectors are products of path eigenvectors $\\varphi_k(i)=\\cos(\\pi k(2i+1)/10)$, with eigenvalues $\\lambda_k = 2-2\\cos(\\pi k/5)$, $k=0,\\dots,4$. Let $w_k=\\varphi_k(0)^2/\\|\\varphi_k\\|^2$. Since $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, only triples $(k_1,k_2,k_3)$ with odd sum contribute, giving\n$$R_{ab} = 4\\sum_{\\substack{k_1+k_2+k_3\\text{ odd}}} \\frac{w_{k_1}w_{k_2}w_{k_3}}{\\lambda_{k_1}+\\lambda_{k_2}+\\lambda_{k_3}}.$$\n\n**Values.** With $s=\\sqrt5$:\n- $w_0=\\tfrac{4}{20}$, $w_1=\\tfrac{5+s}{20}$, $w_2=\\tfrac{3+s}{20}$, $w_3=\\tfrac{5-s}{20}$, $w_4=\\tfrac{3-s}{20}$\n- $\\lambda_0=0$, $\\lambda_1=\\tfrac{3-s}{2}$, $\\lambda_2=\\tfrac{5-s}{2}$, $\\lambda_3=\\tfrac{3+s}{2}$, $\\lambda_4=\\tfrac{5+s}{2}$\n\nWriting $C=c_{k_1}c_{k_2}c_{k_3}$ (with $c_k = 20w_k$) and $D=\\sum d_{k_i}$ (with $\\lambda_k=d_k/2$), one gets $R_{ab} = \\frac{1}{1000}\\sum \\frac{C}{D}$, summed over ordered triples.\n\n**Enumeration.** There are 16 odd-sum multisets (62 ordered triples, matching the count $(125-1)/2$). Grouping conjugate pairs, the contributions $\\text{mult}\\cdot C/D$ are:\n\n| Pair of multisets | Contribution |\n|---|---|\n| 001, 003 | $480$ |\n| 012, 034 | $\\tfrac{2880}{11}$ |\n| 014, 023 | $60$ |\n| 111, 333 | $\\tfrac{500}{3}$ |\n| 113, 133 | $\\tfrac{1500}{19}$ |\n| 122, 344 | $\\tfrac{2940}{31}$ |\n| 124, 234 | $\\tfrac{840}{41}$ |\n| 144, 223 | $\\tfrac{900}{41}$ |\n\nSo $T = 540 + \\tfrac{2880}{11}+\\tfrac{500}{3}+\\tfrac{1500}{19}+\\tfrac{2940}{31}+\\tfrac{1740}{41} = \\dfrac{944115500}{796917}$ (with $796917 = 3\\cdot 11\\cdot 19\\cdot 31\\cdot 41$), and $T\\approx 1184.71$.\n\nThen $R_{ab} = T/1000 \\approx 1.1847$, which is plausible (it lies between the trivial bounds $2/3$ and $12$).\n\n**Hitting time.**\n$$E_aT_b = 300\\cdot\\frac{T}{1000} = \\frac{3T}{10} = \\frac{94411550}{265639}\\approx 355.4.$$\n\n**Reduction.** $265639 = 11\\cdot19\\cdot31\\cdot41$. Checking the numerator $94411550$ modulo each prime gives remainders $-9 \\pmod{11}$, $18 \\pmod{19}$, $27 \\pmod{31}$, and $30 \\pmod{41}$, so none divides it. The fraction is in lowest terms.\n\nTherefore $m+n = 94411550 + 265639 = 94677189$.\n\nANSWER: 94677189",
+  "## Answer: 22419\n\n**Approach.** Use the commute-time identity together with the symmetry of the grid.\n\n**Step 1: Reduce to an effective resistance.** Let $a=(0,0,0)$ and $b=(4,4,4)$. Tetali's formula gives\n$$H(a,b)=\\tfrac12\\sum_v d(v)\\big(R(a,b)+R(b,v)-R(a,v)\\big).$$\nThe map $v\\mapsto(4,4,4)-v$ is an automorphism swapping $a$ and $b$ and preserving degrees, so $\\sum_v d(v)R(b,v)=\\sum_v d(v)R(a,v)$. These terms cancel, leaving\n$$H(a,b)=|E|\\cdot R(a,b).$$\nThe number of edges is $3\\cdot 25\\cdot 4=300$.\n\n**Step 2: Compute $R(a,b)$ by spectral decomposition.** The Laplacian of $P_5^{\\,3}$ is a Kronecker sum of three copies of the path Laplacian $L_1$. The eigenvalues of $L_1$ are $\\lambda_k=2-2\\cos(\\pi k/5)$ with eigenvectors $u_k(j)=\\cos(\\pi k(2j+1)/10)$.\n\nFor the two corners, $u_k(0)-u_k(4)=(1-(-1)^k)\\cos(\\pi k/10)$, so only odd $k\\in\\{1,3\\}$ contribute. Writing $\\|u_k\\|^2=5/2$ for $k\\ne 0$, the per-coordinate weights are:\n- $k=1$: $c_1=p=1+\\tfrac1{\\sqrt5}$, $\\lambda_1=\\alpha=\\tfrac{3-\\sqrt5}{2}$\n- $k=3$: $c_3=q=1-\\tfrac1{\\sqrt5}$, $\\lambda_3=\\beta=\\tfrac{3+\\sqrt5}{2}$\n\nHere $\\alpha\\beta=1$ and $\\alpha+\\beta=3$. (Check: the 1D sum $c_1/\\lambda_1+c_3/\\lambda_3=4$, the resistance of a path of 4 edges.)\n\nIn 3D, $R(a,b)=\\sum_{k_i\\in\\{1,3\\}^3} \\frac{\\prod c_{k_i}}{\\sum\\lambda_{k_i}}$, which gives\n$$R=\\frac{p^3}{3\\alpha}+\\frac{q^3}{3\\beta}+\\frac{3p^2q}{\\alpha+3}+\\frac{3pq^2}{\\beta+3}.$$\n\nEvaluating in $\\mathbb{Q}(\\sqrt5)$ with $s=\\sqrt5$:\n- $p^3=\\frac{40+16s}{25}$, so $\\frac{p^3\\beta}{3}+\\text{conjugate}=\\frac83$.\n- $p^2q=\\frac{20+4s}{25}$ and $\\frac{1}{\\alpha+3}=\\frac{9+s}{38}$, so $\\frac{3p^2q}{\\alpha+3}+\\text{conjugate}=\\frac{24}{19}$.\n\nHence\n$$R(a,b)=\\frac83+\\frac{24}{19}=\\frac{224}{57}\\approx 3.93,$$\nwhich is plausible for a 12-step corner-to-corner distance in a $5\\times5\\times5$ box.\n\n**Step 3: Combine.**\n$$H(a,b)=300\\cdot\\frac{224}{57}=\\frac{22400}{19}.$$\nSince $22400=2^7\\cdot5^2\\cdot7$ and $19$ is coprime to it, the fraction is in lowest terms. So $m+n=22400+19=22419$.\n\nANSWER: 22419",
+  "## Approach\n\nThe expected hitting time comes from effective resistance. For a graph with $|E|$ edges and degrees $d(z)$, the Tetali formula gives\n$$H(a,b)=\\tfrac12\\sum_z d(z)\\big[R(a,b)+R(b,z)-R(a,z)\\big].$$\nHere $\\sum_z d(z)=2|E|=600$. The map $x\\mapsto 4-x$ (applied to all coordinates) swaps $a=(0,0,0)$ and $b=(4,4,4)$, so the two remaining sums cancel and $H=300\\,R(a,b)$.\n\n## Spectral computation of $R(a,b)$\n\nThe grid is the Cartesian product of three copies of the path $P_5$, so its Laplacian eigenvectors are products of path eigenvectors $\\varphi_k(x)=c_k\\cos\\frac{k\\pi(2x+1)}{10}$, with eigenvalues $\\lambda_{k_1}+\\lambda_{k_2}+\\lambda_{k_3}$.\n\n- Since $\\varphi_k(4)=(-1)^k\\varphi_k(0)$, the difference $\\psi(a)-\\psi(b)$ vanishes unless $k_1+k_2+k_3$ is odd, in which case it equals $2\\prod\\varphi_{k_i}(0)$.\n- Set $w_k=\\varphi_k(0)^2$, and write $W_k=20w_k$ and $\\Lambda_k=2\\lambda_k$ with $s=\\sqrt5$:\n  - $W_0=4,\\ W_1=5+s,\\ W_2=3+s,\\ W_3=5-s,\\ W_4=3-s$\n  - $\\Lambda_0=0,\\ \\Lambda_1=3-s,\\ \\Lambda_2=5-s,\\ \\Lambda_3=3+s,\\ \\Lambda_4=5+s$\n\nThen $R=\\frac{1}{1000}S$ with $S=\\sum_{\\text{odd}}\\frac{\\prod W_{k_i}}{\\sum\\Lambda_{k_i}}$, so $H=\\frac{3}{10}S$.\n\n**Case A (exactly one odd index, 54 triples).** Computing the even-pair contributions for each odd index and using Galois conjugation ($s\\to -s$) gives\n$$\\text{Case A}=30\\left(18+\\tfrac{96}{11}+\\tfrac{98}{31}+\\tfrac{58}{41}\\right).$$\n\n**Case B (all indices odd, 8 triples).** Similarly,\n$$\\text{Case B}=2\\left(\\tfrac{250}{3}+\\tfrac{750}{19}\\right)=\\tfrac{14000}{57}.$$\n\nNumerically $S\\approx 1184.7$, so $H\\approx 355.4$, which is consistent with the rough magnitude expected.\n\n## Final value\n\n$$H=\\tfrac{3}{10}S=162+\\tfrac{864}{11}+\\tfrac{882}{31}+\\tfrac{522}{41}+\\tfrac{1400}{19}.$$\n\nOver the common denominator $11\\cdot19\\cdot31\\cdot41=265639$, the numerator is $94{,}411{,}550$. Checking each prime factor of $265639$ shows none divides the numerator, so the fraction is in lowest terms:\n$$H=\\frac{94411550}{265639}\\approx 355.413.$$\n\nTherefore $m+n=94411550+265639=94677189$.\n\nANSWER: 94677189"
+ ],
+ "expected": 94677189
+}

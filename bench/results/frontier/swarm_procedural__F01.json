@@ -1,0 +1,54 @@
+{
+ "arm": "haiku_swarm_procedural",
+ "game": "procedural",
+ "pid": "F01",
+ "answer": null,
+ "correct": false,
+ "cost": 0.031182785,
+ "wall": 259.65793347358704,
+ "n_agents": 1,
+ "max_depth": 0,
+ "n_ledger": 0,
+ "amendments": [],
+ "ledger": [],
+ "events": [
+  {
+   "t": 0.0,
+   "kind": "spawn",
+   "agent": 1,
+   "parent": null,
+   "budget": 50
+  },
+  {
+   "t": 259.66,
+   "kind": "finish",
+   "agent": 1,
+   "status": "done",
+   "turns": 2
+  }
+ ],
+ "agents": {
+  "1": {
+   "parent": null,
+   "depth": 0,
+   "brief": "",
+   "report": "**Report (agent #1, founder): no verified answer yet.**\n\n**Method (DERIVED):**\n- The swap (x,y,z) \u2192 (4\u2212x,4\u2212y,4\u2212z) is a graph automorphism that exchanges the two corners and preserves degrees. So E_a T_b = |E|\u00b7R_eff(a,b), with |E| = 300 and a, b the opposite corners. Hence E = 300\u00b7R, and by unit-current symmetry R = 1/(3\u00b7h(001)), so **E = 100/h(001)**, where h is the harmonic function with h(000)=0 and h(444)=1.\n- Using the S3 symmetry (coordinate permutations) and the antisymmetry h(\u03c3v)=1\u2212h(v), this reduces to 15 unknowns over the 35 sorted-triple classes. I checked all 15 harmonic equations by hand.\n\n**Numerical result (DERIVED, approximate):**\n- h(001) \u2248 0.28136, so E \u2248 355.4. Several equations check to about 0.005, which is consistent with rounding in the ill-conditioned elimination.\n\n**Exact result (CONJECTURE, not trusted):**\n- Cramer's rule on the reduced 2\u00d72 system gave h(001) = 602,000,133,526 / 2,139,586,646,027, i.e. E = 100\u00b72,139,586,646,027 / 602,000,133,526.\n- A Euclid gcd step appeared to give 1,133,117, but the division check failed (remainder 21,000). So the gcd and the reduced m/n are unresolved, and I have no trustworthy m+n.\n- Large intermediate products were done by hand and are error-prone. The exact fraction needs an independent recomputation.\n\n**What the founder should know:**\n- Do not use any m+n from this report. Nothing has been posted to the ledger and no helpers were spawned; my 49 slots are unspent.\n- Next step: have two fresh agents independently (a) re-derive the 15 harmonic equations and (b) solve the exact system with rational arithmetic (or recompute the gcd and reduction). Compare results before answering.\n\nI cannot give a confident ANSWER line from this work.",
+   "status": "done",
+   "turns": 2,
+   "cost": 0.031182785,
+   "out_tokens": 49704,
+   "max_prompt": 50451,
+   "children": [],
+   "t_start": 4.5299530029296875e-06,
+   "t_end": 259.65787863731384,
+   "wallet_end": 49
+  }
+ },
+ "transcripts": {
+  "1": [
+   "",
+   "**Report (agent #1, founder): no verified answer yet.**\n\n**Method (DERIVED):**\n- The swap (x,y,z) \u2192 (4\u2212x,4\u2212y,4\u2212z) is a graph automorphism that exchanges the two corners and preserves degrees. So E_a T_b = |E|\u00b7R_eff(a,b), with |E| = 300 and a, b the opposite corners. Hence E = 300\u00b7R, and by unit-current symmetry R = 1/(3\u00b7h(001)), so **E = 100/h(001)**, where h is the harmonic function with h(000)=0 and h(444)=1.\n- Using the S3 symmetry (coordinate permutations) and the antisymmetry h(\u03c3v)=1\u2212h(v), this reduces to 15 unknowns over the 35 sorted-triple classes. I checked all 15 harmonic equations by hand.\n\n**Numerical result (DERIVED, approximate):**\n- h(001) \u2248 0.28136, so E \u2248 355.4. Several equations check to about 0.005, which is consistent with rounding in the ill-conditioned elimination.\n\n**Exact result (CONJECTURE, not trusted):**\n- Cramer's rule on the reduced 2\u00d72 system gave h(001) = 602,000,133,526 / 2,139,586,646,027, i.e. E = 100\u00b72,139,586,646,027 / 602,000,133,526.\n- A Euclid gcd step appeared to give 1,133,117, but the division check failed (remainder 21,000). So the gcd and the reduced m/n are unresolved, and I have no trustworthy m+n.\n- Large intermediate products were done by hand and are error-prone. The exact fraction needs an independent recomputation.\n\n**What the founder should know:**\n- Do not use any m+n from this report. Nothing has been posted to the ledger and no helpers were spawned; my 49 slots are unspent.\n- Next step: have two fresh agents independently (a) re-derive the 15 harmonic equations and (b) solve the exact system with rational arithmetic (or recompute the gcd and reduction). Compare results before answering.\n\nI cannot give a confident ANSWER line from this work."
+  ]
+ },
+ "expected": 94677189
+}

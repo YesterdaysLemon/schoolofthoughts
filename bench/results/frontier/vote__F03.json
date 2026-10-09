@@ -1,0 +1,1207 @@
+{
+ "arm": "haiku_vote",
+ "pid": "F03",
+ "answer": 16500,
+ "correct": false,
+ "tie": false,
+ "n": 50,
+ "n_parsed": 11,
+ "distribution": [
+  [
+   16500,
+   3
+  ],
+  [
+   16000,
+   1
+  ],
+  [
+   16587,
+   1
+  ],
+  [
+   16190,
+   1
+  ],
+  [
+   16868,
+   1
+  ],
+  [
+   16300,
+   1
+  ],
+  [
+   16800,
+   1
+  ],
+  [
+   16436,
+   1
+  ],
+  [
+   16760,
+   1
+  ]
+ ],
+ "single_acc": 0.0,
+ "pass_at_n": false,
+ "cost": 0.75896,
+ "wall": 33.30959486961365,
+ "errors": [],
+ "samples": [
+  {
+   "sample": 0,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 1,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 2,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 3,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 4,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 5,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 6,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 7,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 8,
+   "answer": 16500,
+   "correct": false,
+   "cost": 0.01161455,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 46422,
+    "output_tokens_details": {
+     "thinking_tokens": 45873
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 9,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 10,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 11,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 12,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 13,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 63999
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 14,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 15,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 16,
+   "answer": 16000,
+   "correct": false,
+   "cost": 0.013131549999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 52490,
+    "output_tokens_details": {
+     "thinking_tokens": 51993
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 17,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 18,
+   "answer": 16587,
+   "correct": false,
+   "cost": 0.01407955,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 56282,
+    "output_tokens_details": {
+     "thinking_tokens": 55665
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 19,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 20,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 21,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 22,
+   "answer": 16190,
+   "correct": false,
+   "cost": 0.0149258,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 59667,
+    "output_tokens_details": {
+     "thinking_tokens": 59141
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 23,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 24,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 25,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 26,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 27,
+   "answer": 16868,
+   "correct": false,
+   "cost": 0.0093333,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 37297,
+    "output_tokens_details": {
+     "thinking_tokens": 36725
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 28,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 29,
+   "answer": 16300,
+   "correct": false,
+   "cost": 0.00910805,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 36396,
+    "output_tokens_details": {
+     "thinking_tokens": 35808
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 30,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 31,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 32,
+   "answer": 16800,
+   "correct": false,
+   "cost": 0.013885799999999998,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 55507,
+    "output_tokens_details": {
+     "thinking_tokens": 54943
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 33,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 63999
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 34,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 35,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 36,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 37,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 38,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 63999
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 39,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 40,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 41,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 42,
+   "answer": 16500,
+   "correct": false,
+   "cost": 0.014430549999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 57686,
+    "output_tokens_details": {
+     "thinking_tokens": 57163
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 43,
+   "answer": 16500,
+   "correct": false,
+   "cost": 0.011477049999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 45872,
+    "output_tokens_details": {
+     "thinking_tokens": 45014
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 44,
+   "answer": 16436,
+   "correct": false,
+   "cost": 0.01070255,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 42774,
+    "output_tokens_details": {
+     "thinking_tokens": 42075
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 45,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 46,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 47,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  },
+  {
+   "sample": 48,
+   "answer": 16760,
+   "correct": false,
+   "cost": 0.0119183,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 47637,
+    "output_tokens_details": {
+     "thinking_tokens": 47030
+    },
+    "service_tier": "batch"
+   },
+   "stop": "end_turn"
+  },
+  {
+   "sample": 49,
+   "answer": null,
+   "correct": false,
+   "cost": 0.01600905,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 181,
+    "output_tokens": 64000,
+    "output_tokens_details": {
+     "thinking_tokens": 64000
+    },
+    "service_tier": "batch"
+   },
+   "stop": "max_tokens"
+  }
+ ],
+ "texts": [
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "I could not compute this value exactly by hand, so the number below is an estimate, not a verified count.\n\n**What I verified by hand.** Let $h_n$ be the number of $n$-step self-avoiding walks from the origin that stay in $y \\ge 0$. Enumerating step by step:\n\n- $h_1 = 3$, $h_2 = 7$, $h_3 = 19$, $h_4 = 49$, $h_5 = 131$.\n\nThese were checked against the full-plane counts $c_n = 4, 12, 36, 100, 284$ for $n = 1,\\dots,5$ (the walks with $y<0$ account for the difference in the $n=3$ case, giving $36-17=19$).\n\n**Why I could not finish exactly.** Self-avoidance has no simple transfer structure here. The direct enumeration grows roughly like $2.7^n$, giving on the order of $10^4$ walks at $n=10$. Memoising on the local obstacle configuration only pays off at depths near 7 or beyond, and that bookkeeping is too large to carry out reliably by hand.\n\n**Estimate.** The ratio $h_n/c_n$ falls from $0.4613$ at $n=5$, and a fit of the form $h_n/c_n \\propto n^{-\\beta}$ with $\\beta \\approx 0.27$\u2013$0.33$ gives $h_{10}/c_{10} \\approx 0.37$\u2013$0.38$. Multiplying by $c_{10} = 44100$ gives $h_{10}$ in roughly the range $16{,}000$\u2013$17{,}000$. I take $16{,}500$ as a point estimate.\n\nANSWER: 16500",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "## Result\n\nI could not compute this exactly by hand, so the integer below is an estimate, not a verified count.\n\n**What I verified exactly.** Let f(n) be the number of length-n self-avoiding walks from (0,0) that never go below y = 0. By enumerating extensions step by step:\n\n- f(1) = 3, f(2) = 7, f(3) = 19, f(4) = 49, f(5) = 131.\n\nFor comparison, the unrestricted counts are c\u2081..c\u2085 = 4, 12, 36, 100, 284, and c\u2086..c\u2081\u2080 = 780, 2172, 5916, 16268, 44100.\n\n**What I estimated.** Going from n = 5 to n = 10 by hand would require enumerating roughly 16,000 walks (f(10) is on the order of 10\u2074), which is beyond a reliable manual count. I extrapolated instead:\n\n- The ratio f(n)/c_n decreases slowly, roughly like n^(\u221225/64) asymptotically, and is 0.4613 at n = 5.\n- Extending the observed ratio f(n)/f(n\u22121) using the known unrestricted ratios c_n/c_{n\u22121} gives f(10) \u2248 16,000\u201316,700.\n- Different extrapolation choices give values in the range roughly 15,500\u201316,900.\n\nI am therefore reporting a central estimate of about 16,000. The true value is very unlikely to equal this exact integer, and a computer enumeration is needed to pin it down.\n\nANSWER: 16000",
+  "",
+  "I could not carry out the full enumeration by hand, so the final number below is an estimate, not a verified count.\n\n**Exact small cases (checked by hand):**\n\nLet a_n be the number of length-n walks from the origin that stay in y \u2265 0.\n\n- a_1 = 3 (up, left, right).\n- a_2 = 7. Of the 12 length-2 walks, the 3 starting with D are invalid, and the 2 walks that go L then D are also invalid. Recount: UU, UL, UR, LL, LU, RR, RU.\n- a_3 = 19. Each of the 7 length-2 walks extends by 2, 3, or 3 valid steps, giving 3+3+3+2+3+2+3 = 19. This matches the 36 \u2212 17 = 19 check.\n- a_4 = 49. Summing the valid 4th-step counts over the 19 walks of length 3 gives 49.\n- a_5 = 131. Summing the valid 5th-step counts over the 49 walks of length 4 gives 131.\n\n**Extrapolation to n = 10:**\n\nThe full-plane SAW counts are c_n = 4, 12, 36, 100, 284, 780, 2172, 5916, 16268, 44100. The ratio f_n = a_n / c_n is 0.75, 0.583, 0.528, 0.490, 0.461 for n = 1..5. Its successive decrements shrink roughly like a power law, and extrapolating them gives f_10 \u2248 0.376. That yields a_10 \u2248 0.376 \u00d7 44100 \u2248 16,600, with an uncertainty of roughly \u00b11000.\n\nAn exact value needs a full enumeration (about 16,000 walks) or a transfer-matrix computation, which I could not complete by hand. The integer below is therefore an estimate and is unlikely to be exactly right.\n\nANSWER: 16587",
+  "",
+  "",
+  "",
+  "I could not carry out an exact count for length 10 by hand, so the number below is an estimate, not a verified answer.\n\n**What I verified exactly**\n\nCounting by first-step symmetry and extending prefixes gives:\n\n| n | h_n (walks with y \u2265 0) | c_n (all SAWs) |\n|---|---|---|\n| 0 | 1 | 1 |\n| 1 | 3 | 4 |\n| 2 | 7 | 12 |\n| 3 | 19 | 36 |\n| 4 | 49 | 100 |\n| 5 | 131 | 284 |\n\nThe values for n = 4 were checked two ways (direct extension, and by subtracting the walks that reach y = \u22121 from the total 100).\n\n**Extrapolating to n = 10**\n\n- Asymptotically, h_n ~ A\u00b7\u03bc^n\u00b7n^(\u22123/64) with \u03bc \u2248 2.638, so the ratio h_n/h_(n\u22121) should be near 2.63 by n = 10. Fitting A from h_5 gives A \u2248 1.11, and then h_10 \u2248 1.11 \u00b7 \u03bc^10 \u00b7 10^(\u22123/64) \u2248 16,200.\n- Using the known total c_10 = 44100 and the observed decay of h_n/c_n (0.528, 0.490, 0.461 for n = 3, 4, 5), the same order of magnitude results, roughly 16,000 with an uncertainty of several hundred.\n\nSo the answer is plausibly around 16,000, but the exact integer requires a full enumeration (or a program) that I could not complete here.\n\nANSWER: 16190",
+  "",
+  "",
+  "",
+  "",
+  "I could not determine this exactly by hand, so the final number below is an estimate, not a verified count.\n\n**Exact small cases.** Let $a_n$ be the number of $n$-step walks from the origin that stay in $y \\ge 0$. Enumerating by hand:\n\n- $a_1 = 3$ (up, left, right)\n- $a_2 = 7$\n- $a_3 = 19$ (checked against the 36 full 3-step walks, of which 17 visit $y<0$)\n- $a_4 = 49$ (extending each of the 19 three-step walks and counting valid fourth steps)\n- $a_5 = 131$ (extending each of the 49 four-step walks)\n\n**Extrapolation.** The full-plane counts $c_n$ (no restriction) are 4, 12, 36, 100, 284, 780, 2172, 5916, 16268, 44100 for $n=1,\\dots,10$. I took the ratio $a_n/c_n$, which decreases roughly like $n^{-\\alpha}$ with $\\alpha \\approx 0.27$ fitted to the computed values $n=3,4,5$. Extending to $n=10$ gives $a_{10}/c_{10} \\approx 0.38$, so $a_{10} \\approx 0.38 \\times 44100 \\approx 16{,}800$. Allowing for the exponent slowly approaching its asymptotic value (about 0.39) pushes the estimate slightly lower, to roughly 16,500\u201316,900.\n\nExact enumeration at $n=10$ would require tracking on the order of $2 \\times 10^4$ walks, which is beyond what can be done reliably by hand. The value below is therefore a best estimate; I have not verified it.\n\nANSWER: 16868",
+  "",
+  "## Result\n\nI could not carry out an exact count by hand. The answer below is an estimate, not a verified value.\n\n## What I verified\n\nI checked small cases by direct enumeration, using the rule that a walk is valid only if every point has $y \\ge 0$, with no revisits and no immediate backtracking.\n\n| Length $n$ | Half-plane walks | Total SAWs $c_n$ | Ratio |\n|---|---|---|---|\n| 1 | 3 | 4 | 0.75 |\n| 2 | 7 | 12 | 0.583 |\n| 3 | 19 | 36 | 0.528 |\n| 4 | 49 | 100 | 0.49 |\n| 5 | 131 | 284 | 0.461 |\n\nThe $n=4$ count was cross-checked two ways: the first-step symmetry gives $25 = 23 + 2$ for walks starting with U, and I separately counted the 12 walks starting with L that go negative, giving $25 - 12 = 13$.\n\n## Estimate for $n=10$\n\nAsymptotically the ratio $c_n^+/c_n$ decays like $n^{-25/64}$, but the observed local exponent so far is about $-0.27$, so I used an exponent near $-0.3$ to $-0.33$ to extrapolate from $n=5$:\n\n$$\\frac{c_{10}^+}{c_{10}} \\approx 0.461 \\cdot 2^{-0.3\\text{ to }-0.33} \\approx 0.37.$$\n\nWith the known total $c_{10} = 44100$, this gives roughly $0.37 \\times 44100 \\approx 16{,}000$\u2013$16{,}500$. I cannot pin the exact integer without a full enumeration, which is roughly ten thousand walks.\n\nANSWER: 16300",
+  "",
+  "",
+  "## Approach\n\nI could not complete an exact count for length 10 by hand, so the number below is an estimate, not a verified result.\n\n**What I could verify.** Let $H_n$ be the number of length-$n$ walks from the origin with $y\\ge 0$ throughout. Using the non-backtracking transfer recursion on (height, last step), then subtracting walks with self-intersections, I got:\n\n- $H_1=3$, $H_2=7$, $H_3=19$, $H_4=49$, $H_5=131$.\n\nFor $n=4$ the non-backtracking count is $53$ and the four square loops give $49$. This matches an independent check: $100 = 2\\cdot 49 - 2 + 4$, where the $4$ walks visit both $y>0$ and $y<0$.\n\n**Why the extension to $n=10$ is out of reach by hand.** Exact values for $n=6,\\dots,10$ require correcting the non-backtracking count for walks that revisit a point. Those corrections involve enumerating self-avoiding prefixes of length up to 9, on the order of thousands of configurations. I could not carry that out reliably here.\n\n**Estimate.** The total number of 10-step self-avoiding walks on the square lattice is $c_{10}=44100$. The ratio $H_n/c_n$ has been falling ($0.583, 0.528, 0.490, 0.461$ for $n=2,\\dots,5$). Extrapolating that decay to $n=10$ gives a fraction of roughly $0.37$\u2013$0.40$, which places $H_{10}$ in the range of about $16{,}000$\u2013$18{,}000$. The value below is a point estimate within that range and is probably not exact.\n\nANSWER: 16800",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "",
+  "I could not complete an exact count by hand, so the number below is an estimate, not a verified value.\n\n**What I could verify exactly**\n\nLet h_n be the number of n-step self-avoiding walks from the origin that stay in y \u2265 0. Hand enumeration gives:\n\n- h_1 = 3, h_2 = 7, h_3 = 19 (checked by first-step decomposition)\n- h_4 = 49 (checked by comparing with the full-plane count c_4 = 100, which splits as 25 walks per first step)\n- h_5 = 131 (first-step decomposition: 61 starting with U, 35 each starting with L or R)\n\n**Why the exact value is out of reach by hand**\n\nReaching n = 10 requires enumerating roughly h_8 \u2248 2000\u20133000 prefixes, or equivalently about 10^4 local continuation counts. That is too error-prone to do reliably here.\n\n**Estimate**\n\nThe full-plane counts are c_n = 4, 12, 36, 100, 284, 780, 2172, 5916, 16268, 44100 for n = 1..10. The ratio g_n = h_n / c_n was 0.75, 0.583, 0.528, 0.490, 0.461 for n = 1..5, and it should keep decreasing like n^(-25/64) for large n. Extrapolating this trend gives g_10 \u2248 0.37\u20130.38, so\n\nh_10 \u2248 0.375 \u00d7 44100 \u2248 16,500\n\nThis is uncertain by a few percent, so the integer below is not reliably exact.\n\nANSWER: 16500",
+  "## Approach\n\nExact enumeration by hand for length 10 is not feasible here: the count is in the tens of thousands, and no closed form is known for half-plane walks. I can verify the first few terms exactly and then estimate the rest.\n\n**Exact small values.** Let $H(n)$ be the number of length-$n$ walks from the origin that never reach $y<0$.\n\n- $H(1)=3$ (up, left, right).\n- $H(2)=7$. Walks starting with U give 3 + 3 + 3 = 9 two-step walks minus... more simply, the 2-step walks are UU, UL, UR, LU, LL, RU, RR, which gives 7.\n- $H(3)=19$. Each 2-step walk extends in 3 ways except LL and RR (2 ways each), giving $5\\cdot 3 + 2\\cdot 2 = 19$. This matches the full count $c_3=36$ minus 17 walks that dip below the axis.\n- $H(4)=49$. Checking against the full count $c_4=100$: the dipping walks are 25 (first step D) + 12 (first step L) + 12 (first step R) + 2 (U-start, namely ULDD and URDD) = 51, so $H(4)=100-51=49$.\n- $H(5)=131$. Using the 49 four-step walks and counting valid fifth steps gives UU-group 25, UL 18, UR 18, LU 22, RU 22, LL 13, RR 13. The U-first total of 61 was cross-checked by counting the 10 dipping U-first walks of length 5.\n\n**Estimating $H(10)$.** The full-plane counts are $c_n$: 4, 12, 36, 100, 284, 780, 2172, 5916, 16268, 44100. The ratio $H(n)/c_n$ falls from 0.49 at $n=4$ to 0.461 at $n=5$, decaying roughly like $n^{-0.3}$ to $n^{-0.39}$ (the theoretical half-plane exponent difference is $\\gamma_1-\\gamma = -25/64$). Extrapolating to $n=10$:\n\n$$H(10)\\approx 0.46\\cdot 44100\\cdot 2^{-0.3}\\approx 16{,}500.$$\n\nEquivalently, the successive growth ratios near 2.6\u20132.66 applied to $H(5)=131$ give about 16,500. This is only an estimate, uncertain by roughly \u00b1500, so I cannot certify the exact integer.\n\nMy best estimate is about 16,500, but this is not a verified exact value.\n\nANSWER: 16500",
+  "## Approach\n\nI could not find a closed form for this count, so I built up the sequence by hand and then extrapolated. The final value is an estimate, not an exact enumeration, so treat it with caution.\n\n**Exact small values** (walks starting at the origin that never go below $y=0$):\n\n- $c_1^+ = 3$ (up, left, right).\n- $c_2^+ = 7$.\n- $c_3^+ = 19$.\n- $c_4^+ = 49$. Cross-check: the full count is $100 = 4 \\times 25$. Up-start walks give $25-2 = 23$ half-plane walks, and each horizontal start gives $25-12 = 13$.\n- $c_5^+ = 131$. The up-start subtree gives $61$; the left and right subtrees give $35$ each. The up-start value was checked independently: exactly $10$ of the $71$ full up-start walks dip below $y=0$.\n\n**Comparison with full-plane counts.** The full square-lattice SAW counts $c_n$ (recalled as $c_6=780$, $c_7=2172$, $c_8=5916$, $c_9=16268$, $c_{10}=44100$) are not derived here. The ratio $r_n = c_n^+/c_n$ is $0.528, 0.490, 0.461$ for $n=3,4,5$. Its local decay exponent is about $0.27$, so I extrapolated $r_n$ with that exponent.\n\n**Extrapolation:**\n\n| $n$ | $r_n$ (est.) | $c_n^+$ (est.) |\n|---|---|---|\n| 6 | 0.436 | \u2248 340 |\n| 7 | 0.416 | \u2248 904 |\n| 8 | 0.399 | \u2248 2360 |\n| 9 | 0.385 | \u2248 6260 |\n| 10 | 0.373 | \u2248 16,400 |\n\nBecause the extrapolation rests on recalled full-plane counts and an assumed decay exponent, the last digits are not reliable. The value is best understood as an estimate of roughly 16,400.\n\nANSWER: 16436",
+  "",
+  "",
+  "",
+  "## Result\n\nI could not complete an exact count by hand, so the answer below is an estimate, not a verified value.\n\n**What I verified exactly:** Let $c_n^+$ be the number of such walks of length $n$. Direct enumeration gives:\n\n- $c_1^+ = 3$, $c_2^+ = 7$, $c_3^+ = 19$, $c_4^+ = 49$, $c_5^+ = 131$\n\nThese were obtained by extending each walk one step at a time and counting the unvisited, non-negative neighbours of the endpoint.\n\n**Approach for n = 10:** A complete enumeration needs roughly $10^4$ walk-level checks, which is not feasible to carry out reliably here. Instead I extrapolated from the exact total counts $c_n$ (known: $c_9 = 16268$, $c_{10} = 44100$ for all SAWs of those lengths, with $c_5=284$ and $c_8=5916$ used for the ratios below). Comparing $c_n^+$ with the full-lattice ratio $c_n/c_{n-1}$ shows the difference shrinks roughly like $0.8/n$. Applying this gives a half-plane ratio of about 2.6\u20132.7 per step, and chaining from $c_5^+ = 131$:\n\n$c_6^+ \\approx 342$, $c_7^+ \\approx 914$, $c_8^+ \\approx 2400$, $c_9^+ \\approx 6370$, $c_{10}^+ \\approx 16{,}700$\n\nThe implied fraction $c_n^+/c_n$ falls smoothly from 0.46 at $n=5$ to about 0.38 at $n=10$, which is consistent with the expected surface-exponent behaviour. The uncertainty is on the order of several hundred, so this value is not exact.\n\nANSWER: 16760",
+  ""
+ ],
+ "expected": 16225
+}

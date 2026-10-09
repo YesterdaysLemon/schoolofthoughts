@@ -1,0 +1,53 @@
+{
+ "arm": "haiku_swarm_procedural",
+ "game": "procedural",
+ "pid": "P01",
+ "answer": 1761,
+ "correct": true,
+ "cost": 0.003334025,
+ "wall": 23.547325372695923,
+ "n_agents": 1,
+ "max_depth": 0,
+ "n_ledger": 0,
+ "amendments": [],
+ "ledger": [],
+ "events": [
+  {
+   "t": 0.0,
+   "kind": "spawn",
+   "agent": 1,
+   "parent": null,
+   "budget": 50
+  },
+  {
+   "t": 23.55,
+   "kind": "finish",
+   "agent": 1,
+   "status": "done",
+   "turns": 1
+  }
+ ],
+ "agents": {
+  "1": {
+   "parent": null,
+   "depth": 0,
+   "brief": "",
+   "report": "The sum is 1761. I worked this out by hand and checked the key sub-computations twice; I did not use helpers.\n\n**Setup.** Odd vertices are {1,3,5,7} and even vertices are {2,4,6,8}. An odd\u2013even edge {i,j} has weight |j\u2212i|. A same-parity edge has weight \u22121. Let M be the 4\u00d74 matrix M[o][e] = |o\u2212e|, with rows o \u2208 {1,3,5,7} and columns e \u2208 {2,4,6,8}:\n\n- r1: [1,3,5,7]\n- r3: [1,1,3,5]\n- r5: [3,1,1,3]\n- r7: [5,3,1,1]\n\nA perfect matching has k odd\u2013even edges, with k \u2208 {0,2,4}, since the leftover odd vertices must pair among themselves.\n\n**k = 0 (all same-parity).** The odd vertices have 3 pairings and the even vertices have 3. Each matching has weight (\u22121)^4 = 1. Contribution: 9.\n\n**k = 4 (all cross edges).** This is a bijection of odd to even vertices, with all four weights positive. Contribution: perm(M).\n- Expanding along row 1 with the 3\u00d73 minors (each checked by all six permutations): perm(M) = 1\u00b754 + 3\u00b798 + 5\u00b798 + 7\u00b754 = 1216.\n\n**k = 2.** Choose 2 odd vertices and 2 even vertices, match them across, and pair the remaining two odds and two evens. The two same-parity edges contribute (\u22121)\u00b2 = 1. Contribution: the sum over row pairs r<r\u2032 and ordered column pairs x\u2260y of M[r][x]\u00b7M[r\u2032][y]. This equals \u03a3_{r<r\u2032} [(row sum r)(row sum r\u2032) \u2212 (row dot product r\u00b7r\u2032)].\n- Row sums: 16, 10, 8, 10.\n- Pairs (1,3): 160 \u2212 54 = 106. (1,5): 128 \u2212 32 = 96. (1,7): 160 \u2212 26 = 134. (3,5): 80 \u2212 22 = 58. (3,7): 100 \u2212 16 = 84. (5,7): 80 \u2212 22 = 58.\n- Total: 536.\n\nMatching counts check out: 9 + 72 + 24 = 105.\n\n**Total.** 9 + 536 + 1216 = 1761.\n\nANSWER: 1761",
+   "status": "done",
+   "turns": 1,
+   "cost": 0.003334025,
+   "out_tokens": 6098,
+   "max_prompt": 2281,
+   "children": [],
+   "t_start": 5.245208740234375e-06,
+   "t_end": 23.54726815223694,
+   "wallet_end": 49
+  }
+ },
+ "transcripts": {
+  "1": [
+   "The sum is 1761. I worked this out by hand and checked the key sub-computations twice; I did not use helpers.\n\n**Setup.** Odd vertices are {1,3,5,7} and even vertices are {2,4,6,8}. An odd\u2013even edge {i,j} has weight |j\u2212i|. A same-parity edge has weight \u22121. Let M be the 4\u00d74 matrix M[o][e] = |o\u2212e|, with rows o \u2208 {1,3,5,7} and columns e \u2208 {2,4,6,8}:\n\n- r1: [1,3,5,7]\n- r3: [1,1,3,5]\n- r5: [3,1,1,3]\n- r7: [5,3,1,1]\n\nA perfect matching has k odd\u2013even edges, with k \u2208 {0,2,4}, since the leftover odd vertices must pair among themselves.\n\n**k = 0 (all same-parity).** The odd vertices have 3 pairings and the even vertices have 3. Each matching has weight (\u22121)^4 = 1. Contribution: 9.\n\n**k = 4 (all cross edges).** This is a bijection of odd to even vertices, with all four weights positive. Contribution: perm(M).\n- Expanding along row 1 with the 3\u00d73 minors (each checked by all six permutations): perm(M) = 1\u00b754 + 3\u00b798 + 5\u00b798 + 7\u00b754 = 1216.\n\n**k = 2.** Choose 2 odd vertices and 2 even vertices, match them across, and pair the remaining two odds and two evens. The two same-parity edges contribute (\u22121)\u00b2 = 1. Contribution: the sum over row pairs r<r\u2032 and ordered column pairs x\u2260y of M[r][x]\u00b7M[r\u2032][y]. This equals \u03a3_{r<r\u2032} [(row sum r)(row sum r\u2032) \u2212 (row dot product r\u00b7r\u2032)].\n- Row sums: 16, 10, 8, 10.\n- Pairs (1,3): 160 \u2212 54 = 106. (1,5): 128 \u2212 32 = 96. (1,7): 160 \u2212 26 = 134. (3,5): 80 \u2212 22 = 58. (3,7): 100 \u2212 16 = 84. (5,7): 80 \u2212 22 = 58.\n- Total: 536.\n\nMatching counts check out: 9 + 72 + 24 = 105.\n\n**Total.** 9 + 536 + 1216 = 1761.\n\nANSWER: 1761"
+  ]
+ },
+ "expected": 1761
+}

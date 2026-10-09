@@ -1,0 +1,169 @@
+{
+ "arm": "haiku_vote",
+ "pid": "P05",
+ "answer": 394,
+ "correct": true,
+ "tie": false,
+ "n": 6,
+ "n_parsed": 6,
+ "distribution": [
+  [
+   394,
+   6
+  ]
+ ],
+ "single_acc": 1.0,
+ "pass_at_n": true,
+ "cost": 0.027936600000000002,
+ "wall": 79.08746886253357,
+ "errors": [],
+ "samples": [
+  {
+   "sample": 0,
+   "answer": 394,
+   "correct": true,
+   "cost": 0.005508600000000001,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 236,
+    "output_tokens": 10970,
+    "output_tokens_details": {
+     "thinking_tokens": 9856
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 62.976051568984985
+  },
+  {
+   "sample": 1,
+   "answer": 394,
+   "correct": true,
+   "cost": 0.0039556,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 236,
+    "output_tokens": 7864,
+    "output_tokens_details": {
+     "thinking_tokens": 6880
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 29.45823645591736
+  },
+  {
+   "sample": 2,
+   "answer": 394,
+   "correct": true,
+   "cost": 0.0055271,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 236,
+    "output_tokens": 11007,
+    "output_tokens_details": {
+     "thinking_tokens": 10222
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 62.64352798461914
+  },
+  {
+   "sample": 3,
+   "answer": 394,
+   "correct": true,
+   "cost": 0.0040711,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 236,
+    "output_tokens": 8095,
+    "output_tokens_details": {
+     "thinking_tokens": 7265
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 30.699313163757324
+  },
+  {
+   "sample": 4,
+   "answer": 394,
+   "correct": true,
+   "cost": 0.0048086000000000005,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 236,
+    "output_tokens": 9570,
+    "output_tokens_details": {
+     "thinking_tokens": 8424
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 66.31266760826111
+  },
+  {
+   "sample": 5,
+   "answer": 394,
+   "correct": true,
+   "cost": 0.0040656,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 236,
+    "output_tokens": 8084,
+    "output_tokens_details": {
+     "thinking_tokens": 7051
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 79.03604507446289
+  }
+ ],
+ "texts": [
+  "## Answer: 394\n\n**Reduction.** Measure each coordinate's distance to the target value 2. A coordinate at 2 has distance 0 and degree 1, at 1 has distance 1 and degree 2, and at 0 has distance 2 and degree 1. Let the state be $(i,j,k)$, where $i$, $j$, $k$ count coordinates at distance 0, 1, 2, so $i+j+k=3$. The target is $(3,0,0)$, the start is $(0,0,3)$, and the total degree is $D=3+j$.\n\nEach edge has probability $1/D$:\n- a distance-1 coordinate has two edges, to distance 0 and to distance 2;\n- a distance-0 or distance-2 coordinate has one edge, to distance 1.\n\n**Equations.** Let $E(i,j,k)$ be the expected hitting time, with $E(3,0,0)=0$. Name the unknowns:\n$a=E(2,0,1)$, $b=E(1,0,2)$, $c=E(0,0,3)$, $d=E(2,1,0)$, $e=E(1,1,1)$, $f=E(0,1,2)$, $g=E(1,2,0)$, $h=E(0,2,1)$, $p=E(0,3,0)$.\n\n$$\n\\begin{aligned}\na&=1+\\tfrac23 e+\\tfrac13 d, & b&=1+\\tfrac13 f+\\tfrac23 e, & c&=1+f,\\\\\nd&=1+\\tfrac14 a+\\tfrac12 g, & e&=1+\\tfrac14(a+b+g+h), & f&=1+\\tfrac14 b+\\tfrac14 c+\\tfrac12 h,\\\\\ng&=1+\\tfrac25 d+\\tfrac25 e+\\tfrac15 p, & h&=1+\\tfrac25 e+\\tfrac25 f+\\tfrac15 p, & p&=1+\\tfrac12 g+\\tfrac12 h.\n\\end{aligned}\n$$\n\n**Solving.** Eliminating $a$, $c$, $b$, $p$ reduces the system to six equations in $d,e,f,g,h$ (with $b$ and $p$ substituted). Solving gives:\n- $h=\\tfrac{527}{10}$\n- $e=\\tfrac{3503}{70}$\n- $g=\\tfrac{3149}{70}$\n- $d=35$\n- $f=\\tfrac{380}{7}$\n\nThen $c = 1+f = \\tfrac{387}{7}$.\n\n**Checks.**\n- Substituting back into all nine original equations confirms each one (for example, $e \\approx 50.04$ and $h = 52.7$ satisfy their equations to rounding).\n- Independent check via return time: the stationary probability of the target is $\\deg(\\text{target})/\\sum\\deg = 3/108$, so the expected return time is $36$. The return time also equals $1+E(\\text{neighbor})$, and the neighbor state $(2,1,0)$ has $d=35$, giving $1+35=36$. \u2713\n\nSo the expected hitting time is $\\tfrac{387}{7}$. Since $387 = 3^2\\cdot 43$ is not divisible by 7, the fraction is in lowest terms, and $m+n = 387+7 = 394$.\n\nANSWER: 394",
+  "## Approach\n\nThe graph is the product of three path graphs $P_3$, so the walk can be lumped by symmetry. Each coordinate takes one of three states relative to the target $(2,2,2)$:\n\n- **0**: the far end (value 0). Its only move is to 1.\n- **1**: the middle (value 1). Its moves are to 0 or 2, each available in one way.\n- **2**: the target end (value 2). Its only move is to 1.\n\nSince the target is symmetric under permuting coordinates, the state can be recorded as $(a,b,c)$, the counts of coordinates in states 0, 1, 2, with $a+b+c=3$. The degree is $D = a + c + 2b$. The goal is $(0,0,3)$, and the start is $(3,0,0)$.\n\n## Equations\n\nLet $E(\\cdot)$ denote expected remaining time from each state, with $E(0,0,3)=0$. Name the unknowns:\n\n- $A=E(3,0,0)$, $B=E(2,1,0)$, $C=E(2,0,1)$, $F=E(1,2,0)$, $G=E(1,1,1)$\n- $H=E(1,0,2)$, $I=E(0,3,0)$, $J=E(0,2,1)$, $K=E(0,1,2)$\n\nThe first-step equations are:\n\n- $A = 1 + B$\n- $B = 1 + \\tfrac14(2F + A + C)$\n- $C = 1 + \\tfrac13(2G + B)$\n- $F = 1 + \\tfrac15(I + 2B + 2G)$\n- $G = 1 + \\tfrac14(J + C + H + F)$\n- $H = 1 + \\tfrac13(K + 2G)$\n- $I = 1 + \\tfrac12(F + J)$\n- $J = 1 + \\tfrac15(2G + 2K + I)$\n- $K = 1 + \\tfrac14(H + 2J)$\n\n## Solving\n\nEliminating variables gives a reduced system in $F, G, J, K$. Solving it yields:\n\n$$G=\\frac{3503}{70},\\quad J=\\frac{3149}{70},\\quad F=\\frac{3689}{70},\\quad K=35.$$\n\nBack-substitution gives:\n\n$$B=\\frac{380}{7},\\quad C=\\frac{1836}{35},\\quad H=\\frac{1611}{35},\\quad I=\\frac{3489}{70}.$$\n\nThen $A = 1 + B = \\dfrac{387}{7}$.\n\n## Verification\n\nI checked all nine original equations against these values, and each holds exactly. For example, for $G$: $4G = 14012/70$ and $4 + J + C + H + F = 14012/70$.\n\n## Result\n\n$E(3,0,0) = \\dfrac{387}{7}$. Since $387 = 9\\cdot 43$ and $7$ is prime, the fraction is in lowest terms, so $m+n = 387+7 = 394$.\n\nANSWER: 394",
+  "## Answer: 394\n\nThe expected hitting time from (0,0,0) to (2,2,2) is 387/7, so m + n = 387 + 7 = 394.\n\n## Approach\n\nEach coordinate can be classified by its distance to the target coordinate 2:\n- **A**: coordinate = 2 (at target). Its only move goes to 1 (type B).\n- **B**: coordinate = 1. Moves go to 2 (type A) or 0 (type C).\n- **C**: coordinate = 0. Its only move goes to 1 (type B).\n\nThe state is (a, b, c), the counts of A, B, C coordinates with a + b + c = 3. The target is (3,0,0), and the start (0,0,0) is (0,0,3). The degree of a vertex in state (a,b,c) is a + 2b + c = 3 + b. Let E(a,b,c) be the expected hitting time, so E(3,0,0) = 0.\n\n## Equations\n\nWrite p = E(2,0,1), q = E(1,0,2), r = E(0,0,3), s = E(2,1,0), t = E(1,1,1), u = E(0,1,2), v = E(1,2,0), w = E(0,2,1), x = E(0,3,0).\n\n- p = 1 + (2t + s)/3\n- q = 1 + (u + 2t)/3\n- r = 1 + u\n- s = 1 + (2v + p)/4\n- t = 1 + (w + p + q + v)/4\n- u = 1 + (q + r + 2w)/4\n- v = 1 + (x + 2s + 2t)/5\n- w = 1 + (2t + 2u + x)/5\n- x = 1 + (v + w)/2\n\n## Solving\n\nEliminating variables gives 439v = 1383 + 367t and 391t = 3057 + 367v, which yield t = 3503/70 and v = 3149/70. Then:\n\n- w = 3689/70\n- x = 3489/70\n- u = 380/7\n- s = 35\n- p = 1611/35\n- q = 1836/35\n- r = 1 + u = 387/7\n\n**Check.** Substituting these values back into the t, u, p, s, v, w, x and q equations (and the original r and u relations) confirms each one holds exactly.\n\nSince 387 = 3\u00b2 \u00b7 43 and 7 are coprime, the fraction 387/7 is in lowest terms.\n\nANSWER: 394",
+  "## Answer: 394\n\nThe expected hitting time from (0,0,0) to (2,2,2) is 387/7, so m + n = 387 + 7 = 394.\n\n## Approach\n\nEach coordinate lives on the path 0\u20131\u20132, and the target (2,2,2) is fixed by any permutation of coordinates. Hitting times are therefore constant on orbits of coordinate permutations, so we can lump states by the multiset of coordinate values. Write a state as (n\u2080, n\u2081, n\u2082), the counts of coordinates equal to 0, 1, 2, with n\u2080+n\u2081+n\u2082 = 3. The target is (0,0,3) and the start is (3,0,0).\n\nThe degree of a state is D = n\u2080 + 2n\u2081 + n\u2082 = 3 + n\u2081. The moves are:\n- each coordinate at 0 moves to 1;\n- each coordinate at 2 moves to 1;\n- each coordinate at 1 moves to 0 or to 2.\n\n## Equations\n\nLet a = E(3,0,0), b = E(2,0,1), c = E(1,0,2), d = E(2,1,0), e = E(1,1,1), f = E(0,1,2), g = E(1,2,0), h = E(0,2,1), k = E(0,3,0), with E(0,0,3) = 0. Each state gives E(s) = 1 + (1/D)\u00b7\u03a3 E(next), so:\n\n- a = 1 + d\n- b = 1 + (2e + d)/3\n- c = 1 + (f + 2e)/3\n- d = 1 + (2g + a + b)/4\n- e = 1 + (h + b + c + g)/4\n- f = 1 + (c + 2h)/4\n- g = 1 + (k + 2d + 2e)/5\n- h = 1 + (2e + 2f + k)/5\n- k = 1 + (g + h)/2\n\n## Solving\n\nEliminating variables step by step gives e = 3503/70 and b = e + 169/70. Back-substitution yields:\n\n- d = 380/7\n- a = 1 + d = 387/7\n\nNumerically the solution is e \u2248 50.04, b \u2248 52.46, c \u2248 46.03, d \u2248 54.29, f = 35, g \u2248 52.70, h \u2248 44.99, k \u2248 49.84, a \u2248 55.29. Each of the nine equations was checked against these values and holds to rounding.\n\nSince gcd(387, 7) = 1, the fraction is in lowest terms.\n\nANSWER: 394",
+  "## Approach\n\nThe expected hitting time from $(0,0,0)$ to $(2,2,2)$ is found by lumping states. The target and start are both fixed by permuting coordinates, so the hitting-time function is invariant under $S_3$ and depends only on the multiset of coordinate values. Let $(a,b,c)$ be the number of coordinates equal to $0$, $1$, $2$ respectively, with $a+b+c=3$. The target is $(0,0,3)$ and the start is $(3,0,0)$.\n\n**Degrees and moves.** A coordinate equal to $0$ or $2$ has one neighbour in that coordinate, and a coordinate equal to $1$ has two. So the total degree of a state is $D = 3+b$. The moves are:\n- a $0$-coordinate goes to $1$: $(a,b,c)\\to(a-1,b+1,c)$;\n- a $1$-coordinate goes to $0$ or $2$: $(a,b,c)\\to(a+1,b-1,c)$ or $(a,b-1,c+1)$;\n- a $2$-coordinate goes to $1$: $(a,b,c)\\to(a,b+1,c-1)$.\n\nEach state $s$ satisfies $D\\,E(s) = D + \\sum_{\\text{moves}} E(\\text{neighbour})$, with $E(0,0,3)=0$.\n\n**Equations.** Write $A=E(3,0,0)$, $B=E(2,1,0)$, $C=E(2,0,1)$, $D'=E(1,2,0)$, $E'=E(1,1,1)$, $F=E(1,0,2)$, $G=E(0,3,0)$, $H=E(0,2,1)$, $I=E(0,1,2)$. The nine equations are:\n\n1. $A = 1+B$\n2. $4B = 4+2D'+A+C$\n3. $3C = 3+2E'+B$\n4. $5D' = 5+G+2B+2E'$\n5. $4E' = 4+H+C+F+D'$\n6. $3F = 3+I+2E'$\n7. $6G = 6+3D'+3H$\n8. $5H = 5+2E'+2I+G$\n9. $4I = 4+F+2H$\n\n**Solving.** Using (7), (9), (6) and (8) to express $I, G, D', F$ in terms of $E'$ and $H$, then (2) and (3) to express $B, C$ in terms of $E'$ and $D'$, the remaining equations (4) and (5) reduce to\n\n$$439H - 367E' = 1383, \\qquad 427H - 371E' = 643.$$\n\nCramer's rule with determinant $-6160$ gives $E' = \\tfrac{3503}{70}$ and $H = \\tfrac{3149}{70}$. Back-substitution gives, in units of $1/70$:\n\n- $I = 2450$, $G = 3489$, $D' = 3689$, $F = 3222$,\n- $B = 3800$, $C = 3672$, $A = 3870$.\n\n**Verification.** Equations (2), (3), (4), (5), (6), (7), (8), (9) all check exactly in these values.\n\nSo the expected hitting time is\n$$A = \\frac{3870}{70} = \\frac{387}{7},$$\nwhich is in lowest terms since $387 = 7\\cdot 55 + 2$.\n\nTherefore $m+n = 387+7 = 394$.\n\nANSWER: 394",
+  "## Setting up the problem\n\nThe graph is the Cartesian product $P_3 \\times P_3 \\times P_3$. Relabel each coordinate by its distance to the target: $d = |x-2|$, so the start $(0,0,0)$ becomes $d=(2,2,2)$ and the target becomes $d=(0,0,0)$.\n\nWithin one coordinate, the moves are:\n- $d=0 \\to 1$ (one option),\n- $d=2 \\to 1$ (one option),\n- $d=1 \\to 0$ or $2$ (two options).\n\nSo a state is determined up to symmetry by $(a,b,c)$, the counts of coordinates with $d=0,1,2$, where $a+b+c=3$. The total degree is $D = a+2b+c = 3+b$. Let $E(a,b,c)$ be the expected time to reach $(3,0,0)$, with $E(3,0,0)=0$. The answer is $E(0,0,3)$.\n\n## The equations\n\nName the unknowns: $A=E(2,1,0)$, $B=E(2,0,1)$, $C=E(1,2,0)$, $D_1=E(1,1,1)$, $F=E(1,0,2)$, $G=E(0,3,0)$, $H=E(0,2,1)$, $I=E(0,1,2)$, $J=E(0,0,3)$. Each state satisfies $E = 1 + \\frac{1}{D}\\sum(\\text{weight}\\cdot E_{\\text{next}})$:\n\n- $4A = 4 + 2C + B$\n- $3B = 3 + 2D_1 + A$\n- $5C = 5 + G + 2A + 2D_1$\n- $4D_1 = 4 + H + C + B + F$\n- $3F = 3 + I + 2D_1$\n- $2G = 2 + C + H$\n- $5H = 5 + 2D_1 + 2I + G$\n- $4I = 4 + F + J + 2H$\n- $J = 1 + I$\n\n## Solving\n\nEliminating $A, B, F, G, J$ in terms of $C, D_1, H, I$ and then solving the reduced system gives\n\n$$H = \\frac{527}{10}, \\quad D_1 = \\frac{3503}{70}, \\quad C = \\frac{3149}{70}, \\quad I = \\frac{380}{7}.$$\n\nBack-substituting:\n- $A = 35$\n- $B = \\frac{1611}{35}$\n- $F = \\frac{1836}{35}$\n- $G = \\frac{3489}{70}$\n- $J = 1 + I = \\frac{387}{7}$\n\n**Check.** Substituting the numerical values into the original equations (for example $4A = 140 = 4 + 2C + B$, $4D_1 \\approx 200.17 = 4+H+C+B+F$, and $4I \\approx 217.14 = 4+F+J+2H$) all hold.\n\nSince $387 = 7\\cdot 55 + 2$, the fraction $\\frac{387}{7}$ is in lowest terms. Therefore $m+n = 387+7 = 394$.\n\nANSWER: 394"
+ ],
+ "expected": 394
+}

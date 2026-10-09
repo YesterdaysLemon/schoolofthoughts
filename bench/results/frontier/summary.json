@@ -1,0 +1,259 @@
+{
+ "rows": [
+  {
+   "pid": "F01",
+   "topic": "random walk hitting time on 5x5x5 grid",
+   "kind": "very long computation",
+   "expected": 94677189,
+   "vote": {
+    "answer": 94677189,
+    "correct": true,
+    "tie": false,
+    "single_acc": 0.9,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      94677189,
+      45
+     ],
+     [
+      22419,
+      4
+     ]
+    ],
+    "cost": 0.33141425,
+    "wall": 33.309213638305664,
+    "errors": 0
+   },
+   "fable": {
+    "answer": 94677189,
+    "correct": true,
+    "cost": 2.22769,
+    "wall": 423.41596603393555,
+    "out_tokens": 44506,
+    "stop": "end_turn",
+    "error": null
+   },
+   "swarm_procedural_v2": {
+    "answer": 94677189,
+    "correct": true,
+    "cost": 0.012486275,
+    "wall": 97.12079286575317,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "swarm_procedural": {
+    "answer": null,
+    "correct": false,
+    "cost": 0.031182785,
+    "wall": 259.65793347358704,
+    "n_agents": 1,
+    "max_depth": 0,
+    "n_ledger": 0,
+    "n_amend": 0
+   }
+  },
+  {
+   "pid": "F02",
+   "topic": "banded derangements, width 4",
+   "kind": "very long computation",
+   "expected": 8192120,
+   "swarm_procedural": {
+    "answer": 8190942,
+    "correct": false,
+    "cost": 0.20473005500000002,
+    "wall": 697.1695206165314,
+    "n_agents": 9,
+    "max_depth": 1,
+    "n_ledger": 2,
+    "n_amend": 0
+   },
+   "fable": {
+    "answer": null,
+    "correct": false,
+    "cost": 5.00136,
+    "wall": 1003.8880622386932,
+    "out_tokens": 100000,
+    "stop": "max_tokens",
+    "error": null
+   },
+   "vote": {
+    "answer": null,
+    "correct": false,
+    "tie": false,
+    "single_acc": 0.0,
+    "pass_at_n": false,
+    "n": 50,
+    "dist": [],
+    "cost": 0.8003399999999999,
+    "wall": 33.309404611587524,
+    "errors": 0
+   },
+   "swarm_procedural_v2": {
+    "answer": 8192120,
+    "correct": true,
+    "cost": 0.348597875,
+    "wall": 1002.1015193462372,
+    "n_agents": 11,
+    "max_depth": 1,
+    "n_ledger": 5,
+    "n_amend": 0
+   }
+  },
+  {
+   "pid": "F03",
+   "topic": "half-plane self-avoiding walks",
+   "kind": "very long enumeration",
+   "expected": 16225,
+   "swarm_procedural": {
+    "answer": 16239,
+    "correct": false,
+    "cost": 0.82959647,
+    "wall": 751.7043254375458,
+    "n_agents": 50,
+    "max_depth": 1,
+    "n_ledger": 0,
+    "n_amend": 0
+   },
+   "fable": {
+    "answer": 16225,
+    "correct": true,
+    "cost": 1.45711,
+    "wall": 270.98441886901855,
+    "out_tokens": 29106,
+    "stop": "end_turn",
+    "error": null
+   },
+   "vote": {
+    "answer": 16500,
+    "correct": false,
+    "tie": false,
+    "single_acc": 0.0,
+    "pass_at_n": false,
+    "n": 50,
+    "dist": [
+     [
+      16500,
+      3
+     ],
+     [
+      16000,
+      1
+     ],
+     [
+      16587,
+      1
+     ],
+     [
+      16190,
+      1
+     ],
+     [
+      16868,
+      1
+     ]
+    ],
+    "cost": 0.75896,
+    "wall": 33.30959486961365,
+    "errors": 0
+   },
+   "swarm_procedural_v2": {
+    "answer": 16209,
+    "correct": false,
+    "cost": 0.987819815,
+    "wall": 1075.0364253520966,
+    "n_agents": 50,
+    "max_depth": 1,
+    "n_ledger": 6,
+    "n_amend": 0
+   }
+  },
+  {
+   "pid": "F04",
+   "topic": "totient summatory function",
+   "kind": "insight + long computation",
+   "expected": 1247816,
+   "vote": {
+    "answer": 1247816,
+    "correct": true,
+    "tie": false,
+    "single_acc": 0.14,
+    "pass_at_n": true,
+    "n": 50,
+    "dist": [
+     [
+      1247816,
+      7
+     ]
+    ],
+    "cost": 0.788484,
+    "wall": 33.309770345687866,
+    "errors": 0
+   },
+   "swarm_procedural_v2": {
+    "answer": 1247808,
+    "correct": false,
+    "cost": 0.24656025499999998,
+    "wall": 373.757604598999,
+    "n_agents": 50,
+    "max_depth": 1,
+    "n_ledger": 3,
+    "n_amend": 0
+   },
+   "swarm_procedural": {
+    "answer": 1247816,
+    "correct": true,
+    "cost": 0.156614665,
+    "wall": 369.9699261188507,
+    "n_agents": 27,
+    "max_depth": 1,
+    "n_ledger": 1,
+    "n_amend": 0
+   },
+   "fable": {
+    "answer": 1247816,
+    "correct": true,
+    "cost": 2.86144,
+    "wall": 498.16938376426697,
+    "out_tokens": 57199,
+    "stop": "end_turn",
+    "error": null
+   }
+  }
+ ],
+ "totals": {
+  "fable": {
+   "n": 4,
+   "correct": 3,
+   "cost": 11.5476
+  },
+  "swarm_procedural": {
+   "n": 4,
+   "correct": 1,
+   "cost": 1.222123975
+  },
+  "swarm_procedural_v2": {
+   "n": 4,
+   "correct": 2,
+   "cost": 1.59546422
+  },
+  "vote": {
+   "n": 4,
+   "correct": 2,
+   "cost": 2.67919825
+  },
+  "haiku_single(mean of 50)": {
+   "n": 4,
+   "correct": 1.04,
+   "cost": 0.053583965
+  },
+  "haiku_pass@50": {
+   "n": 4,
+   "correct": 2,
+   "cost": 2.67919825
+  }
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "arm": "haiku_vote",
+ "pid": "P14",
+ "answer": 1370252,
+ "correct": true,
+ "tie": false,
+ "n": 6,
+ "n_parsed": 6,
+ "distribution": [
+  [
+   1370252,
+   6
+  ]
+ ],
+ "single_acc": 1.0,
+ "pass_at_n": true,
+ "cost": 0.006840799999999999,
+ "wall": 67.3508026599884,
+ "errors": [],
+ "samples": [
+  {
+   "sample": 0,
+   "answer": 1370252,
+   "correct": true,
+   "cost": 0.0014818,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 113,
+    "output_tokens": 2941,
+    "output_tokens_details": {
+     "thinking_tokens": 1998
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 61.250869035720825
+  },
+  {
+   "sample": 1,
+   "answer": 1370252,
+   "correct": true,
+   "cost": 0.0009513,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 113,
+    "output_tokens": 1880,
+    "output_tokens_details": {
+     "thinking_tokens": 951
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 50.2145631313324
+  },
+  {
+   "sample": 2,
+   "answer": 1370252,
+   "correct": true,
+   "cost": 0.0009912999999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 113,
+    "output_tokens": 1960,
+    "output_tokens_details": {
+     "thinking_tokens": 1089
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 44.32532024383545
+  },
+  {
+   "sample": 3,
+   "answer": 1370252,
+   "correct": true,
+   "cost": 0.0010873,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 113,
+    "output_tokens": 2152,
+    "output_tokens_details": {
+     "thinking_tokens": 1201
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 67.2815375328064
+  },
+  {
+   "sample": 4,
+   "answer": 1370252,
+   "correct": true,
+   "cost": 0.0014143,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 113,
+    "output_tokens": 2806,
+    "output_tokens_details": {
+     "thinking_tokens": 1754
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 52.982306480407715
+  },
+  {
+   "sample": 5,
+   "answer": 1370252,
+   "correct": true,
+   "cost": 0.0009147999999999999,
+   "usage": {
+    "cache_creation": {
+     "ephemeral_1h_input_tokens": 0,
+     "ephemeral_5m_input_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "inference_geo": "global",
+    "input_tokens": 113,
+    "output_tokens": 1807,
+    "output_tokens_details": {
+     "thinking_tokens": 985
+    },
+    "service_tier": "standard"
+   },
+   "stop": "end_turn",
+   "wall": 53.2568781375885
+  }
+ ],
+ "texts": [
+  "## Approach\n\nLet $p = 2029$. It is prime, since it has no prime factor up to $\\sqrt{2029} \\approx 45$. The sum runs over $k = 1, \\dots, p-1$, and $p \\equiv 1 \\pmod 4$.\n\nWrite $k^2 = p\\lfloor k^2/p\\rfloor + (k^2 \\bmod p)$, so\n\n$$S = \\sum_{k=1}^{p-1}\\left\\lfloor \\frac{k^2}{p}\\right\\rfloor = \\frac{1}{p}\\left(\\sum_{k=1}^{p-1}k^2 - \\sum_{k=1}^{p-1}(k^2 \\bmod p)\\right).$$\n\n**Sum of squares:** $\\sum_{k=1}^{p-1}k^2 = \\dfrac{(p-1)p(2p-1)}{6}$.\n\n**Sum of residues:** Each nonzero quadratic residue $r$ is hit by exactly two values of $k$ (namely $k$ and $p-k$). So $\\sum_{k=1}^{p-1}(k^2 \\bmod p) = 2R$, where $R$ is the sum of the quadratic residues in $[1, p-1]$.\n\nFor $p \\equiv 1 \\pmod 4$, $\\left(\\frac{p-a}{p}\\right) = \\left(\\frac{a}{p}\\right)$. Hence $\\sum_a \\left(\\frac{a}{p}\\right)a = \\sum_a \\left(\\frac{a}{p}\\right)(p-a)$, which gives $\\sum_a \\left(\\frac{a}{p}\\right)a = 0$. So the residue sum $R$ equals the nonresidue sum $N$. Since $R+N = \\frac{p(p-1)}{2}$, we get $R = \\frac{p(p-1)}{4}$, and therefore\n\n$$\\sum_{k=1}^{p-1}(k^2 \\bmod p) = \\frac{p(p-1)}{2}.$$\n\n**Combining:**\n\n$$S = \\frac{(p-1)(2p-1)}{6} - \\frac{p-1}{2} = \\frac{(p-1)(p-2)}{3}.$$\n\n**Checks:**\n- $p=5$: the terms are $0,0,1,3$, summing to $4$. The formula gives $\\frac{4\\cdot 3}{3} = 4$. \u2713\n- $p=13$: the terms are $0,0,0,1,1,2,3,4,6,7,9,11$, summing to $44$. The formula gives $\\frac{12\\cdot 11}{3} = 44$. \u2713\n\n**Apply to $p = 2029$:**\n\n$$S = \\frac{2028\\cdot 2027}{3} = 676 \\cdot 2027 = 1{,}370{,}252.$$\n\nANSWER: 1370252",
+  "## Setting up the sum\n\nLet $p = 2029$. This is prime, and $2029 \\equiv 1 \\pmod 4$. Since $k^2 = p\\lfloor k^2/p\\rfloor + (k^2 \\bmod p)$,\n\n$$\\sum_{k=1}^{p-1}\\left\\lfloor \\frac{k^2}{p}\\right\\rfloor = \\frac{1}{p}\\left(\\sum_{k=1}^{p-1}k^2 - \\sum_{k=1}^{p-1}(k^2 \\bmod p)\\right).$$\n\n## First sum\n\n$$\\sum_{k=1}^{p-1}k^2 = \\frac{(p-1)p(2p-1)}{6}.$$\n\n## Second sum\n\nThe residues $k^2 \\bmod p$ for $k=1,\\dots,p-1$ are exactly the nonzero quadratic residues, each hit twice (by $k$ and $p-k$). So\n\n$$\\sum_{k=1}^{p-1}(k^2 \\bmod p) = 2\\sum_{\\substack{r\\in(0,p)\\\\ r \\text{ QR}}} r.$$\n\nSince $p \\equiv 1 \\pmod 4$, $-1$ is a quadratic residue, so $r$ is a QR if and only if $p-r$ is. The QRs in $(0,p)$ therefore pair up into pairs summing to $p$, with $(p-1)/2$ residues total, giving\n\n$$\\sum_{\\text{QR } r} r = \\frac{p-1}{2}\\cdot\\frac{p}{2} = \\frac{p(p-1)}{4}.$$\n\nHence $\\sum_{k=1}^{p-1}(k^2 \\bmod p) = \\dfrac{p(p-1)}{2}$.\n\n## Combining\n\n$$\\sum_{k=1}^{p-1}\\left\\lfloor \\frac{k^2}{p}\\right\\rfloor = \\frac{(p-1)(2p-1)}{6} - \\frac{p-1}{2} = \\frac{(p-1)(2p-4)}{6} = \\frac{(p-1)(p-2)}{3}.$$\n\n**Check with $p=5$:** the terms are $\\lfloor 1/5\\rfloor, \\lfloor 4/5\\rfloor, \\lfloor 9/5\\rfloor, \\lfloor 16/5\\rfloor = 0,0,1,3$, summing to $4$. The formula gives $\\frac{4\\cdot 3}{3}=4$. \u2713\n\n## Evaluating\n\nWith $p = 2029$:\n\n$$\\frac{2028\\cdot 2027}{3} = 676\\cdot 2027 = 1{,}352{,}000 + 18{,}252 = 1{,}370{,}252.$$\n\nANSWER: 1370252",
+  "## Setting up the sum\n\nLet $p = 2029$. It is prime: it is not divisible by any prime up to $43$, and $43^2 = 1849 < 2029 < 47^2$. Since $2028 = p-1$, we need $S = \\sum_{k=1}^{p-1} \\left\\lfloor k^2/p \\right\\rfloor$.\n\nWrite $k^2 = p\\left\\lfloor k^2/p\\right\\rfloor + (k^2 \\bmod p)$. Summing over $k = 1, \\dots, p-1$:\n\n$$S = \\frac{1}{p}\\left[\\sum_{k=1}^{p-1} k^2 - \\sum_{k=1}^{p-1} (k^2 \\bmod p)\\right].$$\n\n## First sum\n\n$$\\sum_{k=1}^{p-1} k^2 = \\frac{(p-1)p(2p-1)}{6}.$$\n\n## Second sum\n\nThe map $k \\mapsto k^2 \\bmod p$ on $\\{1,\\dots,p-1\\}$ is 2-to-1 onto the set of quadratic residues (since $k$ and $p-k$ give the same square). So the second sum equals $2\\cdot T$, where $T$ is the sum of the quadratic residues in $[1,p-1]$.\n\nSince $p \\equiv 1 \\pmod 4$ (because $2028 = 4 \\cdot 507$), $-1$ is a quadratic residue. So $r$ is a residue exactly when $p-r$ is one. The $(p-1)/2$ residues therefore form $(p-1)/4$ pairs, each summing to $p$. Hence\n$$T = \\frac{p(p-1)}{4}, \\qquad \\sum_{k=1}^{p-1}(k^2 \\bmod p) = \\frac{p(p-1)}{2}.$$\n\n## Combining\n\n$$S = \\frac{1}{p}\\left[\\frac{(p-1)p(2p-1)}{6} - \\frac{p(p-1)}{2}\\right] = \\frac{(p-1)(2p-1)}{6} - \\frac{p-1}{2} = \\frac{(p-1)(p-2)}{3}.$$\n\n**Check with $p=5$:** the floors are $0,0,1,3$ for $k=1,\\dots,4$, giving $4$. The formula gives $\\frac{4\\cdot 3}{3} = 4$. \u2713\n\n## Evaluating for $p = 2029$\n\n$$S = \\frac{2028 \\cdot 2027}{3} = 676 \\cdot 2027 = 1{,}370{,}252.$$\n\nANSWER: 1370252",
+  "## Setting up the sum\n\nLet $p = 2029$. It is prime: it is not divisible by any prime up to 43, and $\\sqrt{2029} < 46$. Since $k$ runs over $1, \\dots, p-1$, write each term as\n\n$$\\left\\lfloor \\frac{k^2}{p} \\right\\rfloor = \\frac{k^2 - (k^2 \\bmod p)}{p}.$$\n\nSo the desired sum is\n\n$$S = \\frac{1}{p}\\left[\\sum_{k=1}^{p-1} k^2 - \\sum_{k=1}^{p-1} (k^2 \\bmod p)\\right].$$\n\n## First sum\n\n$$\\sum_{k=1}^{p-1} k^2 = \\frac{(p-1)p(2p-1)}{6}.$$\n\n## Second sum\n\nEach nonzero quadratic residue mod $p$ is hit exactly twice, by $k$ and $p-k$. So $\\sum_{k=1}^{p-1}(k^2 \\bmod p) = 2\\cdot\\sum_{\\text{QR } r} r$, where $r$ ranges over the $(p-1)/2$ nonzero quadratic residues in $[1,p-1]$.\n\nSince $p \\equiv 1 \\pmod 4$, $-1$ is a quadratic residue, so $r$ is a residue iff $p-r$ is. The residues therefore pair up into $(p-1)/4$ pairs, each summing to $p$. Hence\n\n$$\\sum_{\\text{QR } r} r = \\frac{p-1}{2}\\cdot\\frac{p}{2}, \\qquad \\sum_{k=1}^{p-1}(k^2 \\bmod p) = \\frac{(p-1)p}{2}.$$\n\n## Combining\n\n$$S = \\frac{1}{p}\\left[\\frac{(p-1)p(2p-1)}{6} - \\frac{(p-1)p}{2}\\right] = \\frac{(p-1)(2p-1)}{6} - \\frac{p-1}{2}.$$\n\nCheck with $p=5$: the formula gives $\\frac{4\\cdot 9}{6} - 2 = 4$, and directly $\\lfloor 1/5\\rfloor+\\lfloor 4/5\\rfloor+\\lfloor 9/5\\rfloor+\\lfloor 16/5\\rfloor = 0+0+1+3 = 4$. \u2713\n\n## Evaluating at $p = 2029$\n\n- $\\dfrac{(p-1)(2p-1)}{6} = \\dfrac{2028 \\cdot 4057}{6} = 338 \\cdot 4057 = 1{,}371{,}266$.\n- $\\dfrac{p-1}{2} = 1014$.\n\n$$S = 1{,}371{,}266 - 1014 = 1{,}370{,}252.$$\n\nANSWER: 1370252",
+  "## Approach\n\nLet $p = 2029$. Since $2029$ is prime and $2029 \\equiv 1 \\pmod 4$, I can write each term as $\\lfloor k^2/p \\rfloor = (k^2 - r_k)/p$, where $r_k = k^2 \\bmod p$. The sum becomes\n\n$$\\sum_{k=1}^{p-1} \\lfloor k^2/p \\rfloor = \\frac{1}{p}\\left(\\sum_{k=1}^{p-1} k^2 - \\sum_{k=1}^{p-1} r_k\\right).$$\n\n**Sum of squares.** Using $\\sum_{k=1}^{p-1} k^2 = \\frac{(p-1)p(2p-1)}{6}$:\n\n$$\\sum_{k=1}^{2028} k^2 = \\frac{2028\\cdot 2029\\cdot 4057}{6} = 338\\cdot 2029\\cdot 4057.$$\n\nNow $2029\\cdot 4057 = 8{,}231{,}653$, and $8{,}231{,}653 \\cdot 338 = 2{,}782{,}298{,}714$.\n\n**Sum of residues.** Each nonzero quadratic residue $a$ mod $p$ is hit twice, by $k$ and $p-k$. So $\\sum_{k=1}^{p-1} r_k = 2S$, where $S$ is the sum of the quadratic residues in $\\{1,\\dots,p-1\\}$.\n\nFor $p \\equiv 1 \\pmod 4$, $\\left(\\frac{-1}{p}\\right) = 1$, so $\\left(\\frac{p-a}{p}\\right) = \\left(\\frac{a}{p}\\right)$. Substituting $a \\mapsto p-a$ in $T = \\sum_a a\\left(\\frac{a}{p}\\right)$ gives $T = -T$, so $T = 0$. Hence the residue sum $S$ equals the non-residue sum $N$. Since $S + N = \\frac{p(p-1)}{2}$, we get\n\n$$S = \\frac{p(p-1)}{4} = 2029 \\cdot 507 = 1{,}028{,}703.$$\n\nSo $\\sum r_k = 2S = 2{,}057{,}406$.\n\n**Combine.**\n\n$$\\sum_{k=1}^{2028} \\left\\lfloor \\frac{k^2}{2029}\\right\\rfloor = \\frac{2{,}782{,}298{,}714 - 2{,}057{,}406}{2029} = \\frac{2{,}780{,}241{,}308}{2029}.$$\n\nDividing: $2029 \\cdot 1{,}370{,}252 = 2{,}780{,}241{,}308$ (check: $2029\\cdot 1{,}370{,}000 = 2{,}779{,}730{,}000$ and $2029\\cdot 252 = 511{,}308$). The division is exact.\n\n**Check the method on $p=5$.** The terms for $k=1,\\dots,4$ are $0,0,1,3$, summing to $4$. The formula gives $\\frac{30 - 10}{5} = 4$, matching.\n\nANSWER: 1370252",
+  "## Setting up the sum\n\nLet $p = 2029$. It is prime (it has no prime factor up to $\\sqrt{2029}\\approx 45$), and $p \\equiv 1 \\pmod 4$. We want $S = \\sum_{k=1}^{p-1} \\lfloor k^2/p \\rfloor$.\n\nWrite $k^2 = p\\lfloor k^2/p\\rfloor + r_k$, where $r_k = k^2 \\bmod p$. Then\n$$p\\cdot S = \\sum_{k=1}^{p-1} k^2 - \\sum_{k=1}^{p-1} r_k.$$\n\n## First sum\n\n$$\\sum_{k=1}^{p-1} k^2 = \\frac{(p-1)p(2p-1)}{6}.$$\n\n## Second sum\n\nThe values $k^2 \\bmod p$ for $k = 1,\\dots,p-1$ are the nonzero quadratic residues, each hit exactly twice (by $k$ and $p-k$). So $\\sum r_k = 2\\cdot T$, where $T$ is the sum of the quadratic residues in $[1,p-1]$.\n\nSince $p\\equiv 1 \\pmod 4$, $-1$ is a quadratic residue, so $r$ is a residue if and only if $p-r$ is. The residues therefore pair up into $(p-1)/4$ pairs each summing to $p$, giving\n$$T = \\frac{p(p-1)}{4}, \\qquad \\sum_{k=1}^{p-1} r_k = \\frac{p(p-1)}{2}.$$\n\n## Combining\n\n$$S = \\frac{1}{p}\\left[\\frac{(p-1)p(2p-1)}{6} - \\frac{p(p-1)}{2}\\right] = \\frac{(p-1)(2p-1)}{6} - \\frac{p-1}{2} = \\frac{(p-1)(p-2)}{3}.$$\n\n**Check with $p=5$:** $\\lfloor 1/5\\rfloor+\\lfloor 4/5\\rfloor+\\lfloor 9/5\\rfloor+\\lfloor 16/5\\rfloor = 0+0+1+3 = 4$, and $\\frac{4\\cdot 3}{3}=4$. \u2713\n\n## Evaluating for $p = 2029$\n\n$$S = \\frac{2028\\cdot 2027}{3} = 676\\cdot 2027 = 1{,}370{,}252.$$\n\nANSWER: 1370252"
+ ],
+ "expected": 1370252
+}
