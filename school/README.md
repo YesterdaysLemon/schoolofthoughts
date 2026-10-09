@@ -51,6 +51,12 @@ clean starting point for the next run.
 Knobs: `--budget 100 --founders 2 --effort xhigh --max-turns 20 --turn-tokens 32000
 --ctx-wrap 60000 --max-depth 10 --api-conc 16 --py-conc 4 --py-mem-gb 6`.
 
+## While it runs
+
+`python3 status.py runs/<tag>` prints a one-screen status: whether the process is alive,
+spend, agents running, hand-offs, ledger/amendment/message counts, and notable events
+from the last few minutes.
+
 ## What to look at afterwards
 
 `python3 report.py runs/<tag> --repo <playground>` writes `runs/<tag>/RESULTS.md`: totals,
