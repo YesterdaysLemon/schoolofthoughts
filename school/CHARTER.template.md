@@ -26,7 +26,7 @@ and no package installs. You can list, read, search and write files, and run Pyt
 repository is large, about 4,500 files; `docs/current-frontier.md` alone is about
 830 KB, several times more than one agent can hold. Read selectively.
 
-**E4. Physical limits, and your gauges.** Each agent has at most 20 turns. One turn
+**E4. Physical limits, and your gauges.** Each agent has at most 40 turns. One turn
 can produce at most about 32,000 tokens including private reasoning; a turn that runs
 past this is cut off and its unfinished work is lost. Every turn you are shown your
 gauges — how full your context is, your turn count, your wallet — and every tool

@@ -721,7 +721,7 @@ def main():
     ap.add_argument("--budget", type=int, default=100)
     ap.add_argument("--founders", type=int, default=2)
     ap.add_argument("--effort", default="xhigh")
-    ap.add_argument("--max-turns", type=int, default=20)
+    ap.add_argument("--max-turns", type=int, default=40)
     ap.add_argument("--turn-tokens", type=int, default=32000)
     ap.add_argument("--ctx-wrap", type=int, default=60000)
     ap.add_argument("--max-depth", type=int, default=10)
