@@ -53,6 +53,10 @@ Knobs: `--budget 100 --founders 2 --effort xhigh --max-turns 20 --turn-tokens 32
 
 ## What to look at afterwards
 
+`python3 report.py runs/<tag> --repo <playground>` writes `runs/<tag>/RESULTS.md`: totals,
+spend, the agent tree with hand-offs, amendments, founder-to-founder messages, the ledger,
+the founders' final reports, and any report that uses the `CANDIDATE` label.
+
 - `git log` in the repository: every agent's file changes are committed under
   `school-agent-<id>`, in order — the history of what emerged.
 - `SCHOOL/LEDGER.md`, `SCHOOL/AMENDMENTS.md`, `SCHOOL/REPORTS/founder-*.md`.
