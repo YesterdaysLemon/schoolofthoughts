@@ -383,8 +383,8 @@ class School:
                         continue
                     rel = q.relative_to(self.repo)
                     out.append(f"{rel}/" if q.is_dir() else f"{rel}  ({q.stat().st_size:,} B)")
-                    if len(out) >= 400:
-                        out.append("... (truncated; narrow the path)")
+                    if len(out) >= 400 or sum(len(o) + 1 for o in out) > 14_000:
+                        out.append("... (truncated to protect your context; narrow the path or use grep with files_only)")
                         break
                 return "\n".join(out) or "(empty)"
             if name == "read_file":
@@ -393,9 +393,9 @@ class School:
                 s = max(1, int(x.get("start_line", 1)))
                 n = max(1, min(600, int(x.get("num_lines", 200))))
                 chunk = lines[s - 1:s - 1 + n]
-                body = "\n".join(f"{s + i:6d}  {ln}" for i, ln in enumerate(chunk))
-                if len(body) > 24_000:
-                    body = body[:24_000] + "\n... (truncated at 24,000 characters; read a smaller range)"
+                body = "\n".join(f"{s + i:6d}  {ln if len(ln) <= 2000 else ln[:2000] + ' …[line truncated]'}" for i, ln in enumerate(chunk))
+                if len(body) > 16_000:
+                    body = body[:16_000] + "\n... (truncated at 16,000 characters to protect your context; read a smaller range)"
                 return f"{x['path']}: lines {s}-{s + len(chunk) - 1} of {len(lines)}\n{body}"
             if name == "grep":
                 p = self.path(x.get("path", "."))
@@ -407,7 +407,10 @@ class School:
                 r = await asyncio.to_thread(subprocess.run, cmd, capture_output=True, text=True, timeout=60)
                 hits = [h.replace(str(self.repo) + "/", "") for h in r.stdout.splitlines()]
                 more = f"\n... ({len(hits) - k} more matches)" if len(hits) > k else ""
-                return ("\n".join(h[:400] for h in hits[:k]) + more) or "(no matches)"
+                body = "\n".join(h[:300] for h in hits[:k])
+                if len(body) > 14_000:
+                    body = body[:14_000] + "\n... (truncated to protect your context)"
+                return (body + more) or "(no matches)"
             if name == "write_file":
                 p = self.path(x["path"], write=True)
                 p.parent.mkdir(parents=True, exist_ok=True)
