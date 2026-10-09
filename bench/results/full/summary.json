@@ -497,6 +497,16 @@
    "topic": "octal game 0.433 (Sprague-Grundy periodicity)",
    "kind": "insight + long computation",
    "expected": 125,
+   "swarm_empty": {
+    "answer": 86,
+    "correct": false,
+    "cost": 0.2107123,
+    "wall": 951.7101438045502,
+    "n_agents": 11,
+    "max_depth": 1,
+    "n_ledger": 6,
+    "n_amend": 0
+   },
    "fable": {
     "answer": 125,
     "correct": true,
@@ -562,9 +572,9 @@
    "cost": 18.1529
   },
   "swarm_empty": {
-   "n": 7,
+   "n": 8,
    "correct": 7,
-   "cost": 0.20902399500000002
+   "cost": 0.419736295
   },
   "swarm_orgchart": {
    "n": 8,

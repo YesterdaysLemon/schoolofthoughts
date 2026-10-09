@@ -45,7 +45,8 @@ Every answer is computed by exhaustive enumeration or exact arithmetic in
    though the charter said unspent slots are worthless.
 4. **The template barely stuck.** The org-chart charter (CEO who does not compute)
    mostly produced a founder who computed everything alone. The empty charter behaved
-   like the procedural one.
+   like the procedural one on 7 of 8 problems and missed the octal coin game (answer
+   86 vs 125), which both other charters solved — one sample, so a hint, not a result.
 5. **No amendments, little ledger use.** Trees were shallow stars; reports to the
    parent carried the communication. Shared memory and rule changes probably need
    longer-running work.

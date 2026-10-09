@@ -35,7 +35,7 @@ majority vote; "single" is the average accuracy of one of those 50.
 | 50 Haikus, majority vote | 8/8 | $3.89 (Batch API, half price) |
 | Haiku swarm, procedural charter | **8/8** | **$0.44** |
 | Haiku swarm, org-chart charter | 8/8 | $0.28 |
-| Haiku swarm, empty charter | 7/7 run | $0.21 |
+| Haiku swarm, empty charter | 7/8 (missed the coin game) | $0.42 |
 
 **Frontier set** — 4 problems chosen to break single models:
 
@@ -60,7 +60,8 @@ What stood out (details in [FINDINGS.md](FINDINGS.md)):
 - **Its failure mode is the near-miss.** On big sums of many slices, one small slip
   survived aggregation (answers off by 8–16 out of 10^4–10^6).
 - **The charter's template mattered less than expected**; the model's own judgment
-  of the task dominated. Amendments and the ledger went mostly unused on problems this
+  of the task dominated — though the empty charter was the only variant to miss a
+  problem (the octal coin game, where the procedural and org-chart swarms succeeded). Amendments and the ledger went mostly unused on problems this
   short — they are what the `school` playground is for.
 
 These are single attempts on 12 problems: suggestive, not statistics.
