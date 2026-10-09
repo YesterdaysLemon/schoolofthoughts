@@ -44,6 +44,10 @@ python3 ecology.py --repo ../playground --tag run1 --cost-cap 30 --wall-hours 6
 python3 ecology.py --repo /tmp/copy --tag dry --mock                         # mechanics test, no API
 ```
 
+Add `--push-branch run/1` to run on a new branch and push it to `origin` every
+`--push-every-min 5` minutes, so the commits can be watched live while `main` stays the
+clean starting point for the next run.
+
 Knobs: `--budget 100 --founders 2 --effort xhigh --max-turns 20 --turn-tokens 32000
 --ctx-wrap 60000 --max-depth 10 --api-conc 16 --py-conc 4 --py-mem-gb 6`.
 

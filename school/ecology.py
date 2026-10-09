@@ -141,6 +141,7 @@ class School:
         self.py_sem = asyncio.Semaphore(a.py_conc)
         self.git_lock = asyncio.Lock()
         self.log_lock = asyncio.Lock()
+        self.last_push = 0.0
         self.client = None
         if not a.mock:
             import anthropic
@@ -186,6 +187,17 @@ class School:
                     subprocess.run(g + ["commit", "-q", "-m", (f"ledger/amendments after agent #{ag.id} turn {ag.turns}" if ag.id else "final sweep: reports and unattributed files")],
                                    env=e2, capture_output=True)
             await asyncio.to_thread(_c)
+        await self.maybe_push()
+
+    async def maybe_push(self, final=False):
+        if not getattr(self.a, "push_branch", ""):
+            return
+        if not final and time.time() - self.last_push < self.a.push_every_min * 60:
+            return
+        self.last_push = time.time()
+        r = await asyncio.to_thread(subprocess.run, ["git", "-C", str(self.repo), "push", "-q", "origin",
+                                                    f"HEAD:refs/heads/{self.a.push_branch}"], capture_output=True, text=True)
+        await self.log("events.jsonl", dict(ev="push", ok=r.returncode == 0, err=r.stderr[-300:] if r.returncode else ""))
 
     def append_file(self, rel, text):
         p = self.repo / rel
@@ -542,6 +554,8 @@ class School:
 
     # ------------------------------------------------------------------ game
     async def play(self):
+        if getattr(self.a, "push_branch", ""):
+            subprocess.run(["git", "-C", str(self.repo), "checkout", "-q", "-b", self.a.push_branch], check=True)
         per = (self.a.budget - self.a.founders) // self.a.founders
         founders = []
         for k in range(1, self.a.founders + 1):
@@ -554,6 +568,7 @@ class School:
         for f in founders:
             (rep_dir / f"founder-{f.founder}.md").write_text(f"# Final report of founder #{f.founder}\n\n{f.report or '(none)'}\n")
         await self.commit(Agent(0, None, 0, 0, 0, 0, ""), "final reports")
+        await self.maybe_push(final=True)
         summary = dict(tag=self.a.tag, agents=self.instances, spent=round(self.spent, 4), wall_s=round(time.time() - self.t0),
                        ledger=len(self.ledger), amendments=self.amendments,
                        tree={a.id: dict(parent=a.parent, role=a.role, inc=a.incarnation, depth=a.depth, status=a.status, turns=a.turns,
@@ -635,6 +650,8 @@ def main():
     ap.add_argument("--py-mem-gb", type=int, default=6)
     ap.add_argument("--cost-cap", type=float, default=30.0)
     ap.add_argument("--wall-hours", type=float, default=6.0)
+    ap.add_argument("--push-branch", default="", help="run on this new git branch and push it to origin periodically")
+    ap.add_argument("--push-every-min", type=float, default=5.0)
     ap.add_argument("--mock", action="store_true")
     a = ap.parse_args()
     asyncio.run(School(a).play())
