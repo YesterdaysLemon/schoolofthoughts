@@ -49,6 +49,21 @@ class Stop(Exception):
     pass
 
 
+def est_tokens(text: str) -> int:
+    """Conservative token estimate (identifier-heavy repository text runs ~3 characters per token)."""
+    return len(text) // 3 + 1
+
+
+def clip(text: str, max_tokens: int) -> str:
+    if est_tokens(text) <= max_tokens:
+        return text
+    keep = max_tokens * 3
+    return text[:keep] + f"\n... [cut here: the full result was about {est_tokens(text):,} tokens; ask for a narrower range or pattern]"
+
+
+WRAP_TOOLS = {"succeed", "ledger_post", "message", "give_slots", "write_file", "edit_file", "amend_charter"}
+
+
 TOOLS = [
     {"name": "list_dir", "description": "List a directory of the repository (names, sizes).",
      "input_schema": {"type": "object", "properties": {"path": {"type": "string", "default": "."},
@@ -229,9 +244,21 @@ class School:
             raise Stop(f"dollar cap ${self.a.cost_cap} reached")
         if time.time() - self.t0 > self.a.wall_hours * 3600:
             raise Stop("wall-clock cap reached")
+        body = {"output_config": {"effort": self.a.effort}, "cache_control": {"type": "ephemeral"}}
+        headers = {}
+        if self.a.clear_at > 0:
+            # Old tool results are cleared server-side once the prompt passes clear_at. Each clear rewrites the
+            # prompt cache from the clearing point, so clears are made rare and large (clear_min) to stay cheap.
+            headers["anthropic-beta"] = "context-management-2025-06-27"
+            body["context_management"] = {"edits": [{
+                "type": "clear_tool_uses_20250919",
+                "trigger": {"type": "input_tokens", "value": self.a.clear_at},
+                "keep": {"type": "tool_uses", "value": 4},
+                "clear_at_least": {"type": "input_tokens", "value": self.a.clear_min},
+                "exclude_tools": ["spawn", "message", "succeed", "amend_charter", "give_slots", "ledger_post"]}]}
         kw = dict(model=MODEL, max_tokens=self.a.turn_tokens, system=self.system(), messages=messages, tools=TOOLS,
                   tool_choice={"type": "none"} if force else {"type": "auto"}, thinking={"type": "adaptive"},
-                  extra_body={"output_config": {"effort": self.a.effort}, "cache_control": {"type": "ephemeral"}})
+                  extra_body=body, extra_headers=headers)
         async with self.api_sem:
             t = time.time()
             if self.a.mock:
@@ -258,8 +285,11 @@ class School:
         ag.cost += c
         ag.out_tokens += u.get("output_tokens") or 0
         ag.max_prompt = max(ag.max_prompt, prompt_tokens(u))
+        cleared = sum(e.get("cleared_input_tokens") or 0 for e in ((msg.get("context_management") or {}).get("applied_edits") or []))
         await self.log("calls.jsonl", dict(agent=ag.id, turn=ag.turns, latency=round(dt, 1), stop=msg.get("stop_reason"),
-                                           prompt=prompt_tokens(u), out=u.get("output_tokens"), cost=c, spent=round(self.spent, 4)))
+                                           prompt=prompt_tokens(u), out=u.get("output_tokens"), cost=c, spent=round(self.spent, 4),
+                                           cache_read=u.get("cache_read_input_tokens") or 0,
+                                           cache_write=u.get("cache_creation_input_tokens") or 0, cleared=cleared))
         return msg
 
     async def run_agent(self, ag: Agent, intro: str):
@@ -268,18 +298,34 @@ class School:
         messages = [{"role": "user", "content": [{"type": "text", "text": intro}]}]
         transcript = []
         force, nudge, last_prompt, handed_off = False, None, 0, False
+        wrap, wrap_turns, warned, last_results_tok = False, 0, False, 0
         while True:
-            if ag.turns >= self.a.max_turns - 1 and not force:
-                force, nudge = True, "WRAP UP NOW (rule E4): this is your last turn. Write your final report without calling any tool."
-            if last_prompt > self.a.ctx_wrap and not force:
-                force, nudge = True, ("WRAP UP NOW (rule E4): your context is nearly full. Write your final report without "
-                                      "calling any tool. (Next time, consider `succeed` before this point.)")
+            # --- phases: normal -> last call (wrap) -> forced final
+            if not wrap and (last_prompt > self.a.ctx_wrap or ag.turns >= self.a.max_turns - 2):
+                wrap = True
+                why = "your context passed the wrap line" if last_prompt > self.a.ctx_wrap else "you are on your last turns"
+                nudge = (f"LAST CALL (rule E4): {why}. You can still: `succeed` (hand your role and wallet to a fresh copy of "
+                         "yourself; recommended if work remains), post to the ledger, message, give slots, or write files. "
+                         "Reading, searching, running code and spawning are closed to you now. Or end by replying without "
+                         "tools: that reply is your final report.")
+                if ag.founder:
+                    nudge += (" As a founder: if you end without succeeding, the game starts a successor for you from your "
+                              "final report.")
+            elif wrap:
+                wrap_turns += 1
+                if wrap_turns >= 2 or last_prompt > self.a.hard_ctx:
+                    force = True
+                    nudge = "FINAL TURN (rule E4): write your final report now, without calling any tool."
+            elif not warned and last_prompt > 0.75 * self.a.ctx_wrap:
+                warned = True
+                nudge = ("GAUGE WARNING: your context is 75% of the way to the wrap line. Plan your next moves: hand "
+                         "reading to a helper (a child starts with a fresh context), write down what matters, or succeed soon.")
             extra = self.drain_inbox(ag)
             if nudge:
                 extra.append(nudge)
                 nudge = None
-            if extra:
-                messages[-1]["content"].append({"type": "text", "text": "\n\n".join(extra)})
+            extra.append(self.gauges(ag, last_prompt, last_results_tok))
+            messages[-1]["content"].append({"type": "text", "text": "\n\n".join(extra)})
             try:
                 msg = await self.call(ag, messages, force)
             except Stop as e:
@@ -304,12 +350,18 @@ class School:
                     continue
                 ag.report = "\n".join(b.get("text", "") for b in content if b["type"] == "text")
                 ag.status = "done"
+                if ag.founder and (wrap or force) and ag.wallet >= 1 and not self.stopping():
+                    # a founder that ran out of room did not choose to end the game: revive it (charter E4)
+                    await self.log("events.jsonl", dict(ev="revive", agent=ag.id))
+                    handed_off = True
+                    await self.handoff(ag, "(The game started you automatically: your predecessor ran out of room without "
+                                           "passing on its role. Its final report follows.)\n\n" + ag.report, transcript)
                 break
             succ = [b for b in uses if b["name"] == "succeed"]
             if succ and len(uses) > 1:
                 results = ["Refused: succeed must be the only tool call in its turn." if b["name"] == "succeed" else None for b in uses]
                 rest = [b for b in uses if b["name"] != "succeed"]
-                rr = await asyncio.gather(*[self.do_tool(ag, b) for b in rest])
+                rr = await asyncio.gather(*[self.do_tool(ag, b, wrap) for b in rest])
                 it = iter(rr)
                 results = [r if r is not None else next(it) for r in results]
             elif succ:
@@ -317,18 +369,31 @@ class School:
                 await self.handoff(ag, succ[0]["input"].get("handoff", ""), transcript)
                 break
             else:
-                results = await asyncio.gather(*[self.do_tool(ag, b) for b in uses])
-            messages.append({"role": "user", "content": [{"type": "tool_result", "tool_use_id": b["id"], "content": str(r)}
+                results = await asyncio.gather(*[self.do_tool(ag, b, wrap) for b in uses])
+            results = [clip(str(r), self.a.max_result_tokens * (2 if b["name"] == "spawn" else 1)) for b, r in zip(uses, results)]
+            results = [f"{r}\n[this result: about {est_tokens(r):,} tokens]" for r in results]
+            last_results_tok = sum(est_tokens(r) for r in results)
+            messages.append({"role": "user", "content": [{"type": "tool_result", "tool_use_id": b["id"], "content": r}
                                                          for b, r in zip(uses, results)]})
             if any(b["name"] in ("write_file", "edit_file", "run_python") for b in uses):
                 await self.commit(ag, ", ".join(sorted({b["name"] for b in uses})))
-            last_prompt += sum(len(str(r)) for r in results) // 3
+            last_prompt += last_results_tok
         ag.alive = False
         ag.t_end = time.time() - self.t0
         json.dump(dict(id=ag.id, brief=ag.brief, intro=intro, transcript=transcript, report=ag.report),
                   open(self.run_dir / f"agent_{ag.id:03d}.json", "w"), indent=1, default=str)
         await self.log("events.jsonl", dict(ev="end", agent=ag.id, status=ag.status, turns=ag.turns, cost=round(ag.cost, 4),
                                             max_prompt=ag.max_prompt, wallet_left=ag.wallet))
+
+    def stopping(self) -> bool:
+        return self.spent >= self.a.cost_cap or time.time() - self.t0 > self.a.wall_hours * 3600
+
+    def gauges(self, ag: Agent, ctx: int, last_results: int) -> str:
+        pct = 100 * ctx / self.a.ctx_wrap
+        clear = (f"; old tool results auto-clear past {self.a.clear_at // 1000}k" if self.a.clear_at > 0 else "")
+        return (f"[gauges] context {ctx / 1000:.1f}k of {self.a.ctx_wrap // 1000}k before the wrap line ({pct:.0f}%){clear} | "
+                f"turn {ag.turns + 1} of {self.a.max_turns} | wallet {ag.wallet} slots | "
+                f"last turn's tool results ~{last_results / 1000:.1f}k tokens")
 
     def drain_inbox(self, ag: Agent):
         out = [f"MESSAGE from agent #{m['from']}: {m['text']}" for m in ag.inbox]
@@ -380,8 +445,11 @@ class School:
             raise ValueError(f"{r} is maintained by the game itself (use the ledger/amend tools)")
         return p
 
-    async def do_tool(self, ag: Agent, b: dict) -> str:
+    async def do_tool(self, ag: Agent, b: dict, wrap: bool = False) -> str:
         name, x = b["name"], b.get("input") or {}
+        if wrap and name not in WRAP_TOOLS:
+            return (f"Refused: `{name}` is closed during LAST CALL (rule E4). Open now: succeed, ledger_post, message, "
+                    "give_slots, write_file, edit_file, amend_charter; or end with a final report.")
         await self.log("events.jsonl", dict(ev="tool", agent=ag.id, tool=name,
                                             arg={k: (str(v)[:160]) for k, v in x.items() if k not in ("content", "code", "new_text", "old_text")}))
         try:
@@ -389,15 +457,24 @@ class School:
                 p = self.path(x.get("path", "."))
                 depth = max(1, min(3, int(x.get("depth", 1))))
                 out = []
-                base = len(p.parts)
-                for q in sorted(p.rglob("*")):
-                    if ".git" in q.parts or len(q.parts) - base > depth:
-                        continue
-                    rel = q.relative_to(self.repo)
-                    out.append(f"{rel}/" if q.is_dir() else f"{rel}  ({q.stat().st_size:,} B)")
-                    if len(out) >= 400 or sum(len(o) + 1 for o in out) > 14_000:
-                        out.append("... (truncated to protect your context; narrow the path or use grep with files_only)")
-                        break
+
+                def walk(d: Path, level: int):
+                    for q in sorted(d.iterdir()):
+                        if q.name == ".git":
+                            continue
+                        rel = q.relative_to(self.repo)
+                        if q.is_dir():
+                            kids = list(q.iterdir())
+                            nf = sum(1 for k in kids if k.is_file())
+                            nd = len(kids) - nf
+                            if level < depth and len(kids) <= 40:
+                                out.append(f"{rel}/")
+                                walk(q, level + 1)
+                            else:
+                                out.append(f"{rel}/  ({nf} files, {nd} dirs)")
+                        else:
+                            out.append(f"{rel}  ({q.stat().st_size:,} B)")
+                walk(p, 1)
                 return "\n".join(out) or "(empty)"
             if name == "read_file":
                 p = self.path(x["path"])
@@ -645,6 +722,10 @@ def main():
     ap.add_argument("--turn-tokens", type=int, default=32000)
     ap.add_argument("--ctx-wrap", type=int, default=60000)
     ap.add_argument("--max-depth", type=int, default=10)
+    ap.add_argument("--clear-at", type=int, default=40000, help="server-side clearing of old tool results past this many prompt tokens (0 = off)")
+    ap.add_argument("--clear-min", type=int, default=15000, help="clear at least this much at once (keeps cache rewrites rare)")
+    ap.add_argument("--hard-ctx", type=int, default=92000, help="force a final report beyond this prompt size (stays under the 100k price tier)")
+    ap.add_argument("--max-result-tokens", type=int, default=2500)
     ap.add_argument("--api-conc", type=int, default=16)
     ap.add_argument("--py-conc", type=int, default=4)
     ap.add_argument("--py-mem-gb", type=int, default=6)

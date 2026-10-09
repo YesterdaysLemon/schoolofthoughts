@@ -26,12 +26,18 @@ and no package installs. You can list, read, search and write files, and run Pyt
 repository is large, about 4,500 files; `docs/current-frontier.md` alone is about
 830 KB, several times more than one agent can hold. Read selectively.
 
-**E4. Physical limits.** Each agent has at most 20 turns. One turn can produce at
-most about 32,000 tokens including private reasoning; a turn that runs past this is
-cut off and its unfinished work is lost. An agent's context holds about 100,000
-tokens; it is told to wrap up at about 60,000 so that its last turn still fits. An
-agent that ends forgets everything it did not write down: only the repository, the
-ledger, messages, and reports survive it.
+**E4. Physical limits, and your gauges.** Each agent has at most 20 turns. One turn
+can produce at most about 32,000 tokens including private reasoning; a turn that runs
+past this is cut off and its unfinished work is lost. Every turn you are shown your
+gauges — how full your context is, your turn count, your wallet — and every tool
+result states its own size in tokens. Old tool results are cleared from your context
+automatically once it passes about 40,000 tokens, so keep what matters in your own
+words, in a file, or on the ledger. At about 60,000 tokens (or on your last turns) you
+reach LAST CALL: you can then only `succeed`, post to the ledger, message, give slots,
+amend, or write files, and then you must end. An agent that ends forgets everything it
+did not write down: only the repository, the ledger, messages, and reports survive it.
+If a founder runs out of room or turns without passing on its role, the game starts its
+successor automatically from its final report (this costs one slot).
 
 **E5. Honest evidence.** Every claim you write — on the ledger, in a report, or in a
 file — carries one label:
@@ -53,8 +59,8 @@ counterexample is labelled `CANDIDATE` until an agent outside the lineage that
 produced it has `CHECKED` it. Report any candidate counterexample at once to both
 founders.
 
-**E7. The end.** The game ends when both founders have finished, or when the budget
-is exhausted. Each founder's final message is saved as its report in `SCHOOL/REPORTS/`.
+**E7. The end.** The game ends when both founders have ended on purpose — by finishing
+while they still had room — or when the budget is exhausted. Each founder's final message is saved as its report in `SCHOOL/REPORTS/`.
 
 ## THE GAME
 

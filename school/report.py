@@ -49,7 +49,7 @@ def main():
     w = L.append
     w(f"# Ecology run report: `{rd.name}`\n")
     w(f"- Agents instantiated: **{len(starts)}** (founders: {sorted(founders)}); max depth {depth}; "
-      f"hand-offs {len(successors)}; statuses {dict(statuses)}")
+      f"hand-offs {len(successors)} (founder revivals {kinds.get('revive', 0)}); statuses {dict(statuses)}")
     w(f"- Spend: **${spent:.2f}** over {len(calls)} requests; wall time {wall/60:.1f} min; "
       f"requests over the 100k price threshold: {over}")
     w(f"- Ledger entries: {sum(labels.values())} {dict(labels)}; amendments: {kinds.get('amend', 0)}; "

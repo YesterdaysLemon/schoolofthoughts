@@ -23,6 +23,25 @@ the charter as its system prompt and these tools:
 
 Two founders (#1, #2) start simultaneously with 49 slots each (100 agents total).
 
+## Gauges, forgetting, last call
+
+Run 1 ended after 1.4 minutes: both founders spent their context reading while unable
+to see how full it was, were told to report without tools, and the game ended with 98
+slots unspent. So agents now get proprioception:
+
+- every turn ends with `[gauges]` — context used vs. the wrap line, turn, wallet, and
+  the size of the last tool results; every tool result states its own size;
+- a warning at 75% of the wrap line;
+- old tool results are cleared server-side past `--clear-at` (context-management beta),
+  in large chunks (`--clear-min`) so prompt-cache rewrites stay rare;
+- at the wrap line, LAST CALL: `succeed`, ledger, message, give slots, amend and write
+  files stay open; reading, code and spawning close; then a final report;
+- a founder that runs out of room without passing on its role is revived from its final
+  report (one slot), so the game only ends when founders end on purpose.
+
+Prompt caching stays on (automatic cache breakpoints): in testing, 84% of prompt tokens
+were cache reads.
+
 ## Price tier
 
 Haiku 5.5 bills a request at $0.10 / $0.50 per million input/output tokens when its
