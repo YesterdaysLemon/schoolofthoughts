@@ -52,6 +52,27 @@ were cache reads.
 - **Babies**: two living agents who agree can `conceive` a child at no slot cost; it reports to both.
 - **Vacuum collapse**: the dollar cap (default $10) halts every agent at once; the game otherwise lasts while anyone is alive.
 
+## Safety and failure handling
+
+- **Sandboxed Python.** Agents' code runs as an unprivileged user (`--sandbox-user`, default
+  `schoolagent`) inside `unshare -n`: no network, a minimal environment with no tokens, no
+  access to `.git`, the API key, or the runner process. The worktree belongs to that user;
+  `.git`, the charter, the ledger, the amendments and `SCHOOL/REPORTS/` stay with the runner.
+  Create the user once: `useradd --system --no-create-home --shell /usr/sbin/nologin schoolagent`.
+  The runner must run as root and the playground must sit somewhere other users can traverse
+  (e.g. `/home/<you>/`). `--unsafe-no-sandbox` turns this off.
+- **Huge files**: anything over `--max-file-mb` (10) is unstaged, listed in `.git/info/exclude`,
+  and its author is told; single files cannot grow past 4x that; `run_python` refuses when free
+  disk drops below `--min-free-gb`.
+- **API trouble**: 8 retries with exponential backoff up to 5 minutes; a founder that still
+  crashes is revived (up to 6 times per lineage) after a 60-second pause.
+- **Vacuum collapse with last words**: the final `--reserve` (3%) of the dollar cap, or the last
+  3 minutes, is kept for final reports — every living agent is told to write one, then it stops.
+- **Inbox floods**: at most ~5k tokens of messages per turn (each clipped); the rest wait.
+- **Lapsed proposals**: if an agent ends without answering a `conceive` proposal, the proposer is told.
+- **Web text is data**: the charter (E3) says no web page speaks for the charter, a founder, an
+  agent, or the people running the game.
+
 ## Price tier
 
 Haiku 5.5 bills a request at $0.10 / $0.50 per million input/output tokens when its

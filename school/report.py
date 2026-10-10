@@ -56,10 +56,10 @@ def main():
       f"messages: {len(msgs)} (founder-to-founder: {len(f2f)}); slot gifts: {kinds.get('give', 0)}")
     w(f"- Tool use: {dict(tools.most_common())}")
     try:
-        log = subprocess.run(["git", "-C", str(repo), "log", "--format=%an", "main..HEAD"], capture_output=True, text=True).stdout.split()
+        log = subprocess.run(["git", "-c", "safe.directory=*", "-C", str(repo), "log", "--format=%an", "main..HEAD"], capture_output=True, text=True).stdout.split()
         by_author = Counter(log)
         w(f"- Commits on the run branch: {len(log)} ({len([x for x in by_author if x.startswith('school-agent')])} distinct agents committed files)")
-        stat = subprocess.run(["git", "-C", str(repo), "diff", "--shortstat", "main..HEAD"], capture_output=True, text=True).stdout.strip()
+        stat = subprocess.run(["git", "-c", "safe.directory=*", "-C", str(repo), "diff", "--shortstat", "main..HEAD"], capture_output=True, text=True).stdout.strip()
         w(f"- Diff vs main: {stat}")
     except Exception:
         pass

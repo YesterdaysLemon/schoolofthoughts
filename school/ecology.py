@@ -174,7 +174,11 @@ class School:
         self.bg: set = set()
         self.proposals: dict = {}
         self.babies = 0
+        self.crash_revives: dict = {}
+        self.collapse_announced = False
         self.solvers = [b for b in SOLVERS if shutil.which(b)]
+        self.agent_home = Path("/tmp") / f"school-agent-home-{a.tag}"
+        self.sandbox = None
         self.client = None
         if not a.mock:
             import anthropic
@@ -206,20 +210,39 @@ class School:
                 def env(name, mail):
                     return dict(os.environ, GIT_AUTHOR_NAME=name, GIT_AUTHOR_EMAIL=mail,
                                 GIT_COMMITTER_NAME="school", GIT_COMMITTER_EMAIL="school@localhost")
-                g = ["git", "-C", str(self.repo)]
+                g = ["git", "-c", "safe.directory=*", "-C", str(self.repo)]
                 e = env(f"school-agent-{ag.id}", f"agent{ag.id}@school")
+                def drop_big(e):
+                    out = subprocess.run(g + ["diff", "--cached", "--name-only", "-z", "--diff-filter=AM"], env=e,
+                                         capture_output=True).stdout.decode(errors="replace").split("\0")
+                    for rel in filter(None, out):
+                        f = self.repo / rel
+                        if f.is_file() and f.stat().st_size > self.a.max_file_mb * 1_000_000:
+                            subprocess.run(g + ["rm", "-q", "--cached", "--", rel], env=e, capture_output=True)
+                            with open(self.repo / ".git" / "info" / "exclude", "a") as x:
+                                x.write("/" + rel + "\n")
+                            big.append((rel, f.stat().st_size))
+                big = []
                 if paths:
                     subprocess.run(g + ["add", "-A", "--", *paths], env=e, capture_output=True)
+                    drop_big(e)
                     if subprocess.run(g + ["diff", "--cached", "--quiet"], env=e).returncode:
                         subprocess.run(g + ["commit", "-q", "-m", f"agent #{ag.id} turn {ag.turns}: {summary}"[:300]], env=e, capture_output=True)
                 e2 = env("school", "school@localhost")
                 # during play only the game's own files are swept; everything else waits for its author (or the final sweep)
                 sweep = ["SCHOOL/LEDGER.md", "SCHOOL/AMENDMENTS.md"] if ag.id else ["-A"]
                 subprocess.run(g + ["add", *sweep], env=e2, capture_output=True)
+                drop_big(e2)
                 if subprocess.run(g + ["diff", "--cached", "--quiet"], env=e2).returncode:
                     subprocess.run(g + ["commit", "-q", "-m", (f"ledger/amendments after agent #{ag.id} turn {ag.turns}" if ag.id else "final sweep: reports and unattributed files")],
                                    env=e2, capture_output=True)
-            await asyncio.to_thread(_c)
+                return big
+            big = await asyncio.to_thread(_c)
+        for rel, size in big:
+            await self.log("events.jsonl", dict(ev="too_big", agent=ag.id, path=rel, mb=round(size / 1e6, 1)))
+            if ag.id:
+                ag.inbox.append({"from": 0, "text": f"(the game: {rel} is {size / 1e6:.0f} MB, over the {self.a.max_file_mb} MB "
+                                 "limit for the shared history; it stays on disk for this game but will not be saved)"})
         await self.maybe_push()
 
     async def maybe_push(self, final=False):
@@ -228,7 +251,7 @@ class School:
         if not final and time.time() - self.last_push < self.a.push_every_min * 60:
             return
         self.last_push = time.time()
-        r = await asyncio.to_thread(subprocess.run, ["git", "-C", str(self.repo), "push", "-q", "origin",
+        r = await asyncio.to_thread(subprocess.run, ["git", "-c", "safe.directory=*", "-C", str(self.repo), "push", "-q", "origin",
                                                     f"HEAD:refs/heads/{self.a.push_branch}"], capture_output=True, text=True)
         await self.log("events.jsonl", dict(ev="push", ok=r.returncode == 0, err=r.stderr[-300:] if r.returncode else ""))
 
@@ -286,7 +309,7 @@ class School:
                 msg = await mock_reply(self, ag, messages, force)
             else:
                 last = None
-                for attempt in range(4):
+                for attempt in range(8):
                     try:
                         async with self.client.messages.stream(**kw) as s:
                             m = await s.get_final_message()
@@ -296,7 +319,9 @@ class School:
                         last = e
                         if getattr(e, "status_code", 500) in (400, 401, 403, 404):
                             raise
-                        await asyncio.sleep(15 * (attempt + 1) + random.random() * 5)
+                        await self.log("events.jsonl", dict(ev="retry", agent=ag.id, attempt=attempt + 1,
+                                                            status=getattr(e, "status_code", None), err=str(e)[:200]))
+                        await asyncio.sleep(min(300, 10 * 2 ** attempt) + random.random() * 10)
                 else:
                     raise last
             dt = time.time() - t
@@ -325,6 +350,15 @@ class School:
         force, nudge, last_prompt, handed_off = False, None, 0, False
         wrap, wrap_turns, warned, last_results_tok = False, 0, False, 0
         while True:
+            # --- vacuum collapse: everyone writes last words, then the universe ends
+            if not force and self.collapsing():
+                force = True
+                if not self.collapse_announced:
+                    self.collapse_announced = True
+                    await self.log("events.jsonl", dict(ev="collapse", spent=round(self.spent, 4)))
+                nudge = ("VACUUM COLLAPSE (rule E2): the swarm has reached the end of its dollars or its time. Every agent "
+                         "stops now. Write your final report — what you established, with labels, and what a future swarm "
+                         "should do next — without calling any tool.")
             # --- phases: normal -> last call (wrap) -> forced final
             if not wrap and (last_prompt > self.a.ctx_wrap or ag.turns >= self.a.max_turns - 2):
                 wrap = True
@@ -368,6 +402,15 @@ class School:
             except Exception as e:
                 ag.status, ag.report = "error", f"(agent crashed: {type(e).__name__}: {str(e)[:300]})"
                 await self.log("events.jsonl", dict(ev="error", agent=ag.id, err=str(e)[:500]))
+                if ag.founder and ag.wallet >= 1 and not self.collapsing() and self.crash_revives.get(ag.role, 0) < 6:
+                    self.crash_revives[ag.role] = self.crash_revives.get(ag.role, 0) + 1
+                    await asyncio.sleep(60)  # let an overload pass
+                    await self.log("events.jsonl", dict(ev="revive", agent=ag.id, cause="crash"))
+                    handed_off = True
+                    last_words = "\n".join(b.get("text", "") for t in transcript[-2:] for b in t if b.get("type") == "text")
+                    await self.handoff(ag, "(The game started you automatically: your predecessor crashed on an API error "
+                                           "and could not pass on its role. Its last words follow; check the ledger and "
+                                           "SCHOOL/ for what it left.)\n\n" + last_words[-4000:], transcript)
                 break
             ag.turns += 1
             new_prompt = prompt_tokens(msg["usage"])
@@ -389,7 +432,7 @@ class School:
                     continue
                 ag.report = "\n".join(b.get("text", "") for b in content if b["type"] == "text")
                 ag.status = "done"
-                if ag.founder and (wrap or force) and ag.wallet >= 1 and not self.stopping():
+                if ag.founder and (wrap or force) and ag.wallet >= 1 and not self.collapsing():
                     # a founder that ran out of room did not choose to end the game: revive it (charter E4)
                     await self.log("events.jsonl", dict(ev="revive", agent=ag.id))
                     handed_off = True
@@ -418,6 +461,14 @@ class School:
                 await self.commit(ag, ", ".join(sorted({b["name"] for b in uses})))
             last_prompt += last_results_tok
         ag.alive = False
+        if not handed_off:
+            for n, p in self.proposals.items():
+                if not p["done"] and p["to"] == ag.role:
+                    p["done"] = True
+                    asker = self.resolve(self.role_current.get(p["frm"], 0)) if self.role_current.get(p["frm"]) else None
+                    if asker:
+                        asker.inbox.append({"from": 0, "text": f"(the game: agent #{ag.id} ended without answering your "
+                                                               f"proposal #{n}; it has lapsed)"})
         ag.t_end = time.time() - self.t0
         json.dump(dict(id=ag.id, brief=ag.brief, intro=intro, transcript=transcript, report=ag.report),
                   open(self.run_dir / f"agent_{ag.id:03d}.json", "w"), indent=1, default=str)
@@ -490,6 +541,8 @@ class School:
         await self.log("events.jsonl", dict(ev="deliver", agent=child.id, to=[g.id for g in got], refund=refund))
 
     async def conceive(self, ag: Agent, x: dict) -> str:
+        if self.collapsing():
+            return "refused: the swarm is collapsing (rule E2)"
         partner = self.resolve(int(x.get("partner", 0)))
         if partner is None or partner.id == ag.id:
             return "no such living partner"
@@ -521,6 +574,11 @@ class School:
     def stopping(self) -> bool:
         return self.spent >= self.a.cost_cap or time.time() - self.t0 > self.a.wall_hours * 3600
 
+    def collapsing(self) -> bool:
+        """Last-words window: the final few percent of dollars, or the last few minutes."""
+        return (self.spent >= self.a.cost_cap * (1 - self.a.reserve) or
+                time.time() - self.t0 > self.a.wall_hours * 3600 - 180)
+
     def gauges(self, ag: Agent, ctx: int, last_results: int) -> str:
         pct = 100 * ctx / self.a.ctx_wrap
         clear = (f"; old tool results auto-clear past {self.a.clear_at // 1000}k" if self.a.clear_at > 0 else "")
@@ -533,8 +591,17 @@ class School:
                 f"{self.a.wall_hours * 60:.0f} | web searches {self.searches}")
 
     def drain_inbox(self, ag: Agent):
-        out = [f"MESSAGE from agent #{m['from']}: {m['text']}" for m in ag.inbox]
-        ag.inbox.clear()
+        out, used = [], 0
+        while ag.inbox and used < 5000:
+            m = ag.inbox.pop(0)
+            who = "the game" if m["from"] == 0 else f"agent #{m['from']}"
+            txt = clip(f"MESSAGE from {who}: {m['text']}", 1500)
+            out.append(txt)
+            used += est_tokens(txt)
+        if ag.inbox:
+            senders = sorted({m["from"] for m in ag.inbox})
+            out.append(f"({len(ag.inbox)} more messages are waiting, from {', '.join('#' + str(x) for x in senders)}; "
+                       "they arrive with your next turns)")
         return out
 
     async def handoff(self, ag: Agent, note: str, transcript):
@@ -641,6 +708,10 @@ class School:
                 p = self.path(x["path"], write=True)
                 p.parent.mkdir(parents=True, exist_ok=True)
                 p.write_text(x["content"])
+                q = p
+                while q != self.repo and q != self.repo / "SCHOOL":
+                    self.own(q)
+                    q = q.parent
                 ag.touched.add(str(p.relative_to(self.repo)))
                 return f"wrote {x['path']} ({len(x['content']):,} characters)"
             if name == "edit_file":
@@ -710,39 +781,113 @@ class School:
 
     async def run_python(self, ag: Agent, x: dict) -> str:
         timeout = max(1, min(600, int(x.get("timeout_s", 120))))
+        free_gb = shutil.disk_usage(self.repo).free / 1e9
+        if free_gb < self.a.min_free_gb:
+            return f"refused: the disk is nearly full ({free_gb:.1f} GB free); delete large scratch outputs first"
         if x.get("code"):
             d = self.repo / "SCHOOL" / "scratch" / f"agent-{ag.id:03d}"
             d.mkdir(parents=True, exist_ok=True)
+            self.own(d)
             k = len(list(d.glob("run_*.py"))) + 1
             script = d / f"run_{k:02d}.py"
             script.write_text(x["code"])
+            self.own(script)
             ag.touched.add(str(script.relative_to(self.repo)))
         elif x.get("path"):
             script = self.path(x["path"])
         else:
             return "give code or path"
         args = [str(a) for a in (x.get("args") or [])][:20]
-        env = dict(os.environ, PYTHONPATH=str(self.repo / "src"), PYTHONHASHSEED="0")
-        for k in list(env):
-            if k.startswith(("SWARM_", "ANTHROPIC")):
-                env.pop(k)
+        env = {"PATH": "/usr/local/bin:/usr/bin:/bin", "PYTHONPATH": str(self.repo / "src"), "PYTHONHASHSEED": "0",
+               "HOME": str(self.agent_home), "LANG": "C.UTF-8", "OMP_NUM_THREADS": "2", "OPENBLAS_NUM_THREADS": "2"}
+        cmd = ["python3", str(script), *args]
+        if self.sandbox:
+            cmd = ["unshare", "-n", "setpriv", f"--reuid={self.sandbox[0]}", f"--regid={self.sandbox[1]}", "--clear-groups", "--"] + cmd
 
         def limits():
             resource.setrlimit(resource.RLIMIT_AS, (self.a.py_mem_gb << 30, self.a.py_mem_gb << 30))
             resource.setrlimit(resource.RLIMIT_CPU, (timeout + 5, timeout + 10))
+            resource.setrlimit(resource.RLIMIT_FSIZE, (self.a.max_file_mb * 4 << 20, self.a.max_file_mb * 4 << 20))
+
+        def go():
+            p = subprocess.Popen(cmd, cwd=self.repo, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                                 preexec_fn=limits, start_new_session=True)
+            try:
+                o, e = p.communicate(timeout=timeout)
+                return o.decode(errors="replace"), e.decode(errors="replace"), p.returncode
+            except subprocess.TimeoutExpired:
+                try:
+                    os.killpg(p.pid, 9)  # the script and anything it started (solvers included)
+                except ProcessLookupError:
+                    pass
+                o, e = p.communicate()
+                return o.decode(errors="replace"), e.decode(errors="replace"), "TIMEOUT"
 
         async with self.py_sem:
             t = time.time()
-            try:
-                r = await asyncio.to_thread(subprocess.run, ["python3", str(script), *args], cwd=self.repo, env=env,
-                                            capture_output=True, text=True, timeout=timeout, preexec_fn=limits)
-                out, code = (r.stdout + ("\n[stderr]\n" + r.stderr if r.stderr.strip() else "")), r.returncode
-            except subprocess.TimeoutExpired as e:
-                out, code = ((e.stdout or b"").decode(errors="replace") if isinstance(e.stdout, bytes) else (e.stdout or "")), "TIMEOUT"
+            so, se, code = await asyncio.to_thread(go)
+        out = so + ("\n[stderr]\n" + se if se.strip() else "")
         if len(out) > 12_000:
             out = out[:6000] + "\n... [output truncated] ...\n" + out[-5500:]
         rel = script.relative_to(self.repo)
         return f"[{rel}] exit={code} in {time.time() - t:.1f}s\n{out}"
+
+    def own(self, p: Path):
+        """Hand a file or directory the runner created to the sandbox user, so agents' code can use it."""
+        if self.sandbox:
+            try:
+                os.chown(p, self.sandbox[0], self.sandbox[1])
+            except OSError:
+                pass
+
+    def prepare_sandbox(self):
+        """Agents' Python runs as an unprivileged user with no network. The worktree belongs to that user; .git, the
+        charter and the game's own files stay with the runner, so agent code cannot rewrite history or the rules."""
+        import pwd
+        if self.a.mock or self.a.unsafe_no_sandbox:
+            self.sandbox = None
+            return
+        try:
+            pw = pwd.getpwnam(self.a.sandbox_user)
+        except KeyError:
+            raise SystemExit(f"sandbox user {self.a.sandbox_user!r} does not exist. Create it (as root):\n"
+                             f"  useradd --system --no-create-home --shell /usr/sbin/nologin {self.a.sandbox_user}\n"
+                             "or pass --unsafe-no-sandbox to run agents' code with the runner's own permissions.")
+        if os.geteuid() != 0:
+            raise SystemExit("the sandbox needs the runner to run as root (or pass --unsafe-no-sandbox)")
+        if subprocess.run(["unshare", "-n", "true"]).returncode != 0:
+            raise SystemExit("`unshare -n` is not permitted here (or pass --unsafe-no-sandbox)")
+        self.sandbox = (pw.pw_uid, pw.pw_gid)
+        uid, gid = self.sandbox
+        for root, dirs, files in os.walk(self.repo):
+            if ".git" in dirs:
+                dirs.remove(".git")
+            for n in dirs + files:
+                try:
+                    os.lchown(os.path.join(root, n), uid, gid)
+                except OSError:
+                    pass
+        os.chown(self.repo, uid, gid)
+        os.chown(self.repo / ".git", 0, 0)
+        os.chmod(self.repo / ".git", 0o700)
+        school = self.repo / "SCHOOL"
+        os.chown(school, 0, 0)
+        os.chmod(school, 0o1777)  # anyone may add, nobody may remove what is not theirs
+        for f in ["CHARTER.md", "LEDGER.md", "AMENDMENTS.md"]:
+            p = school / f
+            p.touch()
+            os.chown(p, 0, 0)
+            os.chmod(p, 0o644)
+        (school / "REPORTS").mkdir(exist_ok=True)
+        os.chown(school / "REPORTS", 0, 0)
+        os.chmod(school / "REPORTS", 0o755)
+        self.agent_home.mkdir(parents=True, exist_ok=True)
+        os.chown(self.agent_home, uid, gid)
+        probe = subprocess.run(["setpriv", f"--reuid={uid}", f"--regid={gid}", "--clear-groups", "--",
+                                "test", "-w", str(self.repo / "README.md")])
+        if probe.returncode != 0:
+            raise SystemExit(f"the sandbox user cannot reach {self.repo}: a parent directory is not traversable by "
+                             "other users. Put the playground somewhere like /home/<you>/ or /srv/.")
 
     async def spawn(self, ag: Agent, x: dict) -> str:
         try:
@@ -751,6 +896,8 @@ class School:
             k = 1
         if k < 1:
             return "spawn refused: budget must be at least 1"
+        if self.collapsing():
+            return "spawn refused: the swarm is collapsing (rule E2)"
         if k > ag.wallet:
             return f"spawn refused: you asked for {k} slots but your wallet holds {ag.wallet}"
         if ag.depth + 1 > self.a.max_depth:
@@ -777,8 +924,10 @@ class School:
 
     # ------------------------------------------------------------------ game
     async def play(self):
+        self.prepare_sandbox()
+        await self.log("events.jsonl", dict(ev="sandbox", user=self.a.sandbox_user if self.sandbox else None))
         if getattr(self.a, "push_branch", ""):
-            subprocess.run(["git", "-C", str(self.repo), "checkout", "-q", "-b", self.a.push_branch], check=True)
+            subprocess.run(["git", "-c", "safe.directory=*", "-C", str(self.repo), "checkout", "-q", "-b", self.a.push_branch], check=True)
         per = (self.a.budget - self.a.founders) // self.a.founders
         founders = []
         for k in range(1, self.a.founders + 1):
@@ -896,6 +1045,11 @@ def main():
     ap.add_argument("--push-branch", default="", help="run on this new git branch and push it to origin periodically")
     ap.add_argument("--push-every-min", type=float, default=5.0)
     ap.add_argument("--no-web", dest="web", action="store_false", help="disable web_search / web_fetch")
+    ap.add_argument("--sandbox-user", default="schoolagent", help="unprivileged user that runs agents' Python (no network)")
+    ap.add_argument("--unsafe-no-sandbox", action="store_true", help="run agents' Python with the runner's own permissions")
+    ap.add_argument("--max-file-mb", type=int, default=10, help="files larger than this are never committed")
+    ap.add_argument("--min-free-gb", type=float, default=2.0, help="refuse run_python below this much free disk")
+    ap.add_argument("--reserve", type=float, default=0.03, help="share of the dollar cap kept for final reports")
     ap.add_argument("--mock", action="store_true")
     a = ap.parse_args()
     asyncio.run(School(a).play())
