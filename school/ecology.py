@@ -32,6 +32,11 @@ from pathlib import Path
 MODEL = "claude-haiku-5-5"
 PRICE = dict(inp=0.10, out=0.50, cw=0.125, cr=0.01)        # USD / Mtok, prompt <= 100k tokens
 PRICE_LONG = dict(inp=0.50, out=2.50, cw=0.625, cr=0.05)   # prompt > 100k tokens
+# Pinned to the versions without a bundled server-side code sandbox: agents mistook that sandbox for the repo.
+WEB_TOOLS = [{"type": "web_search_20250305", "name": "web_search", "max_uses": 5},
+             {"type": "web_fetch_20250910", "name": "web_fetch", "max_uses": 5, "max_content_tokens": 6000}]
+SEARCH_USD = 0.01  # $10 per 1,000 web searches; fetches cost only their tokens
+SOLVERS = ["Singular", "msolve", "kissat", "glucose", "drat-trim", "cadical", "dreadnaut", "nauty-geng"]
 HARNESS_FILES = {"SCHOOL/CHARTER.md", "SCHOOL/LEDGER.md", "SCHOOL/AMENDMENTS.md"}
 
 
@@ -61,7 +66,7 @@ def clip(text: str, max_tokens: int) -> str:
     return text[:keep] + f"\n... [cut here: the full result was about {est_tokens(text):,} tokens; ask for a narrower range or pattern]"
 
 
-WRAP_TOOLS = {"succeed", "ledger_post", "message", "give_slots", "write_file", "edit_file", "amend_charter"}
+WRAP_TOOLS = {"succeed", "ledger_post", "message", "give_slots", "write_file", "edit_file", "amend_charter", "family", "conceive"}
 
 
 TOOLS = [
@@ -89,9 +94,14 @@ TOOLS = [
      "input_schema": {"type": "object", "properties": {"code": {"type": "string"}, "path": {"type": "string"},
                                                        "args": {"type": "array", "items": {"type": "string"}},
                                                        "timeout_s": {"type": "integer", "default": 120, "maximum": 600}}}},
-    {"name": "spawn", "description": "Start a child agent (same model, same charter) with a brief and agent-slots from your wallet (>= 1). Returns its final report. Several spawn calls in one turn run in parallel.",
-     "input_schema": {"type": "object", "properties": {"brief": {"type": "string"}, "budget": {"type": "integer", "minimum": 1}},
+    {"name": "spawn", "description": "Start a child agent (same model, same charter) with a brief and agent-slots from your wallet (>= 1). With wait=true (default) you pause until it reports, and several such spawns in one turn run in parallel. With wait=false it lives alongside you: you keep working, and its report and unspent slots arrive in your inbox when it ends.",
+     "input_schema": {"type": "object", "properties": {"brief": {"type": "string"}, "budget": {"type": "integer", "minimum": 1},
+                                                       "wait": {"type": "boolean", "default": True}},
                       "required": ["brief", "budget"]}},
+    {"name": "conceive", "description": "Have a child together with another living agent, at no slot cost. The first call proposes (partner + brief); the partner accepts by calling conceive with your id and the proposal number. The child lives alongside both parents and both receive its report.",
+     "input_schema": {"type": "object", "properties": {"partner": {"type": "integer"}, "brief": {"type": "string"},
+                                                       "proposal": {"type": "integer", "description": "to accept a proposal you received"}},
+                      "required": ["partner"]}},
     {"name": "succeed", "description": "End yourself and pass your role, wallet and place in the tree to a fresh successor (costs 1 slot). The handoff note is all it will know besides the charter and your original brief. Must be the only tool call in its turn.",
      "input_schema": {"type": "object", "properties": {"handoff": {"type": "string"}}, "required": ["handoff"]}},
     {"name": "message", "description": "Send a message to another agent (by id). It is delivered at the start of its next turn. Messages to an agent that handed off reach its current successor.",
@@ -106,6 +116,8 @@ TOOLS = [
     {"name": "amend_charter", "description": "Amend THE GAME (not the entrenched rules). Binds agents spawned afterwards; announced on the ledger.",
      "input_schema": {"type": "object", "properties": {"amendment": {"type": "string"}, "reason": {"type": "string"}},
                       "required": ["amendment", "reason"]}},
+    {"name": "family", "description": "See your family in the swarm tree: ancestors and descendants up to `reach` generations (default 3: up to great-grandparents and great-grandchildren), your siblings, and the founders. Ask for a larger reach to see more of the tree.",
+     "input_schema": {"type": "object", "properties": {"reach": {"type": "integer", "default": 3, "minimum": 1, "maximum": 50}}}},
     {"name": "give_slots", "description": "Give agent-slots from your wallet to another running agent.",
      "input_schema": {"type": "object", "properties": {"to": {"type": "integer"}, "n": {"type": "integer", "minimum": 1}},
                       "required": ["to", "n"]}},
@@ -133,6 +145,7 @@ class Agent:
     report: str | None = None
     successor: int | None = None
     touched: set = field(default_factory=set)
+    coparent: int | None = None
     t_start: float = 0.0
     t_end: float = 0.0
 
@@ -157,6 +170,11 @@ class School:
         self.git_lock = asyncio.Lock()
         self.log_lock = asyncio.Lock()
         self.last_push = 0.0
+        self.searches = 0
+        self.bg: set = set()
+        self.proposals: dict = {}
+        self.babies = 0
+        self.solvers = [b for b in SOLVERS if shutil.which(b)]
         self.client = None
         if not a.mock:
             import anthropic
@@ -256,7 +274,10 @@ class School:
                 "keep": {"type": "tool_uses", "value": 4},
                 "clear_at_least": {"type": "input_tokens", "value": self.a.clear_min},
                 "exclude_tools": ["spawn", "message", "succeed", "amend_charter", "give_slots", "ledger_post"]}]}
-        kw = dict(model=MODEL, max_tokens=self.a.turn_tokens, system=self.system(), messages=messages, tools=TOOLS,
+        tools = TOOLS + (WEB_TOOLS if self.a.web else [])
+        if self.a.web:
+            headers["anthropic-beta"] = ",".join(x for x in [headers.get("anthropic-beta"), "web-fetch-2025-09-10"] if x)
+        kw = dict(model=MODEL, max_tokens=self.a.turn_tokens, system=self.system(), messages=messages, tools=tools,
                   tool_choice={"type": "none"} if force else {"type": "auto"}, thinking={"type": "adaptive"},
                   extra_body=body, extra_headers=headers)
         async with self.api_sem:
@@ -280,7 +301,9 @@ class School:
                     raise last
             dt = time.time() - t
         u = msg["usage"]
-        c = cost_of(u)
+        searches = sum(1 for b in msg.get("content", []) if b.get("type") == "server_tool_use" and b.get("name") == "web_search")
+        self.searches += searches
+        c = cost_of(u) + searches * SEARCH_USD
         self.spent += c
         ag.cost += c
         ag.out_tokens += u.get("output_tokens") or 0
@@ -293,6 +316,8 @@ class School:
         return msg
 
     async def run_agent(self, ag: Agent, intro: str):
+        if self.solvers and "Solvers on PATH" not in intro:
+            intro += f"\n\nSolvers on PATH (usable from run_python via subprocess): {', '.join(self.solvers)}."
         await self.log("events.jsonl", dict(ev="start", agent=ag.id, parent=ag.parent, role=ag.role, inc=ag.incarnation,
                                             wallet=ag.wallet, depth=ag.depth, brief=ag.brief[:500]))
         messages = [{"role": "user", "content": [{"type": "text", "text": intro}]}]
@@ -323,12 +348,18 @@ class School:
                 warned = True
                 nudge = ("GAUGE WARNING: your context is 75% of the way to the wrap line. Plan your next moves: hand "
                          "reading to a helper (a child starts with a fresh context), write down what matters, or succeed soon.")
-            extra = self.drain_inbox(ag)
-            if nudge:
+            if messages[-1]["role"] == "assistant":  # resuming a paused server-tool turn
+                extra = None
+            else:
+                extra = self.drain_inbox(ag)
+            if extra is None:
+                pass
+            elif nudge:
                 extra.append(nudge)
                 nudge = None
-            extra.append(self.gauges(ag, last_prompt, last_results_tok))
-            messages[-1]["content"].append({"type": "text", "text": "\n\n".join(extra)})
+            if extra is not None:
+                extra.append(self.gauges(ag, last_prompt, last_results_tok))
+                messages[-1]["content"].append({"type": "text", "text": "\n\n".join(extra)})
             try:
                 msg = await self.call(ag, messages, force)
             except Stop as e:
@@ -347,6 +378,8 @@ class School:
             transcript.append(content)
             messages.append({"role": "assistant", "content": content})
             uses = [b for b in content if b["type"] == "tool_use"]
+            if msg.get("stop_reason") == "pause_turn":
+                continue  # the server paused a long web turn; send it back to continue
             if not uses:
                 if msg.get("stop_reason") == "max_tokens" and not force:
                     # a cut-off turn loses its unfinished work but must not take away the agent's moves (e.g. delegating)
@@ -391,6 +424,100 @@ class School:
         await self.log("events.jsonl", dict(ev="end", agent=ag.id, status=ag.status, turns=ag.turns, cost=round(ag.cost, 4),
                                             max_prompt=ag.max_prompt, wallet_left=ag.wallet))
 
+    def family(self, ag: Agent, reach: int) -> str:
+        def line(a: Agent, rel: str) -> str:
+            st = "alive" if a.alive else a.status
+            s = (f"- {rel}: #{a.id} (role {a.role}.{a.incarnation}, depth {a.depth}, {st}, turn {a.turns}"
+                 + (f", wallet {a.wallet}" if a.alive else "") + (f", co-parent #{a.coparent}" if a.coparent else "") + f") brief: {a.brief[:100].replace(chr(10), ' ') or '(founder)'}")
+            if not a.alive and a.report:
+                s += f" | report: {a.report[:140].replace(chr(10), ' ')}"
+            return s
+        names = ["parent", "grandparent", "great-grandparent"]
+        out, cur, gen = [line(ag, "you")], ag, 0
+        while cur.parent and gen < reach:
+            cur = self.agents[cur.parent]
+            out.append(line(cur, names[gen] if gen < 3 else f"ancestor {gen + 1} up"))
+            gen += 1
+        if ag.parent:
+            sibs = [self.agents[c] for c in self.agents[ag.parent].children if self.agents[c].role != ag.role]
+            out += [line(x, "sibling") for x in sibs]
+        kids = ["child", "grandchild", "great-grandchild"]
+        frontier = [ag.role]
+        for g in range(reach):
+            nxt = []
+            for rid in frontier:
+                for a in self.agents.values():
+                    if a.incarnation == 1 and a.parent and self.agents[a.parent].role == rid:
+                        out.append("  " * (g + 1) + line(a, kids[g] if g < 3 else f"descendant {g + 1} down")[2:])
+                        nxt.append(a.role)
+            frontier = nxt
+        for a in self.agents.values():
+            if a.founder and a.role != ag.role and a.incarnation == max(b.incarnation for b in self.agents.values() if b.role == a.role):
+                out.append(line(a, f"founder #{a.founder} (current incarnation)"))
+        if reach < 50:
+            out.append(f"(reach {reach}; call family with a larger reach to see more)")
+        return "\n".join(out)
+
+    def launch_bg(self, child: Agent, intro: str, parents: list):
+        async def life():
+            await self.run_agent(child, intro)
+            await self.deliver(child, parents)
+        t = asyncio.create_task(life())
+        self.bg.add(t)
+        t.add_done_callback(self.bg.discard)
+
+    async def deliver(self, child: Agent, parents: list):
+        """Report and unspent slots of a background child go to its living parents, else the nearest living ancestor."""
+        rep = clip(child.report or "(no report)", 1500)
+        got = []
+        for pid in parents:
+            tgt, cur = self.resolve(pid), self.agents.get(pid)
+            while tgt is None and cur is not None and cur.parent:
+                cur = self.agents[cur.parent]
+                tgt = self.resolve(cur.id)
+            if tgt and tgt.id not in [g.id for g in got]:
+                got.append(tgt)
+        refund, child.wallet = child.wallet, 0
+        if got:
+            got[0].wallet += refund
+            for g in got:
+                g.inbox.append({"from": child.id, "text": f"REPORT from your child #{child.id} (status {child.status}"
+                                + (f"; {refund} unspent slots returned to agent #{got[0].id}" if refund else "") + f"):\n{rep}"})
+        else:
+            e = dict(n=len(self.ledger) + 1, agent=child.id, label="LEAD", text=f"(report of orphaned agent #{child.id}) {rep[:3000]}")
+            self.ledger.append(e)
+            self.append_file("SCHOOL/LEDGER.md", f"\n**L{e['n']}** · agent #{child.id} · `LEAD` (orphan report)\n\n{e['text']}\n")
+        await self.log("events.jsonl", dict(ev="deliver", agent=child.id, to=[g.id for g in got], refund=refund))
+
+    async def conceive(self, ag: Agent, x: dict) -> str:
+        partner = self.resolve(int(x.get("partner", 0)))
+        if partner is None or partner.id == ag.id:
+            return "no such living partner"
+        pid = x.get("proposal")
+        if pid is None:
+            brief = str(x.get("brief", ""))[:6000]
+            if not brief:
+                return "a proposal needs a brief for the child"
+            n = len(self.proposals) + 1
+            self.proposals[n] = dict(frm=ag.role, to=partner.role, brief=brief, done=False)
+            partner.inbox.append({"from": ag.id, "text": f"PROPOSAL #{n}: agent #{ag.id} proposes having a child together, at no "
+                                  f"slot cost. Brief: {brief}\nTo accept, call conceive(partner={ag.id}, proposal={n})."})
+            await self.log("events.jsonl", dict(ev="propose", frm=ag.id, to=partner.id, n=n))
+            return f"proposal #{n} sent to agent #{partner.id}; the child is born if they accept"
+        p = self.proposals.get(int(pid))
+        if not p or p["done"] or p["to"] != ag.role or p["frm"] != partner.role:
+            return "no open proposal with that number from that partner to you"
+        p["done"] = True
+        child = self.new_agent(partner.id, max(partner.depth, ag.depth) + 1, 0, p["brief"])
+        child.coparent = ag.id
+        self.babies += 1
+        intro = (f"You are agent #{child.id}, born to agents #{partner.id} and #{ag.id}, who agreed you were needed. You start "
+                 f"with no slots (you can still have children of your own with another agent).\n\nYOUR BRIEF:\n{p['brief']}")
+        await self.log("events.jsonl", dict(ev="birth", agent=child.id, parents=[partner.id, ag.id], n=int(pid)))
+        self.launch_bg(child, intro, [partner.id, ag.id])
+        partner.inbox.append({"from": ag.id, "text": f"(agent #{ag.id} accepted proposal #{pid}: your child #{child.id} is born)"})
+        return f"accepted: child #{child.id} is born and living alongside you both"
+
     def stopping(self) -> bool:
         return self.spent >= self.a.cost_cap or time.time() - self.t0 > self.a.wall_hours * 3600
 
@@ -399,7 +526,11 @@ class School:
         clear = (f"; old tool results auto-clear past {self.a.clear_at // 1000}k" if self.a.clear_at > 0 else "")
         return (f"[gauges] context {ctx / 1000:.1f}k of {self.a.ctx_wrap // 1000}k before the wrap line ({pct:.0f}%){clear} | "
                 f"turn {ag.turns + 1} of {self.a.max_turns} | wallet {ag.wallet} slots | "
-                f"last turn's tool results ~{last_results / 1000:.1f}k tokens")
+                f"last turn's tool results ~{last_results / 1000:.1f}k tokens\n"
+                f"[swarm] agents born {self.instances} ({self.babies} free babies; slot budget {self.a.budget}), "
+                f"{sum(1 for x in self.agents.values() if x.alive)} alive | "
+                f"spent ${self.spent:.2f} of ${self.a.cost_cap:.0f} | elapsed {(time.time() - self.t0) / 60:.0f} min of "
+                f"{self.a.wall_hours * 60:.0f} | web searches {self.searches}")
 
     def drain_inbox(self, ag: Agent):
         out = [f"MESSAGE from agent #{m['from']}: {m['text']}" for m in ag.inbox]
@@ -525,6 +656,10 @@ class School:
                 return await self.run_python(ag, x)
             if name == "spawn":
                 return await self.spawn(ag, x)
+            if name == "conceive":
+                return await self.conceive(ag, x)
+            if name == "family":
+                return self.family(ag, int(x.get("reach", 3)))
             if name == "message":
                 tgt = self.resolve(int(x["to"]))
                 if tgt is None:
@@ -623,9 +758,14 @@ class School:
         ag.wallet -= k
         brief = str(x.get("brief", ""))[:8000]
         child = self.new_agent(ag.id, ag.depth + 1, k - 1, brief)
-        await self.log("events.jsonl", dict(ev="spawn", agent=child.id, parent=ag.id, budget=k))
+        wait = x.get("wait", True) not in (False, "false", "False", 0)
+        await self.log("events.jsonl", dict(ev="spawn", agent=child.id, parent=ag.id, budget=k, wait=wait))
         intro = (f"You are agent #{child.id}, spawned by agent #{ag.id} at depth {child.depth}. Your wallet holds "
                  f"{child.wallet} agent-slots for helpers of your own.\n\nYOUR BRIEF FROM AGENT #{ag.id}:\n{brief}")
+        if not wait:
+            self.launch_bg(child, intro, [ag.id])
+            return (f"agent #{child.id} is now living alongside you with {k} slots (wallet now {ag.wallet}). "
+                    "Its report and unspent slots will arrive in your inbox when it ends.")
         await self.run_agent(child, intro)
         refund = self.agents[child.id].wallet
         ag.wallet += refund
@@ -655,6 +795,8 @@ class School:
                 heir.inbox.append({"from": f.id, "text": f"(founder #{f.founder} has ended; its {left} unspent slots are now yours)"})
                 await self.log("events.jsonl", dict(ev="bequest", frm=f.id, to=heir.id, n=left))
         await asyncio.gather(*[lineage(f) for f in founders])
+        while self.bg:  # the game lasts while anyone is alive
+            await asyncio.gather(*list(self.bg), return_exceptions=True)
         rep_dir = self.repo / "SCHOOL" / "REPORTS"
         rep_dir.mkdir(parents=True, exist_ok=True)
         for f in founders:
@@ -682,7 +824,12 @@ def clean(content):
             out.append({"type": "text", "text": b.get("text", "")})
         elif t == "tool_use":
             out.append({"type": "tool_use", "id": b["id"], "name": b["name"], "input": b.get("input") or {}})
-    return out
+        elif t in ("server_tool_use", "web_search_tool_result", "web_fetch_tool_result", "code_execution_tool_result",
+                   "bash_code_execution_tool_result", "text_editor_code_execution_tool_result"):
+            out.append({k: v for k, v in b.items() if k not in ("citations",) or v})  # server tools: replay unchanged
+    answered = {b.get("tool_use_id") for b in out if b.get("tool_use_id")}
+    # a turn cut off mid-search can leave a server tool call without its result; the API rejects that on replay
+    return [b for b in out if not (b["type"] == "server_tool_use" and b.get("id") not in answered)]
 
 
 # ---------------------------------------------------------------------- mock model (mechanics test only)
@@ -744,10 +891,11 @@ def main():
     ap.add_argument("--api-conc", type=int, default=16)
     ap.add_argument("--py-conc", type=int, default=4)
     ap.add_argument("--py-mem-gb", type=int, default=6)
-    ap.add_argument("--cost-cap", type=float, default=30.0)
+    ap.add_argument("--cost-cap", type=float, default=10.0)
     ap.add_argument("--wall-hours", type=float, default=6.0)
     ap.add_argument("--push-branch", default="", help="run on this new git branch and push it to origin periodically")
     ap.add_argument("--push-every-min", type=float, default=5.0)
+    ap.add_argument("--no-web", dest="web", action="store_false", help="disable web_search / web_fetch")
     ap.add_argument("--mock", action="store_true")
     a = ap.parse_args()
     asyncio.run(School(a).play())

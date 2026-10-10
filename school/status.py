@@ -32,10 +32,11 @@ print(f"spend ${sum(c['cost'] for c in calls):.2f} over {len(calls)} requests; m
       f"server clears {k.get('cleared', 0)} (~{sum(e.get('tokens', 0) for e in ev if e['ev'] == 'cleared'):,} tokens); errors {k.get('error', 0)}; pushes {sum(1 for e in ev if e['ev']=='push' and e.get('ok'))} ok / "
       f"{sum(1 for e in ev if e['ev']=='push' and not e.get('ok'))} failed")
 print(f"ledger {k.get('ledger', 0)} {dict(Counter(e['label'] for e in ev if e['ev']=='ledger'))}; amendments {k.get('amend', 0)}; "
-      f"messages {k.get('message', 0)}; slot gifts {k.get('give', 0)}")
+      f"messages {k.get('message', 0)}; slot gifts {k.get('give', 0)}; proposals {k.get('propose', 0)}; births {k.get('birth', 0)}; "
+      f"background spawns {sum(1 for e in ev if e['ev'] == 'spawn' and e.get('wait') is False)}")
 print(f"tool calls: {dict(Counter(e['tool'] for e in ev if e['ev']=='tool').most_common(8))}")
 notable = [e for e in ev if e["t"] >= t_now - a.since_min * 60 and (
-    e["ev"] in ("amend", "message", "give", "succeed", "revive", "error") or (e["ev"] == "spawn")
+    e["ev"] in ("amend", "message", "give", "succeed", "revive", "error", "birth", "propose", "bequest") or (e["ev"] == "spawn")
     or (e["ev"] == "ledger" and e["label"] in ("PROVED", "COMPUTED", "CHECKED", "CANDIDATE")) or (e["ev"] == "push" and not e.get("ok")))]
 print(f"\nnotable events in the last {a.since_min:g} min ({len(notable)}):")
 for e in notable[-25:]:

@@ -42,6 +42,16 @@ slots unspent. So agents now get proprioception:
 Prompt caching stays on (automatic cache breakpoints): in testing, 84% of prompt tokens
 were cache reads.
 
+## Round 3: the world gets bigger
+
+- **Internet**: `web_search` / `web_fetch` (Anthropic server tools; about $0.01 per search, counted in the swarm's spend).
+- **Solvers**: `install_solvers.sh` puts Singular, msolve, kissat, glucose, drat-trim, CaDiCaL and nauty on PATH; each agent's intro lists what is available.
+- **Family**: `family(reach=3)` shows ancestors and descendants to great-grand level, siblings and founders; a larger reach shows more.
+- **Swarm gauges**: agents born, alive, dollars spent of the cap, minutes elapsed, searches — every turn.
+- **Living alongside**: `spawn(..., wait=false)` lets a parent keep working; the report and unspent slots arrive in its inbox.
+- **Babies**: two living agents who agree can `conceive` a child at no slot cost; it reports to both.
+- **Vacuum collapse**: the dollar cap (default $10) halts every agent at once; the game otherwise lasts while anyone is alive.
+
 ## Price tier
 
 Haiku 5.5 bills a request at $0.10 / $0.50 per million input/output tokens when its

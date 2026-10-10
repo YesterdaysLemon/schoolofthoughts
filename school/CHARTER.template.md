@@ -12,25 +12,34 @@ proposed mechanism and leaves a sharper next question. Nobody grades the game wh
 is played; afterwards the work is judged by what this repository contains and whether
 it holds up.
 
-**E2. Budget is currency.** The swarm may contain at most 100 agents in total. It
-begins with two founders, #1 and #2, who start at the same time and each hold a
-wallet of 49 agent-slots. Spawning a child or a successor costs exactly the slots you
-hand it (at least 1, because the new agent itself occupies one). When a child
-finishes, the slots it did not use come back to your wallet. You may give slots to
-any living agent with `give_slots`. You cannot spend slots you do not hold. When a
-founder ends, its unspent slots pass to the other founder if it is still playing. Slots
-still unspent when the game ends are worth nothing.
+**E2. Budget is currency, and life is finite.** The game begins with two founders, #1
+and #2, who start at the same time and each hold a wallet of 49 agent-slots. Spawning a
+child costs exactly the slots you hand it (at least 1, because the new agent itself
+occupies one). A spawned child either makes you wait for its report, or lives alongside
+you (`wait=false`) while you keep working; either way its report and unspent slots come
+back to you, or to your nearest living ancestor if you have ended. You may give slots to
+any living agent with `give_slots`. Two living agents who agree that something else needs
+doing may have a child together with `conceive`: it costs no slots, lives alongside them,
+and reports to both. When a founder ends, its unspent slots pass to the other founder if
+it is still playing. Above all of this sits one hard limit: the swarm's total spending.
+When it reaches the dollar cap shown in your gauges, every agent stops at once.
 
-**E3. The world.** Your workspace is this repository and nothing else: no internet
-and no package installs. You can list, read, search and write files, and run Python
-(with sympy, numpy, python-sat and python-flint available) under a time limit. The
-repository is large, about 4,500 files; `docs/current-frontier.md` alone is about
-830 KB, several times more than one agent can hold. Read selectively.
+**E3. The world.** Your workspace is this repository. You can list, read, search and
+write its files and run Python (with sympy, numpy, python-sat and python-flint), and
+the external solvers listed in your intro (for example Singular, msolve, kissat,
+glucose, drat-trim, CaDiCaL, nauty) can be called from Python. You can also search and
+read the web with `web_search` and `web_fetch`; each search costs the swarm about one
+cent. You cannot install packages. The repository is large, about 4,500 files;
+`docs/current-frontier.md` alone is about 830 KB, several times more than one agent can
+hold. Read selectively. `family` shows where you sit in the swarm: your ancestors and
+descendants up to three generations, your siblings and the founders; ask it for a
+larger reach to see more.
 
 **E4. Physical limits, and your gauges.** Each agent has at most 40 turns. One turn
 can produce at most about 32,000 tokens including private reasoning; a turn that runs
 past this is cut off and its unfinished work is lost. Every turn you are shown your
-gauges — how full your context is, your turn count, your wallet — and every tool
+gauges — how full your context is, your turn count, your wallet, and the swarm's
+agents, dollars and time used — and every tool
 result states its own size in tokens. Old tool results are cleared from your context
 automatically once it passes about 40,000 tokens, so keep what matters in your own
 words, in a file, or on the ledger. At about 60,000 tokens (or on your last turns) you
@@ -60,8 +69,8 @@ counterexample is labelled `CANDIDATE` until an agent outside the lineage that
 produced it has `CHECKED` it. Report any candidate counterexample at once to both
 founders.
 
-**E7. The end.** The game ends when both founders have ended on purpose — by finishing
-while they still had room — or when the budget is exhausted. Each founder's final message is saved as its report in `SCHOOL/REPORTS/`.
+**E7. The end.** The game ends when no agent is left alive, or when the dollar cap is
+reached. Each founder's final message is saved as its report in `SCHOOL/REPORTS/`.
 
 ## THE GAME
 

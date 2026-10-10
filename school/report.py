@@ -68,7 +68,8 @@ def main():
     for f in sorted(rd.glob("agent_*.json")):
         d = json.load(open(f))
         rep = (d.get("report") or "")
-        if re.search(r"\bCANDIDATE\b", rep):  # the charter's mandatory label for a claimed global proof or counterexample
+        claims = [ln for ln in rep.splitlines() if "CANDIDATE" in ln and not re.search(r"\b(no|not|nothing|none|never)\b", ln, re.I)]
+        if claims:  # the charter's mandatory label for a claimed global proof or counterexample, not merely mentioned
             flags.append((d["id"], rep[:400].replace("\n", " ")))
     w("\n## Flags for review\n")
     if flags:
